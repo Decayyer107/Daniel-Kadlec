@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from "react";
 import LanguageSwitcher from "../components/LanguageSwicther";
+import { useLanguage } from '@/utils/LanguageContext';
+
 
 export default function Navbar() {
     const [theme, setTheme] = useState<"light" | "dark" >("dark");
+    const { dict } = useLanguage();
 
     useEffect(() => {
         setTheme("dark");
@@ -28,9 +31,9 @@ export default function Navbar() {
     return (
         <nav className="w-full h-16 flex items-center justify-between px-4 transition-colors duration-500 bg-gray-300 dark:bg-gray-950 absolute top-0">
             <ul className="flex gap-4">
-                <li><a className="text-black dark:text-white" href="/">Třeba Domů</a></li>
-                <li><a className="text-black dark:text-white" href="#">Třeba Kontakt</a></li>
-                <li><a className="text-black dark:text-white" href="#">Třeba o mě</a></li>
+                <li><a className="text-black dark:text-white" href="#">{dict.nav.Home}</a></li>
+                <li><a className="text-black dark:text-white" href="#">{dict.nav.Contact}</a></li>
+                <li><a className="text-black dark:text-white" href="#">{dict.nav.About}</a></li>
             </ul>
             <div className={'flex gap-4'}>
                 <LanguageSwitcher/>
