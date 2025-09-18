@@ -19,7 +19,6 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
         setMounted(true);
     }, []);
 
-    // Render nothing until theme is applied
     if (!mounted) return null;
 
     return <>{children}</>;
