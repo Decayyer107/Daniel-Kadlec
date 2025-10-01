@@ -1,19 +1,8 @@
 @import "tailwindcss";
+@import "./fonts.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@font-face {
-    font-family: 'ClashDisplay';
-    src: url('/fonts/clash-display/ClashDisplay-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Archivo';
-    src: url('/fonts/archivo/Archivo-Regular.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-}
 
 @theme {
     --color-offblack: #0B0B0D;
@@ -27,9 +16,5 @@
 
     --color-green-primary: #B5FF6D;
     --color-green-secondary: #30AF5B;
-
-    --font-primary: "ClashDisplay", sans-serif;
-    --font-secondary: "Archivo", sans-serif;
-
 
 }
