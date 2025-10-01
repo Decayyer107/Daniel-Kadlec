@@ -6,7 +6,7 @@ import { LanguageProvider } from "@/utils/LanguageContext";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-        <body className="transition-colors duration-500 antialiased">
+        <body className="bg-offwhite dark:bg-offblack transition-colors duration-500 antialiased">
         <ThemeProvider>
             <LanguageProvider>
                 <Navbar />
