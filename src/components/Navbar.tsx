@@ -29,7 +29,8 @@ export default function Navbar() {
     if (!theme) return null;
 
     return (
-        <nav className="w-full h-16 flex items-center justify-between px-4 transition-colors duration-500 bg-gray-300 dark:bg-gray-950 absolute top-0">
+        <nav className="section h-16 flex items-center justify-between transition-colors duration-500 ">
+            <img src="#" alt=""/>
             <ul className="flex gap-4">
                 <li><a className="text-black dark:text-white" href="#">{dict.nav.Home}</a></li>
                 <li><a className="text-black dark:text-white" href="#">{dict.nav.Contact}</a></li>
@@ -38,7 +39,7 @@ export default function Navbar() {
             <div className={'flex gap-4'}>
                 <LanguageSwitcher/>
                 <button
-                    className="p-2 bg-gray-200 dark:bg-gray-800 text-black dark:text-white rounded-md transition-colors duration-300"
+                    className="p-2 bg-gray-100 dark:bg-gray-900 text-offblack dark:text-offwhite rounded-md transition-colors duration-300"
                     onClick={toggleTheme}
                 >
                     {theme === "dark" ? "Light" : "Dark"}
