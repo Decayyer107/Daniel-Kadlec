@@ -1,6 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import ThemeProvider from "@/components/ThemeProvider";
+import ThemeProvider from "@/utils/ThemeProvider";
 import { LanguageProvider } from "@/utils/LanguageContext";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -9,7 +9,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <body>
         <ThemeProvider>
             <LanguageProvider>
-                <div className="bg-offwhite dark:bg-offblack transition-colors duration-500 antialiased">
+                <div className="bg-offwhite dark:bg-offblack transition-colors duration-500 antialiased min-h-screen">
                     <Navbar />
                     {children}
                 </div>
