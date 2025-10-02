@@ -1,4 +1,4 @@
 {
   "common": { "hello": "Krásný nadpis", "paragraph": "Strašně sexy paragraf" },
-  "nav": { "Home": "Domů", "Contact": "Kontakt", "About": "O mě" }
+  "nav": { "Home": "Domů", "Contact": "Kontakt", "About": "O mě", "Portfolio": "Portfolio" }
 }

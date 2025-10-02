@@ -3,19 +3,21 @@
 import { useEffect, useState } from "react";
 import LanguageSwitcher from "../components/LanguageSwicther";
 import { useLanguage } from '@/utils/LanguageContext';
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+
+const LogoPrimary = "/logo/logomark-primary.svg";
+const LogoSecondary = "/logo/logomark-secondary.svg";
 
 
 export default function Navbar() {
-    const [theme, setTheme] = useState<"light" | "dark" >("dark");
     const { dict } = useLanguage();
+    const [theme, setTheme] = useState<"light" | "dark">("dark");
 
     useEffect(() => {
-        setTheme("dark");
         document.documentElement.classList.add("dark");
     }, []);
 
     const toggleTheme = () => {
-        if (!theme) return;
         const root = document.documentElement;
         if (theme === "dark") {
             root.classList.remove("dark");
@@ -25,25 +27,18 @@ export default function Navbar() {
             setTheme("dark");
         }
     };
-
-    if (!theme) return null;
-
     return (
-        <nav className="section h-16 flex items-center justify-between transition-colors duration-500 ">
-            <img src="#" alt=""/>
-            <ul className="flex gap-4">
+        <nav className="fixed top-0 left-1/2 -translate-x-1/2  section h-20 flex items-center justify-between transition-colors duration-500 ">
+            <img src={theme === "dark" ? LogoPrimary : LogoSecondary} alt="Logo" className={'w-14'} />
+            <ul className="flex gap-12 font-secondary font-bold text-md">
                 <li><a className="text-black dark:text-white" href="#">{dict.nav.Home}</a></li>
-                <li><a className="text-black dark:text-white" href="#">{dict.nav.Contact}</a></li>
                 <li><a className="text-black dark:text-white" href="#">{dict.nav.About}</a></li>
+                <li><a className="text-black dark:text-white" href="#">{dict.nav.Portfolio}</a></li>
+                <li><a className="text-black dark:text-white" href="#">{dict.nav.Contact}</a></li>
             </ul>
-            <div className={'flex gap-4'}>
+            <div className="flex gap-4">
                 <LanguageSwitcher/>
-                <button
-                    className="p-2 bg-gray-100 dark:bg-gray-900 text-offblack dark:text-offwhite rounded-md transition-colors duration-300"
-                    onClick={toggleTheme}
-                >
-                    {theme === "dark" ? "Light" : "Dark"}
-                </button>
+                <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
             </div>
         </nav>
     );

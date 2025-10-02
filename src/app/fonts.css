@@ -13,6 +13,12 @@
     font-weight: 500;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Archivo';
+    src: url('/fonts/archivo/Archivo-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
 
 @theme{
     --font-primary: "ClashDisplay", sans-serif;

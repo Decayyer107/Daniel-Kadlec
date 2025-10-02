@@ -20,12 +20,10 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     const [lang, setLangState] = useState<Locale>(getCookieLang());
     const dict = getDictionary(lang);
-    console.log("Dictionary for", lang, dict);
 
     const setLang = (newLang: Locale) => {
         setLangState(newLang);
         document.cookie = `locale=${newLang}; path=/; max-age=${60 * 60 * 24 * 365}`;
-        console.log("Cookie set:", document.cookie);
     };
 
     return (
