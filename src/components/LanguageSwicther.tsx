@@ -11,7 +11,7 @@ export default function LanguageSwitcher() {
     return (
         <button
             onClick={toggleLang}
-            className="font-secondary font-bold dark:text-offwhite transition-colors duration-300"
+            className="font-secondary font-bold dark:text-offwhite transition-colors duration-300 cursor-pointer"
         >
             {lang === 'cz' ? 'CZ' : 'EN'}
         </button>

@@ -16,7 +16,7 @@ export default function ThemeSwitcher({ theme, toggleTheme }: ThemeSwitcherProps
     }
 
     return (
-        <button onClick={toggleTheme}>
+        <button onClick={toggleTheme} className={'cursor-pointer'}>
             {icon}
         </button>
     );
