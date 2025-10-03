@@ -12,9 +12,8 @@ export default function Hero(){
     return (
         <section className={'section min-h-screen flex justify-center flex-col'}>
             <div className={'flex flex-col justify-start'}>
-                <h1 className={'font-primary text-7xl text'}>Frontend vývojář & <br/>
-                    UX/UI designér.</h1>
-                <h2 className={'font-secondary text-3xl text mt-2'}>Ahoj! Jmenuji se Daniel Kadlec.<br/>Student z ČR s vášní pro tvorbu webů.</h2>
+                <h1 className={'font-primary text-7xl text'}>{dict.hero.heading()}</h1>
+                <h2 className={'font-secondary font-bold text-3xl text mt-5'}>{dict.hero.paragraph()}</h2>
             </div>
             <div className={'flex flex-col items-end gap-5'}>
                 <span className={'flex gap-6 items-center jus'}>
@@ -23,7 +22,7 @@ export default function Hero(){
                     <LiaLinkedin className={'text w-[60px] h-[60px] cursor-pointer'}/>
                     <MdOutlineEmail className={'text w-[60px] h-[60px] cursor-pointer'}/>
                 </span>
-                <Button/>
+                <Button>{dict.hero.button}</Button>
             </div>
         </section>
     );

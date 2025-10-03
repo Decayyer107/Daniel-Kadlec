@@ -9,7 +9,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <body>
         <ThemeProvider>
             <LanguageProvider>
-                <div className="bg-offwhite dark:bg-offblack transition-colors duration-500 antialiased min-h-screen">
+                <div className="bg-offwhite dark:bg-offblack transition-all duration-500 antialiased min-h-screen">
                     <Navbar />
                     {children}
                 </div>

@@ -41,4 +41,7 @@
 .text{
     @apply text-offblack dark:text-offwhite;
 }
+.text-green{
+    @apply text-green-secondary dark:text-green-primary;
+}
 

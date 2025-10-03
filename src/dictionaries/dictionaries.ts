@@ -1,6 +1,6 @@
-import en from './en.json';
-import cz from './cz.json';
-import { Locale } from '@/i18n-config';
+import en from "./en";
+import cz from "./cz";
+import { Locale } from "@/i18n-config";
 
 type Dict = typeof en;
 
