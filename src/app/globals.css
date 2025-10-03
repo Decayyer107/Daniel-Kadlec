@@ -38,4 +38,7 @@
     2xl:max-w-[1536px];
 }
 
+.text{
+    @apply text-offblack dark:text-offwhite;
+}
 

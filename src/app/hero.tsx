@@ -12,16 +12,16 @@ export default function Hero(){
     return (
         <section className={'section min-h-screen flex justify-center flex-col'}>
             <div className={'flex flex-col justify-start'}>
-                <h1 className={'font-primary text-7xl text-offblack dark:text-offwhite'}>Frontend vývojář & <br/>
+                <h1 className={'font-primary text-7xl text'}>Frontend vývojář & <br/>
                     UX/UI designér.</h1>
-                <h2 className={'font-secondary text-3xl text-offblack dark:text-offwhite'}>Ahoj! Jmenuji se Daniel Kadlec.<br/>Student z ČR s vášní pro tvorbu webů.</h2>
+                <h2 className={'font-secondary text-3xl text mt-2'}>Ahoj! Jmenuji se Daniel Kadlec.<br/>Student z ČR s vášní pro tvorbu webů.</h2>
             </div>
             <div className={'flex flex-col items-end gap-5'}>
                 <span className={'flex gap-6 items-center jus'}>
-                    <FaGithub className={'text-white w-[48px] h-[48px]'}/>
-                    <FaXTwitter className={'text-white w-[48px] h-[48px]'}/>
-                    <LiaLinkedin className={'text-white w-[60px] h-[60px]'}/>
-                    <MdOutlineEmail className={'text-white w-[60px] h-[60px]'}/>
+                    <FaGithub className={'text w-[48px] h-[48px] cursor-pointer'}/>
+                    <FaXTwitter className={'text w-[48px] h-[48px] cursor-pointer'}/>
+                    <LiaLinkedin className={'text w-[60px] h-[60px] cursor-pointer'}/>
+                    <MdOutlineEmail className={'text w-[60px] h-[60px] cursor-pointer'}/>
                 </span>
                 <Button/>
             </div>
