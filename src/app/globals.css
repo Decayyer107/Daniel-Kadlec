@@ -47,4 +47,7 @@
 .hero-element{
     @apply w-[1050px] h-[200px] rounded-[500px] bg-gray-200 dark:bg-gray-900 transition-all duration-500 shadow-[inset_0px_8px_2px_rgba(210,210,221,0.3)] dark:shadow-[rgba(7,7,8,0.8)];
 }
+.hopper-element{
+    @apply rounded-[500px] bg-offwhite dark:bg-gray-900 transition-all duration-500 shadow-[inset_4px_4px_6px_rgba(210,210,221,0.3)] dark:shadow-[rgba(7,7,8,0.8)];
+}
 
