@@ -10,6 +10,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { LiaLinkedin } from "react-icons/lia";
 import { MdOutlineEmail } from "react-icons/md";
 import HopperElement from "@/components/HopperElement";
+import SocialIcons from "@/components/SocialIcons";
 
 const LogoPrimary = "/logo/logomark-primary.svg";
 const LogoSecondary = "/logo/logomark-secondary.svg";
@@ -44,10 +45,7 @@ export default function Footer() {
                     </div>
                     <div>
                 <span className="flex gap-6 items-center">
-                  <FaGithub className="text w-[32px] h-[32px] cursor-pointer"/>
-                  <FaXTwitter className="text w-[32px] h-[32px] cursor-pointer"/>
-                  <LiaLinkedin className="text w-[42px] h-[42px] cursor-pointer"/>
-                  <MdOutlineEmail className="text w-[42px] h-[42px] cursor-pointer"/>
+                    <SocialIcons isSmall={true}/>
                 </span>
                     </div>
                 </div>

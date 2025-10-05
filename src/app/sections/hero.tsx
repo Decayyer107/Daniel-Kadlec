@@ -1,12 +1,10 @@
 import {useLanguage} from "@/utils/LanguageContext";
 import Button from "../../components/Button"
 
-import { FaGithub } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { LiaLinkedin } from "react-icons/lia";
-import { MdOutlineEmail } from "react-icons/md";
+
 
 import HeroElement from "@/components/HeroElement";
+import SocialIcons from "@/components/SocialIcons";
 
 export default function Hero() {
     const { dict } = useLanguage();
@@ -24,12 +22,7 @@ export default function Hero() {
             </div>
 
             <div className="relative z-10 flex flex-col items-end gap-5">
-                <span className="flex gap-6 items-center">
-                    <FaGithub className="text w-[48px] h-[48px] cursor-pointer"/>
-                    <FaXTwitter className="text w-[48px] h-[48px] cursor-pointer"/>
-                    <LiaLinkedin className="text w-[60px] h-[60px] cursor-pointer"/>
-                    <MdOutlineEmail className="text w-[60px] h-[60px] cursor-pointer"/>
-                </span>
+                <SocialIcons isSmall={false}/>
                 <Button>{dict.hero.button}</Button>
             </div>
         </section>
