@@ -1,5 +1,5 @@
 import {useLanguage} from "@/utils/LanguageContext";
-import Button from "../components/Button"
+import Button from "../../components/Button"
 
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -15,7 +15,7 @@ export default function Hero() {
         <section className={'section min-h-screen flex justify-center flex-col relative'}>
             <HeroElement />
             <div className="relative z-10 flex flex-col justify-start">
-                <h1 className={'font-primary text-7xl text'}>
+                <h1 className={'text-h1'}>
                     {dict.hero.heading()}
                 </h1>
                 <h2 className={'font-secondary font-bold text-3xl text mt-5'}>

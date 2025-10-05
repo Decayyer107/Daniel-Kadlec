@@ -38,12 +38,25 @@
     2xl:max-w-[1536px];
 }
 
+.text-h1{
+    @apply text-offblack dark:text-offwhite font-primary text-7xl;
+}
+.text-subheading{
+    @apply text-gray-500 dark:text-gray-300 font-secondary font-bold text-2xl ml-1 -mt-1;
+}
 .text{
     @apply text-offblack dark:text-offwhite;
 }
 .text-green{
     @apply text-green-secondary dark:text-green-primary;
 }
+.text-highlighted{
+    @apply text-offblack dark:text-offwhite font-bold;
+}
+.text-secondary{
+    @apply text-offblack dark:text-gray-300;
+}
+
 .hero-element{
     @apply w-[1050px] h-[200px] rounded-[500px] bg-gray-200 dark:bg-gray-900 transition-all duration-500 shadow-[inset_0px_8px_2px_rgba(210,210,221,0.3)] dark:shadow-[rgba(7,7,8,0.8)];
 }
