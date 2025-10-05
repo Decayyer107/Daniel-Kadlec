@@ -16,6 +16,13 @@
 }
 @font-face {
     font-family: 'Archivo';
+    src: url('/fonts/archivo/Archivo-Medium.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo';
     src: url('/fonts/archivo/Archivo-Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;

@@ -42,7 +42,7 @@
     @apply text-offblack dark:text-offwhite font-primary text-7xl;
 }
 .text-subheading{
-    @apply text-gray-500 dark:text-gray-300 font-secondary font-bold text-2xl ml-1 -mt-1;
+    @apply text-gray-300 font-secondary font-bold text-3xl ml-1 -mt-[6px];
 }
 .text{
     @apply text-offblack dark:text-offwhite;
@@ -54,7 +54,7 @@
     @apply text-offblack dark:text-offwhite font-bold;
 }
 .text-secondary{
-    @apply text-gray-500 dark:text-gray-300 font-[500] dark:font-bold;
+    @apply text-gray-500 dark:text-gray-300 font-medium;
 }
 
 .hero-element{
