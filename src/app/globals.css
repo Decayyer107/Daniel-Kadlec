@@ -51,10 +51,10 @@
     @apply text-green-secondary dark:text-green-primary;
 }
 .text-highlighted{
-    @apply text-offblack dark:text-offwhite;
+    @apply text-offblack dark:text-offwhite font-bold;
 }
 .text-secondary{
-    @apply text-offblack dark:text-gray-300 font-bold;
+    @apply text-gray-500 dark:text-gray-300 font-[500] dark:font-bold;
 }
 
 .hero-element{
