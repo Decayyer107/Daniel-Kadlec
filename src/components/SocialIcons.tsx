@@ -9,19 +9,41 @@ interface IconsProps {
 }
 
 export default function SocialIcons({ isSmall }: IconsProps) {
+    const [hovered, setHovered] = useState<string | null>(null);
+
+    const getClasses = (id: string, baseSize: string) => {
+        const isHovered = hovered === id;
+        const isOther = hovered !== null && hovered !== id;
+
+        return `
+      cursor-pointer transition-all duration-500 ease-out
+      ${baseSize}
+      ${isHovered ? "scale-105 opacity-100" : isOther ? "scale-100 opacity-50" : "scale-100 opacity-100"}
+    `;
+    };
 
     return (
-        <div
-            className="flex gap-6 items-center text
-    hover:[&>*:not(:hover)]:opacity-50
-    hover:[&>*:not(:hover)]:scale-100
-    [&>*]:transition-all [&>*]:duration-500 [&>*]:ease-out"
-        >
-            <FaGithub className="cursor-pointer w-12 h-12 hover:scale-105" />
-            <FaXTwitter className="cursor-pointer w-12 h-12 hover:scale-105" />
-            <LiaLinkedin className="cursor-pointer w-16 h-16 hover:scale-105" />
-            <MdOutlineEmail className="cursor-pointer w-16 h-16 hover:scale-105" />
+        <div className="flex gap-6 items-center text">
+            <FaGithub
+                className={getClasses("github", isSmall ? "w-12 h-12" : "w-12 h-12")}
+                onMouseEnter={() => setHovered("github")}
+                onMouseLeave={() => setHovered(null)}
+            />
+            <FaXTwitter
+                className={getClasses("twitter", isSmall ? "w-12 h-12" : "w-12 h-12")}
+                onMouseEnter={() => setHovered("twitter")}
+                onMouseLeave={() => setHovered(null)}
+            />
+            <LiaLinkedin
+                className={getClasses("linkedin", isSmall ? "w-16 h-16" : "w-16 h-16")}
+                onMouseEnter={() => setHovered("linkedin")}
+                onMouseLeave={() => setHovered(null)}
+            />
+            <MdOutlineEmail
+                className={getClasses("email", isSmall ? "w-16 h-16" : "w-16 h-16")}
+                onMouseEnter={() => setHovered("email")}
+                onMouseLeave={() => setHovered(null)}
+            />
         </div>
-
     );
 }
