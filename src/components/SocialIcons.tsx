@@ -9,45 +9,19 @@ interface IconsProps {
 }
 
 export default function SocialIcons({ isSmall }: IconsProps) {
-    const [hovered, setHovered] = useState<string | null>(null);
-
-    const baseClasses = "cursor-pointer transition-all duration-500 ease-out text";
-
-    const getStyle = (id: string) => {
-        const isHovered = hovered === id;
-        const isOther = hovered !== null && !isHovered;
-
-        return `
-      ${baseClasses}
-      ${isHovered ? "scale-110" : isOther ? "opacity-50" : "opacity-100"}
-    `;
-    };
 
     return (
-        <span className="flex gap-6 items-center">
-      <FaGithub
-          onMouseEnter={() => setHovered("github")}
-          onMouseLeave={() => setHovered(null)}
-          className={`${getStyle("github")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
-      />
+        <div
+            className="flex gap-6 items-center text
+    hover:[&>*:not(:hover)]:opacity-50
+    hover:[&>*:not(:hover)]:scale-100
+    [&>*]:transition-all [&>*]:duration-500 [&>*]:ease-out"
+        >
+            <FaGithub className="cursor-pointer w-12 h-12 hover:scale-105" />
+            <FaXTwitter className="cursor-pointer w-12 h-12 hover:scale-105" />
+            <LiaLinkedin className="cursor-pointer w-16 h-16 hover:scale-105" />
+            <MdOutlineEmail className="cursor-pointer w-16 h-16 hover:scale-105" />
+        </div>
 
-      <FaXTwitter
-          onMouseEnter={() => setHovered("twitter")}
-          onMouseLeave={() => setHovered(null)}
-          className={`${getStyle("twitter")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
-      />
-
-      <LiaLinkedin
-          onMouseEnter={() => setHovered("linkedin")}
-          onMouseLeave={() => setHovered(null)}
-          className={`${getStyle("linkedin")} ${!isSmall ? "w-[64px] h-[64px]" : "w-[42px] h-[42px]"}`}
-      />
-
-      <MdOutlineEmail
-          onMouseEnter={() => setHovered("email")}
-          onMouseLeave={() => setHovered(null)}
-          className={`${getStyle("email")} ${!isSmall ? "w-[64px] h-[64px]" : "w-[42px] h-[42px]"}`}
-      />
-    </span>
     );
 }
