@@ -35,6 +35,14 @@ const en = {
         ),
         button: "Download Resume",
     },
+    portfolioSection: {
+        heading: (): ReactNode => (
+            <>
+                <span className={"text-green"}>Portfolio</span> in a nutshell.
+            </>
+        ),
+        subheading: "A brief overview of selected projects",
+    },
 
     nav: {
         Home: "Home",

@@ -17,9 +17,9 @@ const cs = {
     },
     about: {
         heading: (): ReactNode => (
-          <>
-            O <span className={"text-green"}>mně</span>.
-          </>
+            <>
+                O <span className={"text-green"}>mně</span>.
+            </>
         ),
         subheading: "Dozvěďte se více",
         paragraph: (): ReactNode => (
@@ -34,6 +34,14 @@ const cs = {
             </>
         ),
         button: "Stáhnout životopis",
+    },
+    portfolioSection: {
+        heading: (): ReactNode => (
+            <>
+                <span className={"text-green"}>Portfolio</span>v kostce.
+            </>
+        ),
+        subheading: "Krátký přehled vybraných projektů",
     },
     nav: {
         Home: "Domů",
