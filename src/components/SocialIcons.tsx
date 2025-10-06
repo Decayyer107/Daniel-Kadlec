@@ -19,7 +19,7 @@ export default function SocialIcons({ isSmall }: IconsProps) {
 
         return `
       ${baseClasses}
-      ${isHovered ? "scale-110" : isOther ? "opacity-50 scale-90" : "opacity-100 scale-100"}
+      ${isHovered ? "scale-105" : isOther ? "opacity-50" : "opacity-100"}
     `;
     };
 
