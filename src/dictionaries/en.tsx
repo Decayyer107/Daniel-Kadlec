@@ -33,7 +33,7 @@ const en = {
                 In my free time, I enjoy <span className="text-highlighted">music, guitar, and video games</span>.
             </>
         ),
-        button: "Download Resume",
+        button: "Download my resume",
     },
     portfolioSection: {
         heading: (): ReactNode => (
@@ -42,6 +42,8 @@ const en = {
             </>
         ),
         subheading: "A brief overview of selected projects",
+        project_button: "Learn more",
+        button: "View all projects",
     },
 
     nav: {

@@ -33,7 +33,7 @@ const cs = {
                 Ve volném čase se věnuji <span className="text-highlighted">hudbě, kytaře a videohrám</span>.
             </>
         ),
-        button: "Stáhnout životopis",
+        button: "Stáhněte si můj životopis",
     },
     portfolioSection: {
         heading: (): ReactNode => (
@@ -42,6 +42,9 @@ const cs = {
             </>
         ),
         subheading: "Krátký přehled vybraných projektů",
+        project_button: "Zjistěte více",
+        button: "Zobrazit všechny projetky",
+
     },
     nav: {
         Home: "Domů",
