@@ -11,39 +11,43 @@ interface IconsProps {
 export default function SocialIcons({ isSmall }: IconsProps) {
     const [hovered, setHovered] = useState<string | null>(null);
 
-    const getClasses = (id: string, baseSize: string) => {
+    const baseClasses = "cursor-pointer transition-all duration-500 ease-out text";
+
+    const getStyle = (id: string) => {
         const isHovered = hovered === id;
-        const isOther = hovered !== null && hovered !== id;
+        const isOther = hovered !== null && !isHovered;
 
         return `
-      cursor-pointer transition-all duration-500 ease-out
-      ${baseSize}
-      ${isHovered ? "scale-105 opacity-100" : isOther ? "scale-100 opacity-50" : "scale-100 opacity-100"}
+      ${baseClasses}
+      ${isHovered ? "scale-110" : isOther ? "opacity-50 scale-90" : "opacity-100 scale-100"}
     `;
     };
 
     return (
-        <div className="flex gap-6 items-center text">
-            <FaGithub
-                className={getClasses("github", isSmall ? "w-12 h-12" : "w-12 h-12")}
-                onMouseEnter={() => setHovered("github")}
-                onMouseLeave={() => setHovered(null)}
-            />
-            <FaXTwitter
-                className={getClasses("twitter", isSmall ? "w-12 h-12" : "w-12 h-12")}
-                onMouseEnter={() => setHovered("twitter")}
-                onMouseLeave={() => setHovered(null)}
-            />
-            <LiaLinkedin
-                className={getClasses("linkedin", isSmall ? "w-16 h-16" : "w-16 h-16")}
-                onMouseEnter={() => setHovered("linkedin")}
-                onMouseLeave={() => setHovered(null)}
-            />
-            <MdOutlineEmail
-                className={getClasses("email", isSmall ? "w-16 h-16" : "w-16 h-16")}
-                onMouseEnter={() => setHovered("email")}
-                onMouseLeave={() => setHovered(null)}
-            />
-        </div>
+        <span className="flex gap-6 items-center">
+      <FaGithub
+          onMouseEnter={() => setHovered("github")}
+          onMouseLeave={() => setHovered(null)}
+          className={`${getStyle("github")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
+      />
+
+      <FaXTwitter
+          onMouseEnter={() => setHovered("twitter")}
+          onMouseLeave={() => setHovered(null)}
+          className={`${getStyle("twitter")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
+      />
+
+      <LiaLinkedin
+          onMouseEnter={() => setHovered("linkedin")}
+          onMouseLeave={() => setHovered(null)}
+          className={`${getStyle("linkedin")} ${!isSmall ? "w-[64px] h-[64px]" : "w-[42px] h-[42px]"}`}
+      />
+
+      <MdOutlineEmail
+          onMouseEnter={() => setHovered("email")}
+          onMouseLeave={() => setHovered(null)}
+          className={`${getStyle("email")} ${!isSmall ? "w-[64px] h-[64px]" : "w-[42px] h-[42px]"}`}
+      />
+    </span>
     );
 }
