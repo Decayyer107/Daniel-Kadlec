@@ -46,6 +46,34 @@ const cs = {
         button: "Zobrazit všechny projetky",
 
     },
+    skills: {
+        heading: (): ReactNode => (
+            <>
+                Klíčové <span className={"text-green"}>dovednosti</span>.
+            </>
+        ),
+        subheading: "Oblasti ve kterých se specializuji",
+
+        card_1_heading: (): ReactNode => (
+            <>
+                <span className={'text-green'}>Frontend </span>vývoj
+            </>
+        ),
+        card_1_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
+        card_2_heading: (): ReactNode => (
+            <>
+                <span className={'text-green'}>UX/UI </span>design
+            </>
+        ),
+        card_2_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
+        card_3_heading: (): ReactNode => (
+            <>
+                <span className={'text-green'}>Brand </span>design
+            </>
+        ),
+        card_3_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
+
+    },
     nav: {
         Home: "Domů",
         Contact: "Kontakt",

@@ -45,6 +45,33 @@ const en = {
         project_button: "Learn more",
         button: "View all projects",
     },
+    skills: {
+        heading: (): ReactNode => (
+            <>
+                Key <span className={"text-green"}>skills</span>.
+            </>
+        ),
+        subheading: "Areas in which I specialize",
+        card_1_heading: (): ReactNode => (
+            <>
+                <span className={'text-green'}>Frontend </span>development
+            </>
+        ),
+        card_1_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
+        card_2_heading: (): ReactNode => (
+            <>
+                <span className={'text-green'}>UX/UI </span>design
+            </>
+        ),
+        card_2_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
+        card_3_heading: (): ReactNode => (
+            <>
+                <span className={'text-green'}>Brand </span>design
+            </>
+        ),
+        card_3_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
+
+    },
 
     nav: {
         Home: "Home",

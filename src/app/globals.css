@@ -41,8 +41,11 @@
 .text-h1{
     @apply text-offblack dark:text-offwhite font-primary text-7xl;
 }
+.text-h2{
+    @apply text-offblack dark:text-offwhite font-primary text-5xl;
+}
 .text-subheading{
-    @apply text-gray-300 font-secondary font-bold text-3xl ml-1 -mt-[6px];
+    @apply text-gray-300 font-secondary font-bold text-3xl ml-1 -mt-[3px];
 }
 .text-subheading-green{
     @apply text-green-secondary dark:text-green-primary font-secondary font-semibold text-3xl ml-1 -mt-[6px];

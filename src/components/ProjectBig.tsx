@@ -7,7 +7,7 @@ export default function ProjectBig(){
     return(
         <div className={'flex gap-12'}>
             {/*IMAGE*/}
-            <div className={'w-[450px] h-[270px] bg-gray-700 rounded-2xl shadow-2xl'}>
+            <div className={'w-[450px] h-[270px] bg-gray-700 rounded-2xl shadow-md'}>
             </div>
 
             <div className={'flex flex-col justify-between'}>
