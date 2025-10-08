@@ -1,16 +1,14 @@
 import {useLanguage} from "@/utils/LanguageContext";
 import ProjectBig from "@/components/ProjectBig";
 import Button from "@/components/Button";
+import Heading from "@/components/Heading";
 
 export default function Portfolio(){
     const { dict } = useLanguage();
 
     return(
         <section className={'section mb-64'}>
-            <div className={'mb-20'}>
-                <h1 className={'text-h1'}>{dict.portfolioSection.heading()}</h1>
-                <h2 className={'text-subheading'}>{dict.portfolioSection.subheading}</h2>
-            </div>
+            <Heading Heading={dict.portfolioSection.heading()} Subheading={dict.portfolioSection.subheading}/>
             <div className={'flex flex-col gap-12'}>
                 <ProjectBig/>
                 <ProjectBig/>
