@@ -34,7 +34,7 @@ export function About() {
                         </span>
                         <span className="flex gap-6 items-center">
                             <FaXTwitter size={50} />
-                            Platform X
+                            {dict.contact.contact_twitter}
                         </span>
                         <span className="flex gap-6 items-center">
                             <FaLinkedin size={50} />
@@ -51,20 +51,28 @@ export function About() {
                     name="contactform"
                     id="contactform"
                     onSubmit={submitForm}
-                    className="flex flex-col gap-4 w-full lg:w-1/2"
+                    className="flex flex-col gap-4 w-full lg:w-1/2 text flex-1"
                 >
-                    <div className={"flex justify-between gap-3"}>
-                        <Input className="text w-full" name="name" placeholder="Full Name" autoComplete={"name"} />
-                        <Input className="text w-full" name="email" placeholder="E-Mail" autoComplete={"email"} />
+                    <div className="flex justify-between gap-3">
+                        <Input className="w-full" name="name" placeholder={dict.contact.contact_form_name} autoComplete="name" />
+                        <Input className="w-full" name="email" placeholder={dict.contact.contact_form_email} autoComplete="email" />
                     </div>
-                    <Input className="text" name="subject" placeholder="Subject" />
+                    <Input name="subject" placeholder={dict.contact.contact_form_subject} />
+
                     <textarea
-                        className="text bg-gray-900 border-1 border-gray-700 text p-4 rounded-[8px] resize-none h-44"
+                        className="flex-1 min-h-[10rem] bg-gray-200 dark:bg-gray-900 border-2 border-gray-100 dark:border-gray-700
+               text-gray-900 dark:text-gray-100 placeholder-gray-400
+               p-4 rounded-[8px] resize-none transition-all duration-500"
                         name="message"
-                        placeholder="Message"
+                        placeholder={dict.contact.contact_form_message}
                     />
-                    <input type="submit" className={"inline-flex justify-center items-center gap-2 py-[14px] px-14 border-2 rounded-[14px] font-secondary font-bold text-xl text-offblack dark:text-offwhite border-offblack dark:border-offwhite transition-all hover:bg-pink-500 hover:border-yellow-300 hover:text-lime-300"} />
+
+                    <input
+                        type="submit"
+                        className="inline-flex justify-center items-center gap-2 py-[14px] px-14 border-2 rounded-[14px] font-secondary font-bold text-xl text-offblack dark:text-offwhite border-offblack dark:border-offwhite cursor-pointer"
+                    />
                 </form>
+
             </div>
         </section>
     );

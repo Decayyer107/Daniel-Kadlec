@@ -83,6 +83,13 @@ const en = {
                 Whether you're looking for a <span className={'text-green'}>developer, designer</span>, or just want to chat - <span className={'text-green'}>I'd love to hear from you</span>.
             </>
         ),
+        contact_twitter: "Platform X",
+
+        contact_form_name: "Name & Surname",
+        contact_form_email: "E-mail",
+        contact_form_subject: "Subject",
+        contact_form_message: "Message",
+        contact_form_button: "Send",
     },
 
     nav: {

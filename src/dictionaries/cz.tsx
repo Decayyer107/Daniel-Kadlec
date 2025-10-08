@@ -85,6 +85,13 @@ const cs = {
                 Ať už hledáte <span className={'text-green'}>vývojáře, designéra</span>, nebo si jen chcete popovídat - <span className={'text-green'}>rád se vám ozvu</span>.
             </>
         ),
+        contact_twitter: "Platforma X",
+
+        contact_form_name: "Celé jméno",
+        contact_form_email: "E-mail",
+        contact_form_subject: "Předmět",
+        contact_form_message: "Zpráva",
+        contact_form_button: "Odeslat",
     },
     nav: {
         Home: "Domů",
