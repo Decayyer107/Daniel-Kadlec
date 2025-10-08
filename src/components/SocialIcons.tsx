@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { LiaLinkedin } from "react-icons/lia";
-import { MdOutlineEmail } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 
 interface IconsProps {
     isSmall: boolean;
@@ -37,16 +37,16 @@ export default function SocialIcons({ isSmall }: IconsProps) {
           className={`${getStyle("twitter")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
       />
 
-      <LiaLinkedin
+      <FaLinkedin
           onMouseEnter={() => setHovered("linkedin")}
           onMouseLeave={() => setHovered(null)}
-          className={`${getStyle("linkedin")} ${!isSmall ? "w-[64px] h-[64px]" : "w-[42px] h-[42px]"}`}
+          className={`${getStyle("linkedin")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
       />
 
-      <MdOutlineEmail
+      <FaEnvelope
           onMouseEnter={() => setHovered("email")}
           onMouseLeave={() => setHovered(null)}
-          className={`${getStyle("email")} ${!isSmall ? "w-[64px] h-[64px]" : "w-[42px] h-[42px]"}`}
+          className={`${getStyle("email")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
       />
     </span>
     );

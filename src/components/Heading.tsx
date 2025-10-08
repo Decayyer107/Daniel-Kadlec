@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 interface HeadingProps{
     Heading: ReactNode;
-    Subheading: string;
+    Subheading?: string;
 }
 export default function Heading({Heading, Subheading}:HeadingProps) {
     return(

@@ -72,6 +72,18 @@ const en = {
         card_3_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
 
     },
+    contact: {
+        heading: (): ReactNode => (
+            <>
+                Contact <span className={"text-green"}>me</span>.
+            </>
+        ),
+        paragraph: (): ReactNode => (
+            <>
+                Whether you're looking for a <span className={'text-green'}>developer, designer</span>, or just want to chat - <span className={'text-green'}>I'd love to hear from you</span>.
+            </>
+        ),
+    },
 
     nav: {
         Home: "Home",

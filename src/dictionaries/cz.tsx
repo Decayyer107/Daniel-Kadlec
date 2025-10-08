@@ -74,6 +74,18 @@ const cs = {
         card_3_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
 
     },
+    contact: {
+        heading: (): ReactNode => (
+            <>
+                Kontaktuje <span className={"text-green"}>mně</span>.
+            </>
+        ),
+        paragraph: (): ReactNode => (
+            <>
+                Ať už hledáte <span className={'text-green'}>vývojáře, designéra</span>, nebo si jen chcete popovídat - <span className={'text-green'}>rád se vám ozvu</span>.
+            </>
+        ),
+    },
     nav: {
         Home: "Domů",
         Contact: "Kontakt",
