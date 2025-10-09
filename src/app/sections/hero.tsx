@@ -23,7 +23,7 @@ export default function Hero() {
 
             <div className="relative z-10 flex flex-col items-end gap-5">
                 <SocialIcons isSmall={false}/>
-                <Button>{dict.hero.button}</Button>
+                <Button link={"/portfolio"}>{dict.hero.button}</Button>
             </div>
         </section>
     );

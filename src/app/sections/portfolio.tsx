@@ -15,7 +15,7 @@ export default function Portfolio(){
                 <ProjectBig/>
             </div>
             <div className="flex justify-end items-center h-full mt-28">
-                <Button className={'w-1/3'}>{dict.portfolioSection.button}</Button>
+                <Button link={"/portfolio"} className={'w-1/3'}>{dict.portfolioSection.button}</Button>
             </div>
         </section>
     );

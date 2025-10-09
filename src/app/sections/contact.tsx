@@ -20,7 +20,7 @@ export function About() {
     }
 
     return (
-        <section className="section flex mb-64 flex-col">
+        <section id={'contact'} className="section flex mb-64 flex-col">
             <Heading Heading={dict.contact.heading()} />
             <div className="flex gap-8 lg:flex-row flex-col">
                 <div className={'lg:w-1/2'}>
@@ -28,22 +28,36 @@ export function About() {
                         {dict.contact.paragraph()}
                     </p>
                     <div className="text text-4xl font-bold flex flex-col gap-6 mt-8">
-                        <span className="flex gap-6 items-center">
+
+                        <a href="" className={'cursor-pointer w-fit hover:underline'}>
+                            <span className="flex gap-6 items-center">
                             <FaGithub size={50}/>
                             Github
+                            </span>
+                        </a>
+
+                        <a href="" className={'cursor-pointer w-fit hover:underline'}>
+                            <span className="flex gap-6 items-center">
+                                <FaXTwitter size={50} />
+                                {dict.contact.contact_twitter}
                         </span>
-                        <span className="flex gap-6 items-center">
-                            <FaXTwitter size={50} />
-                            {dict.contact.contact_twitter}
-                        </span>
-                        <span className="flex gap-6 items-center">
-                            <FaLinkedin size={50} />
-                            LinkedIn
-                        </span>
-                        <span className="flex gap-6 items-center">
+                        </a>
+
+                        <a href="" className={'cursor-pointer w-fit hover:underline'}>
+                            <span className="flex gap-6 items-center">
+                                <FaLinkedin size={50} />
+                                LinkedIn
+                            </span>
+                        </a>
+                        <a
+                            href="mailto:kontakt@danielkadlec.cz"
+                            className="cursor-pointer w-fit hover:underline"
+                        >
+                          <span className="flex gap-6 items-center">
                             <FaEnvelope size={50} />
                             E-mail
-                        </span>
+                          </span>
+                        </a>
                     </div>
                 </div>
 

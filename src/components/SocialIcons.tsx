@@ -25,29 +25,35 @@ export default function SocialIcons({ isSmall }: IconsProps) {
 
     return (
         <span className="flex gap-6 items-center">
-      <FaGithub
-          onMouseEnter={() => setHovered("github")}
-          onMouseLeave={() => setHovered(null)}
-          className={`${getStyle("github")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
-      />
+            <a href="https://github.com/Decayyer107">
+                <FaGithub
+                onMouseEnter={() => setHovered("github")}
+                onMouseLeave={() => setHovered(null)}
+                className={`${getStyle("github")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
+            /></a>
 
-      <FaXTwitter
-          onMouseEnter={() => setHovered("twitter")}
-          onMouseLeave={() => setHovered(null)}
-          className={`${getStyle("twitter")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
-      />
+            <a href="https://x.com/dan_kadlec">      <FaXTwitter
+                onMouseEnter={() => setHovered("twitter")}
+                onMouseLeave={() => setHovered(null)}
+                className={`${getStyle("twitter")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
+            /></a>
 
-      <FaLinkedin
-          onMouseEnter={() => setHovered("linkedin")}
-          onMouseLeave={() => setHovered(null)}
-          className={`${getStyle("linkedin")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
-      />
+            <a href="https://www.linkedin.com/in/daniel-kadlec-903759379/">
+                      <FaLinkedin
+                          onMouseEnter={() => setHovered("linkedin")}
+                          onMouseLeave={() => setHovered(null)}
+                          className={`${getStyle("linkedin")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
+                      />
+            </a>
 
-      <FaEnvelope
-          onMouseEnter={() => setHovered("email")}
-          onMouseLeave={() => setHovered(null)}
-          className={`${getStyle("email")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
-      />
+            <a href="mailto:kontakt@danielkadlec.cz"
+            >
+                <FaEnvelope
+                onMouseEnter={() => setHovered("email")}
+                onMouseLeave={() => setHovered(null)}
+                className={`${getStyle("email")} ${!isSmall ? "w-[48px] h-[48px]" : "w-[32px] h-[32px]"}`}
+            />
+            </a>
     </span>
     );
 }
