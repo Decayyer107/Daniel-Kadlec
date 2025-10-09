@@ -91,7 +91,19 @@ const en = {
         contact_form_message: "Message",
         contact_form_button: "Send",
     },
+    portfolio: {
+        heading: (): ReactNode => (
+            <>
+                Complete <span className={"text-green"}>portfolio</span>.
+            </>
+        ),
+        subheading: "All the projects I worked on",
+        filters_heading: "Filters",
+        filters_all: "All",
+        filters_development: "Development",
+        filters_design: "Design",
 
+    },
     nav: {
         Home: "Home",
         Contact: "Contact",

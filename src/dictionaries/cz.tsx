@@ -93,6 +93,19 @@ const cs = {
         contact_form_message: "Zpráva",
         contact_form_button: "Odeslat",
     },
+    portfolio: {
+        heading: (): ReactNode => (
+            <>
+                Kompletní <span className={"text-green"}>portfolio</span>.
+            </>
+        ),
+        subheading: "Všechny projekty, na kterých jsem pracoval",
+        filters_heading: "Filtrování",
+        filters_all: "Vše",
+        filters_development: "Vývoj",
+        filters_design: "Design",
+
+    },
     nav: {
         Home: "Domů",
         Contact: "Kontakt",
