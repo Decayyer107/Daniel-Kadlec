@@ -53,7 +53,7 @@ export default function TechStack({ techs, className = "", size = 20 }: TechStac
     const techMap = getTechMap(size);
 
     return (
-        <div className={`flex flex-wrap gap-6 text-center ${className}`}>
+        <div className={`flex gap-6 text-center ${className}`}>
             {techs.map((tech) => {
                 const item = techMap[tech];
                 if (!item) return null;
