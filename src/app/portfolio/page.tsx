@@ -1,6 +1,6 @@
 'use client';
 import Heading from "@/components/Heading";
-import ProjectSmall from "@/components/ProjectSmall";
+import ProjectBig from "@/components/ProjectBig";
 
 import {useLanguage} from "@/utils/LanguageContext";
 
@@ -28,10 +28,10 @@ export default function Portfolio() {
                 max-md:grid-cols-1
                 max-md:[&>*:nth-child(even)]:mt-0
             ">
-                <ProjectSmall />
-                <ProjectSmall />
-                <ProjectSmall />
-                <ProjectSmall />
+                <ProjectBig />
+                <ProjectBig />
+                <ProjectBig />
+                <ProjectBig />
             </div>
         </section>
     );

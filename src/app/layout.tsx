@@ -7,6 +7,7 @@ import { ThemeProvider, useTheme } from "@/utils/ThemeContext";
 import { LanguageProvider } from "@/utils/LanguageContext";
 import { useEffect, useState } from "react";
 
+
 function BackgroundLayers() {
     const { theme } = useTheme();
     const [darkOpacity, setDarkOpacity] = useState(theme === "dark" ? 1 : 0);

@@ -7,6 +7,7 @@ import Skills from "./sections/skills";
 import {About as Contact} from "./sections/contact";
 
 
+
 export default function Home() {
 
   return (
