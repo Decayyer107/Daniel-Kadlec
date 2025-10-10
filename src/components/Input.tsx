@@ -1,10 +1,6 @@
-import {DetailedHTMLProps, InputHTMLAttributes} from "react";
+import { DetailedHTMLProps, InputHTMLAttributes } from "react";
 
-interface CustomInputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
-
-}
-
-export default function Input({ className = "", ...props }: CustomInputProps) {
+export default function Input({className = "", ...props}: DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>) {
     return (
         <input
             {...props}

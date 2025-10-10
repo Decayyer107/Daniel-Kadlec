@@ -5,7 +5,6 @@ import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
-import Button from "@/components/Button";
 import React from "react";
 
 export function About() {

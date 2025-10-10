@@ -5,10 +5,6 @@ import LanguageSwitcher from './LanguageSwicther';
 import ThemeSwitcher from './ThemeSwitcher';
 
 import { useLanguage } from '@/utils/LanguageContext';
-import { FaGithub } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { LiaLinkedin } from "react-icons/lia";
-import { MdOutlineEmail } from "react-icons/md";
 import HopperElement from "@/components/HopperElement";
 import SocialIcons from "@/components/SocialIcons";
 
