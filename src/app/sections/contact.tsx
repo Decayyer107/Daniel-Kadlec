@@ -28,21 +28,21 @@ export function About() {
                     </p>
                     <div className="text text-4xl font-bold flex flex-col gap-6 mt-8">
 
-                        <a href="" className={'cursor-pointer w-fit hover:underline'}>
+                        <a href="https://github.com/Decayyer107" className={'cursor-pointer w-fit hover:underline'}>
                             <span className="flex gap-6 items-center">
                             <FaGithub size={50}/>
                             Github
                             </span>
                         </a>
 
-                        <a href="" className={'cursor-pointer w-fit hover:underline'}>
+                        <a href="https://x.com/dan_kadlec" className={'cursor-pointer w-fit hover:underline'}>
                             <span className="flex gap-6 items-center">
                                 <FaXTwitter size={50} />
                                 {dict.contact.contact_twitter}
                         </span>
                         </a>
 
-                        <a href="" className={'cursor-pointer w-fit hover:underline'}>
+                        <a href="https://www.linkedin.com/in/daniel-kadlec-903759379/" className={'cursor-pointer w-fit hover:underline'}>
                             <span className="flex gap-6 items-center">
                                 <FaLinkedin size={50} />
                                 LinkedIn
