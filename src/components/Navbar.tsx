@@ -46,13 +46,13 @@ export default function Navbar() {
 
     return (
         <nav className="fixed top-0 left-1/2 -translate-x-1/2 section h-20 flex items-center justify-between transition-colors duration-500 z-[99]">
-            <a href="/" onClick={(e) => goHome(undefined, e)}>
+            <Link href="/" onClick={(e) => goHome(undefined, e)}>
                 <Image
                     src={theme === 'dark' ? LogoPrimary : LogoSecondary}
                     alt="Logo"
                     className="w-14 cursor-pointer"
                 />
-            </a>
+            </Link>
             <ul className="flex gap-12 font-secondary font-bold text-md">
                 <li><Link className={'text'} href="/" onClick={(e) => goHome(undefined, e)}>{dict.nav.Home}</Link></li>
                 <li><Link className={'text'} href="/#about" onClick={(e) => goHome('about', e)}>{dict.nav.About}</Link></li>

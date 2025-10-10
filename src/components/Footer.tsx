@@ -7,6 +7,7 @@ import ThemeSwitcher from './ThemeSwitcher';
 import { useLanguage } from '@/utils/LanguageContext';
 import HopperElement from "@/components/HopperElement";
 import SocialIcons from "@/components/SocialIcons";
+import Image from "next/image";
 
 const LogoPrimary = "/logo/logomark-primary.svg";
 const LogoSecondary = "/logo/logomark-secondary.svg";
@@ -24,7 +25,7 @@ export default function Footer() {
                 </div>
                 <div className={'flex flex-col justify-center items-center gap-6'}>
                     <div className="flex gap-2 justify-center items-center">
-                        <img src={theme === "dark" ? LogoPrimary : LogoSecondary} alt="Logo" className="w-14 cursor-pointer" />
+                        <Image src={theme === "dark" ? LogoPrimary : LogoSecondary} alt="Logo" className="w-14 cursor-pointer" />
                         <span className="text font-primary font-bold text-3xl">Daniel <span className="text-green">Kadlec</span></span>
                     </div>
                     <div>
