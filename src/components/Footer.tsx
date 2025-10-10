@@ -8,6 +8,7 @@ import { useLanguage } from '@/utils/LanguageContext';
 import HopperElement from "@/components/HopperElement";
 import SocialIcons from "@/components/SocialIcons";
 import Image from "next/image";
+import Link from "next/link";
 
 const LogoPrimary = "/logo/logomark-primary.svg";
 const LogoSecondary = "/logo/logomark-secondary.svg";
@@ -30,10 +31,10 @@ export default function Footer() {
                     </div>
                     <div>
                         <ul className="flex gap-12 font-secondary font-bold text-md">
-                            <li><a className="text" href="#">{dict.nav.Home}</a></li>
-                            <li><a className="text" href="#">{dict.nav.About}</a></li>
-                            <li><a className="text" href="#">{dict.nav.Portfolio}</a></li>
-                            <li><a className="text" href="#">{dict.nav.Contact}</a></li>
+                            <li><Link className="text" href="#">{dict.nav.Home}</Link></li>
+                            <li><Link className="text" href="#">{dict.nav.About}</Link></li>
+                            <li><Link className="text" href="#">{dict.nav.Portfolio}</Link></li>
+                            <li><Link className="text" href="#">{dict.nav.Contact}</Link></li>
                         </ul>
                     </div>
                     <div className="flex gap-8 justify-center items-center">
