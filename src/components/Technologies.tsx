@@ -58,7 +58,7 @@ export default function TechStack({ techs, className = "" }: TechStackProps) {
                 return (
                     <div
                         key={tech}
-                        className="py-[6px] px-4 flex items-center justify-center gap-1 bg-gray-100 dark:bg-gray-700 grayscale-100 hover:grayscale-0 hover:scale-[102%]  shadow-md rounded-md font-bold transition-all duration-500 cursor-default"
+                        className="py-[6px] px-4 flex items-center justify-center gap-1 bg-gray-100 dark:bg-gray-700 grayscale-100 hover:grayscale-0 shadow-md rounded-md font-bold transition-all duration-500 cursor-default"
                     >
                         {item.icon}
                         <span className="text-[18px] font-medium text-secondary">
