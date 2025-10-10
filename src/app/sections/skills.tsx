@@ -1,6 +1,7 @@
 import {useLanguage} from "@/utils/LanguageContext";
 import Skill from "../../components/Skill";
 import Heading from "../../components/Heading";
+import TechMarquee from "@/components/TechMarquee";
 
 import { FaCode } from "react-icons/fa";
 import { FaPenNib } from "react-icons/fa6";
@@ -18,6 +19,7 @@ export default function Portfolio(){
                 <Skill heading={dict.skills.card_2_heading()} paragraph={dict.skills.card_2_paragraph} icon={<FaPenNib/>}/>
                 <Skill heading={dict.skills.card_3_heading()} paragraph={dict.skills.card_3_paragraph} icon={<BsPalette2/>}/>
             </div>
+            <TechMarquee />
         </section>
     );
 }
