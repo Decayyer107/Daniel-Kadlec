@@ -87,8 +87,6 @@ html{
 }
 
 .animate-marquee {
-    display: flex;
-    gap: 10px;
-    animation: marquee 15s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 

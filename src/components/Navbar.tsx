@@ -50,7 +50,9 @@ export default function Navbar() {
                 <Image
                     src={theme === 'dark' ? LogoPrimary : LogoSecondary}
                     alt="Logo"
-                    className="w-14 cursor-pointer"
+                    width={56}
+                    height={56}
+                    className="cursor-pointer"
                 />
             </Link>
             <ul className="flex gap-12 font-secondary font-bold text-md">
