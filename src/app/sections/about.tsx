@@ -24,7 +24,7 @@ export default function About(){
                 </div>
             </div>
             <div className={'w-1/2'}>
-                <p className={'text-secondary text-2xl'}>{dict.about.paragraph()}</p>
+                <p className={'text-secondary'}>{dict.about.paragraph()}</p>
             </div>
         </section>
     );

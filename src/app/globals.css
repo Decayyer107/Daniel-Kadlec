@@ -33,29 +33,26 @@ html{
     scroll-margin-top: 25vh;
 }
 .section {
-    @apply mx-auto px-6 sm:px-12 lg:px-16;
-
-    @apply w-full
-    max-w-[350px]
-    xs:max-w-[480px]
-    sm:max-w-[650px]
-    md:max-w-[768px]
-    lg:max-w-[1024px]
-    xl:max-w-[1280px]
-    2xl:max-w-[1350px];
+    @apply mx-auto max-w-[1350px] px-[clamp(20px,_8vw,_100px)] ;
 }
 
 .text-h1{
-    @apply text-offblack dark:text-offwhite font-primary text-7xl;
+    @apply text-offblack dark:text-offwhite font-primary text-[clamp(32px,_7vw,_64px)] leading-[clamp(28px,_calc(4vw+16px),_58px)];
 }
 .text-h2{
     @apply text-offblack dark:text-offwhite font-primary text-5xl;
 }
 .text-subheading{
-    @apply text-gray-300 font-secondary font-bold text-3xl ml-1 -mt-[3px];
+    @apply text-gray-300 font-secondary font-bold text-[clamp(18px,_3.5vw,_26px)] -mt-[3px];
 }
 .text-subheading-green{
     @apply text-green-secondary dark:text-green-primary font-secondary font-semibold text-3xl ml-1 -mt-[6px];
+}
+.text-body-large{
+    @apply text-offblack dark:text-offwhite font-secondary font-bold text-[clamp(14px,_3vw,_30px)] mt-5 leading-[clamp(18px,_calc(3vw),_34px)];
+}
+.text-secondary{
+    @apply text-gray-500 dark:text-gray-300 font-medium text-[clamp(14px,_calc(1vw+6px),_18px)];
 }
 .text{
     @apply text-offblack dark:text-offwhite;
@@ -66,9 +63,7 @@ html{
 .text-highlighted{
     @apply text-offblack dark:text-offwhite font-bold;
 }
-.text-secondary{
-    @apply text-gray-500 dark:text-gray-300 font-medium;
-}
+
 
 .hero-element{
     @apply w-[1050px] h-[200px] rounded-[500px] bg-gray-200 dark:bg-gray-900 transition-all duration-500 shadow-[inset_0px_8px_2px_rgba(210,210,221,0.3)] dark:shadow-[rgba(7,7,8,0.8)];

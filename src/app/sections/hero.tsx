@@ -13,15 +13,15 @@ export default function Hero() {
         <section className={'section min-h-screen flex justify-center flex-col relative'}>
             <HeroElement />
             <div className="relative z-10 flex flex-col justify-start">
-                <h1 className={'text-h1'}>
+                <h1 className={'text-h1 !text-[clamp(24px,_7vw,_64px)]'}>
                     {dict.hero.heading()}
                 </h1>
-                <h2 className={'font-secondary font-bold text-3xl text mt-5'}>
+                <h2 className={'text-body-large'}>
                     {dict.hero.paragraph()}
                 </h2>
             </div>
 
-            <div className="relative z-10 flex flex-col items-end gap-5">
+            <div className="relative z-10 flex flex-col items-end gap-[clamp(10px,_4vw,_20px)] mt-8">
                 <SocialIcons isSmall={false}/>
                 <Button link={"/portfolio"}>{dict.hero.button}</Button>
             </div>
