@@ -13,7 +13,7 @@ export default function Hero() {
         <section className={'section min-h-screen flex justify-center flex-col relative'}>
             <HeroElement />
             <div className="relative z-10 flex flex-col justify-start">
-                <h1 className={'text-h1 !text-[clamp(24px,_7vw,_64px)]'}>
+                <h1 className={'text-h1 text-h1'}>
                     {dict.hero.heading()}
                 </h1>
                 <h2 className={'text-body-large'}>

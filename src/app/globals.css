@@ -33,23 +33,23 @@ html{
     scroll-margin-top: 25vh;
 }
 .section {
-    @apply mx-auto max-w-[1350px] px-[clamp(20px,_8vw,_100px)] ;
+    @apply mx-auto max-w-[1350px] px-[clamp(20px,_6vw,_100px)] ;
 }
 
 .text-h1{
-    @apply text-offblack dark:text-offwhite font-primary text-[clamp(32px,_7vw,_64px)] leading-[clamp(28px,_calc(4vw+16px),_58px)];
+    @apply text-offblack dark:text-offwhite font-primary text-[clamp(38px,_7vw,_64px)] leading-[clamp(34px,_calc(4vw+16px),_58px)];
 }
 .text-h2{
     @apply text-offblack dark:text-offwhite font-primary text-5xl;
 }
 .text-subheading{
-    @apply text-gray-300 font-secondary font-bold text-[clamp(18px,_3.5vw,_26px)] -mt-[3px];
+    @apply text-gray-300 font-secondary font-bold text-[clamp(20px,_3.5vw,_26px)] -mt-[3px];
 }
 .text-subheading-green{
     @apply text-green-secondary dark:text-green-primary font-secondary font-semibold text-3xl ml-1 -mt-[6px];
 }
 .text-body-large{
-    @apply text-offblack dark:text-offwhite font-secondary font-bold text-[clamp(14px,_3vw,_30px)] mt-5 leading-[clamp(18px,_calc(3vw),_34px)];
+    @apply text-offblack dark:text-offwhite font-secondary font-bold text-[clamp(18px,_3vw,_30px)] mt-5 leading-[clamp(20px,_calc(3vw),_34px)];
 }
 .text-secondary{
     @apply text-gray-500 dark:text-gray-300 font-medium text-[clamp(14px,_calc(1vw+6px),_18px)];

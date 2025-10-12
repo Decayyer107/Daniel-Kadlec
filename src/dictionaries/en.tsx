@@ -4,9 +4,10 @@ const en = {
     hero: {
         heading: (): ReactNode => (
             <>
-                Frontend <span className={'text-green'}>developer</span> & <br/>
-                <span className={'text-green'}>UX/UI</span> designer.
+                Frontend <span className="text-green">vývojář&nbsp;&</span><br />
+                <span className="text-green">UX/UI</span> designér.
             </>
+
         ),
         paragraph: (): ReactNode => (
             <>
