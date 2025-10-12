@@ -37,7 +37,7 @@ html{
 }
 
 .text-h1{
-    @apply text-offblack dark:text-offwhite font-primary text-[clamp(38px,_7vw,_64px)] leading-[clamp(34px,_calc(4vw+16px),_58px)];
+    @apply text-offblack dark:text-offwhite font-primary text-[clamp(42px,_7vw,_64px)] leading-[clamp(34px,_calc(4vw+16px),_58px)];
 }
 .text-h2{
     @apply text-offblack dark:text-offwhite font-primary text-5xl;
@@ -52,7 +52,7 @@ html{
     @apply text-offblack dark:text-offwhite font-secondary font-bold text-[clamp(18px,_3vw,_30px)] mt-5 leading-[clamp(20px,_calc(3vw),_34px)];
 }
 .text-secondary{
-    @apply text-gray-500 dark:text-gray-300 font-medium text-[clamp(14px,_calc(1vw+6px),_18px)];
+    @apply text-gray-500 dark:text-gray-300 font-medium text-[clamp(16px,_calc(1vw+6px),_18px)];
 }
 .text{
     @apply text-offblack dark:text-offwhite;
