@@ -26,11 +26,15 @@ export default function SocialIcons({ isSmall }: IconsProps) {
 
     // Define responsive clamp-based size
     const sizeClass = !isSmall
-        ? "w-[clamp(32px,7vw,48px)] h-[clamp(32px,7vw,48px)]" // large variant
-        : "w-[clamp(24px,5vw,32px)] h-[clamp(24px,5vw,32px)]"; // small variant
+        ? "w-[clamp(32px,5.5vw,48px)] h-[clamp(32px,5.5vw,48px)]" // large variant
+        : "w-[clamp(30px,5vw,32px)] h-[clamp(30px,5vw,32px)]"; // small variant
+
+    const gapClass = !isSmall
+        ? "gap-[clamp(_12px,_2vw,_24px)]" // large variant
+        : "gap-[clamp(_18px,_2vw,_24px)]"; // small variant
 
     return (
-        <span className="flex gap-[clamp(_12px,_2vw,_24px)] items-center">
+        <span className={`flex gap-[clamp(_12px,_2vw,_24px)] items-center ${gapClass}`}>
           <a href="https://github.com/Decayyer107">
             <FaGithub
                 onMouseEnter={() => setHovered("github")}

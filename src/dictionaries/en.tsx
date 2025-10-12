@@ -11,7 +11,7 @@ const en = {
         ),
         paragraph: (): ReactNode => (
             <>
-                Hello! My name is  <span className={'text-green'}>Daniel Kadlec</span>. Student from<br/> the <span className={'text-green'}>Czech Republic</span> with a passion for <span className={'text-green'}>web development</span>.
+                Hello! My name is  <span className={'text-green'}>Daniel Kadlec</span>. Student from<br className={'hidden xs:block'}/> the <span className={'text-green'}>Czech Republic</span> with a passion for <span className={'text-green'}>web development</span>.
             </>
         ),
         button: "Take a look at my projects",

@@ -21,7 +21,7 @@ export default function Hero() {
                 </h2>
             </div>
 
-            <div className="relative z-10 flex flex-col items-end gap-[clamp(10px,_4vw,_20px)] mt-8">
+            <div className="relative z-10 flex flex-col items-end gap-[clamp(10px,_4vw,_20px)] mt-[clamp(48px,_4vw,_32px)]">
                 <SocialIcons isSmall={false}/>
                 <Button link={"/portfolio"}>{dict.hero.button}</Button>
             </div>

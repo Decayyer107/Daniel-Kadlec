@@ -20,24 +20,33 @@ export default function Footer() {
 
     return (
         <footer className="section ">
-            <div className={'bg-gray-200 dark:bg-[#0C0C0E] border-2 shadow-xl border-gray-100 dark:border-gray-900 w-full h-72 rounded-[24px] mb-8 px-12 transition-all duration-500 flex justify-between items-center'}>
+            <div className={'bg-gray-200 dark:bg-[#0C0C0E] border-2 shadow-xl border-gray-100 dark:border-gray-900 w-full py-[clamp(_24px,_1.5vw,_36px)] rounded-[16px] sm:rounded-[24px] mb-8 px-[clamp(_24px,_1.5vw,_48px)] transition-all duration-500 flex justify-between items-center'}>
                 <div className={'scale-y-[-1]'}>
-                    <HopperElement/>
+                    <HopperElement className={'hidden lg:block'}/>
                 </div>
-                <div className={'flex flex-col justify-center items-center gap-6'}>
-                    <div className="flex gap-2 justify-center items-center">
-                        <Image width={56} height={56} src={theme === "dark" ? LogoPrimary : LogoSecondary} alt="Logo" className="cursor-pointer" priority unoptimized/>
-                        <span className="text font-primary font-bold text-3xl">Daniel <span className="text-green">Kadlec</span></span>
+                <div className={'flex flex-col justify-center items-center gap-[clamp(_14px,_1.5vw,_24px)]'}>
+                    <div className="flex gap-[clamp(_4px,_1vw,_8px)] justify-center items-center">
+                        <div className="relative w-[clamp(_36px,_5vw,_56px)] h-[clamp(_36px,_5vw,_56px)] ">
+                            <Image
+                                src={theme === "dark" ? LogoPrimary : LogoSecondary}
+                                alt="Logo"
+                                fill
+                                className="object-contain cursor-pointer"
+                                priority
+                                unoptimized
+                            />
+                        </div>
+                        <span className="text font-primary font-bold text-[clamp(_20px,_3vw,_30px)]">Daniel <span className="text-green">Kadlec</span></span>
                     </div>
                     <div>
-                        <ul className="flex gap-12 font-secondary font-bold text-md">
+                        <ul className="flex gap-[clamp(_20px,_3vw,_42px)] font-secondary font-bold text-[clamp(_14px,_2.5vw,_18px)]">
                             <li><Link className="text" href="#">{dict.nav.Home}</Link></li>
                             <li><Link className="text" href="#">{dict.nav.About}</Link></li>
                             <li><Link className="text" href="#">{dict.nav.Portfolio}</Link></li>
                             <li><Link className="text" href="#">{dict.nav.Contact}</Link></li>
                         </ul>
                     </div>
-                    <div className="flex gap-8 justify-center items-center">
+                    <div className="flex gap-[clamp(_16px,_3vw,_32px)] justify-center items-center">
                         <LanguageSwitcher />
                         <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
                     </div>
@@ -48,7 +57,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className={'scale-x-[-1]'}>
-                    <HopperElement/>
+                    <HopperElement className={'hidden lg:block'}/>
                 </div>
             </div>
         </footer>
