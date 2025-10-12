@@ -38,7 +38,7 @@ const cs = {
     portfolioSection: {
         heading: (): ReactNode => (
             <>
-                <span className={"text-green"}>Portfolio</span>v kostce.
+                <span className={"text-green"}>Portfolio</span> v kostce.
             </>
         ),
         subheading: "Krátký přehled vybraných projektů",

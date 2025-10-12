@@ -40,13 +40,13 @@ html{
     @apply text-offblack dark:text-offwhite font-primary text-[clamp(42px,_7vw,_64px)] leading-[clamp(34px,_calc(4vw+16px),_58px)];
 }
 .text-h2{
-    @apply text-offblack dark:text-offwhite font-primary text-5xl;
+    @apply text-offblack dark:text-offwhite font-primary text-[clamp(36px,_5vw,_58px)] leading-[clamp(34px,_calc(4vw+16px),_58px)];
 }
 .text-subheading{
     @apply text-gray-300 font-secondary font-bold text-[clamp(20px,_3.5vw,_26px)] -mt-[3px];
 }
 .text-subheading-green{
-    @apply text-green-secondary dark:text-green-primary font-secondary font-semibold text-3xl ml-1 -mt-[6px];
+    @apply text-green-secondary dark:text-green-primary font-secondary font-semibold text-[clamp(22px,_2.5vw,_30px)] -mt-[6px];
 }
 .text-body-large{
     @apply text-offblack dark:text-offwhite font-secondary font-bold text-[clamp(18px,_3vw,_30px)] mt-5 leading-[clamp(20px,_calc(3vw),_34px)];
