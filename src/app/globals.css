@@ -43,7 +43,7 @@ html{
     @apply text-offblack dark:text-offwhite font-primary text-[clamp(36px,_5vw,_58px)] leading-[clamp(34px,_calc(4vw+16px),_58px)];
 }
 .text-subheading{
-    @apply text-gray-300 font-secondary font-bold text-[clamp(20px,_3.5vw,_26px)] -mt-[3px];
+    @apply text-gray-300 font-secondary font-bold text-[clamp(20px,_3.5vw,_26px)];
 }
 .text-subheading-green{
     @apply text-green-secondary dark:text-green-primary font-secondary font-semibold text-[clamp(22px,_2.5vw,_30px)] -mt-[6px];

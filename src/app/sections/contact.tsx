@@ -20,7 +20,7 @@ export function About() {
 
     return (
         <section id={'contact'} className="section flex mb-[clamp(124px,_25vw,_256px)] flex-col">
-            <Heading Heading={dict.contact.heading()} />
+            <Heading className={'!mb-[clamp(_0px,_3vw,_72px)]'} Heading={dict.contact.heading()} />
             <div className="flex gap-8 lg:flex-row flex-col">
                 <div className={'lg:w-1/2'}>
                     <p className="text text-body-large font-bold">
