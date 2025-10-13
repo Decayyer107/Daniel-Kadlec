@@ -11,7 +11,7 @@ export default function TechMarquee() {
 
     return (
         <div
-            className="overflow-hidden whitespace-nowrap py-4 mb-8 relative"
+            className="overflow-hidden whitespace-nowrap py-4 mb-[clamp(12px,_2vw,_32px)] relative"
             style={{
                 WebkitMaskImage:
                     "linear-gradient(to right, rgba(0,0,0,0), black 10%, black 90%, rgba(0,0,0,0))",

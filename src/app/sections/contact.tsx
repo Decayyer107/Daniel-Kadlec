@@ -19,7 +19,7 @@ export function About() {
     }
 
     return (
-        <section id={'contact'} className="section flex mb-64 flex-col">
+        <section id={'contact'} className="section flex mb-[clamp(124px,_25vw,_256px)] flex-col">
             <Heading Heading={dict.contact.heading()} />
             <div className="flex gap-8 lg:flex-row flex-col">
                 <div className={'lg:w-1/2'}>

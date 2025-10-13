@@ -7,9 +7,9 @@ export default function Portfolio(){
     const { dict } = useLanguage();
 
     return(
-        <section className={'section mb-64'}>
+        <section className={'section mb-[clamp(124px,_25vw,_256px)]'}>
             <Heading Heading={dict.portfolioSection.heading()} Subheading={dict.portfolioSection.subheading}/>
-            <div className={'flex flex-col gap-12'}>
+            <div className={'flex flex-col gap-[clamp(52px,_4vw,_64px)]'}>
                 <ProjectSmall/>
                 <ProjectSmall/>
                 <ProjectSmall/>

@@ -12,8 +12,8 @@ export default function Portfolio(){
     const { dict } = useLanguage();
 
     return(
-        <section className={'section mb-64'}>
-            <Heading className={'!mb-8'} Heading={dict.skills.heading()} Subheading={dict.skills.subheading}/>
+        <section className={'section mb-[clamp(124px,_25vw,_256px)]'}>
+            <Heading className={'!mb-[clamp(12px,_2vw,_32px)]'} Heading={dict.skills.heading()} Subheading={dict.skills.subheading}/>
             <TechMarquee />
             <div className={'flex flex-col gap-[clamp(_24px,_3vw,_48px)]'}>
                 <Skill heading={dict.skills.card_1_heading()} paragraph={dict.skills.card_1_paragraph} icon={<FaCode/>}/>

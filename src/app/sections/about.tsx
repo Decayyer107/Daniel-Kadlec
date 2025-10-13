@@ -10,7 +10,7 @@ export default function About(){
     const { dict } = useLanguage();
 
     return (
-        <section id="about" className="section flex flex-col md:flex-row mb-64">
+        <section id="about" className="section flex flex-col md:flex-row mb-[clamp(124px,_25vw,_256px)]">
             <div className="w-full md:w-1/2 md:mr-[clamp(_24px,_3vw,_48px)] flex flex-col justify-between mb-6 md:mb-0">
                 <Heading className={'!mb-0'} Heading={dict.about.heading()} Subheading={dict.about.subheading} />
                 <div className={'hidden md:block'}>
