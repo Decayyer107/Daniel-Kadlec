@@ -17,7 +17,7 @@ export default function ProjectSmall(){
                     <Technologies className="mt-[clamp(4px,_2.5vw,_8px)]" techs={["figma", "css", "html"]}/>
                 </div>
                 <div className={'w-full flex justify-end'}>
-                    <Button className="w-full xs:w-1/2 md:w-fit py-[clamp(12px,_2vw,_15px)] md:!py-[clamp(8px,_1vw,_12px)] !rounded-[14px] md:!rounded-[8px] lg:!rounded-[14px] mt-6">{dict.portfolioSection.project_button}</Button>
+                    <Button className="w-full xs:w-1/2 md:w-fit py-[clamp(12px,_2vw,_15px)] md:!py-[clamp(8px,_1vw,_12px)] !rounded-[14px] md:!rounded-[12px] lg:!rounded-[14px] mt-[clamp(18px,_1vw,_24px)] ">{dict.portfolioSection.project_button}</Button>
                 </div>
             </div>
         </div>
