@@ -7,7 +7,7 @@ interface HeadingProps{
 }
 export default function Heading({Heading, Subheading, className}:HeadingProps) {
     return(
-        <div className={`mb-18 ${className}`}>
+        <div className={`mb-[clamp(_0px,_3vw,_72px)] ${className}`}>
             <h1 className={'text-h1'}>{Heading}</h1>
             <h2 className={'text-subheading'}>{Subheading}</h2>
         </div>

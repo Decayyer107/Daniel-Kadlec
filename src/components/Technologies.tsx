@@ -60,7 +60,7 @@ export default function TechStack({ techs, className = "", size = 20 }: TechStac
                 return (
                     <div
                         key={tech}
-                        className="py-2 px-4 flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-700 grayscale hover:grayscale-0 rounded-md font-bold transition-all duration-500 cursor-default"
+                        className="py-2 px-4 flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-700 rounded-md font-bold transition-all duration-500 cursor-default"
                     >
                         {item.icon}
                         <span className="!text-[clamp(12px,_1.5vw,_18px)] font-medium text-secondary">

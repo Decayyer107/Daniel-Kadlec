@@ -49,7 +49,7 @@ html{
     @apply text-green-secondary dark:text-green-primary font-secondary font-semibold text-[clamp(22px,_2.5vw,_30px)] -mt-[6px];
 }
 .text-body-large{
-    @apply text-offblack dark:text-offwhite font-secondary font-bold text-[clamp(18px,_3vw,_30px)] mt-5 leading-[clamp(20px,_calc(3vw),_34px)];
+    @apply text-offblack dark:text-offwhite font-secondary font-bold text-[clamp(18px,_3vw,_30px)] mt-[clamp(10px,_3vw,_20px)] leading-[clamp(20px,_calc(3vw),_34px)];
 }
 .text-secondary{
     @apply text-gray-500 dark:text-gray-300 font-medium text-[clamp(16px,_calc(1vw+6px),_18px)];
@@ -72,6 +72,13 @@ html{
     @apply rounded-[500px] bg-offwhite dark:bg-gray-900 transition-all duration-500 shadow-[inset_4px_4px_6px_rgba(210,210,221,0.3)] dark:shadow-[rgba(7,7,8,0.8)];
 }
 
+.contact-link{
+    @apply flex gap-[clamp(12px,2vw,24px)] items-center;
+}
+.contact-icon{
+    @apply text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px];
+}
+
 @keyframes marquee {
     0% {
         transform: translateX(0);
@@ -83,5 +90,10 @@ html{
 
 .animate-marquee {
     animation: marquee 30s linear infinite;
+}
+@media (max-width: 768px) {
+    .animate-marquee {
+        animation: marquee 15s linear infinite;
+    }
 }
 

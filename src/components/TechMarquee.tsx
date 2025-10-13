@@ -30,7 +30,7 @@ export default function TechMarquee() {
                     return (
                         <div
                             key={idx}
-                            className="py-2 px-4 flex items-center justify-center gap-[clamp(_2px,_2vw,_12px)] grayscale hover:grayscale-0 rounded-md font-bold transition-all duration-500 cursor-default"
+                            className="py-2 px-4 flex items-center justify-center gap-[clamp(_2px,_2vw,_12px)] rounded-md font-bold transition-all duration-500 cursor-default"
                         >
                             {item.icon}
                             <span className="!text-[clamp(_12px,_2vw,_18px)] font-medium text-secondary">
