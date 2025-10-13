@@ -15,7 +15,7 @@ export default function Portfolio(){
         <section className={'section mb-64'}>
             <Heading className={'!mb-8'} Heading={dict.skills.heading()} Subheading={dict.skills.subheading}/>
             <TechMarquee />
-            <div className={'flex flex-col gap-12'}>
+            <div className={'flex flex-col gap-[clamp(_24px,_3vw,_48px)]'}>
                 <Skill heading={dict.skills.card_1_heading()} paragraph={dict.skills.card_1_paragraph} icon={<FaCode/>}/>
                 <Skill heading={dict.skills.card_2_heading()} paragraph={dict.skills.card_2_paragraph} icon={<FaPenNib/>}/>
                 <Skill heading={dict.skills.card_3_heading()} paragraph={dict.skills.card_3_paragraph} icon={<BsPalette2/>}/>

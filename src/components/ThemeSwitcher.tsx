@@ -10,9 +10,9 @@ export default function ThemeSwitcher({ theme, toggleTheme }: ThemeSwitcherProps
     let icon;
 
     if (theme === "dark") {
-        icon = <MdSunny className="text-green-primary text-[clamp(_16px,_2vw,_24px)]" />;
+        icon = <MdSunny className="text-green-primary text-[clamp(_16px,_2vw,_20px)]" />;
     } else {
-        icon = <FaMoon className="text-green-secondary text-[clamp(_16px,_2vw,_24px)]" />;
+        icon = <FaMoon className="text-green-secondary text-[clamp(_16px,_2vw,_20px)]" />;
     }
 
     return (
