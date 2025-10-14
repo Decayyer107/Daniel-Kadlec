@@ -54,7 +54,7 @@ html{
 }
 
 .text-h1{
-    @apply text-offblack dark:text-offwhite font-primary text-[clamp(42px,_7vw,_64px)] leading-[clamp(34px,_calc(4vw+16px),_58px)];
+    @apply text-offblack dark:text-offwhite font-primary text-[clamp(42px,_7vw,_64px)] leading-[clamp(38px,_calc(4vw+16px),_58px)];
 }
 .text-h2{
     @apply text-offblack dark:text-offwhite font-primary text-[clamp(36px,_5vw,_58px)] leading-[clamp(34px,_calc(4vw+16px),_58px)];
