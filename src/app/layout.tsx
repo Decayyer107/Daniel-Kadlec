@@ -43,12 +43,11 @@ function BackgroundLayers() {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-        <body>
+        <body className={''}>
         <ThemeProvider>
             <LanguageProvider>
                 <div className="relative min-h-screen overflow-x-hidden antialiased">
                     <BackgroundLayers />
-
                     <div className="relative z-10 transition-all duration-500">
                         <Navbar />
                         {children}

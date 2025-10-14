@@ -5,10 +5,11 @@ import LanguageSwitcher from './LanguageSwicther';
 import ThemeSwitcher from './ThemeSwitcher';
 import { useLanguage } from '@/utils/LanguageContext';
 import { useRouter, usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import { TbMenuDeep } from "react-icons/tb";
+import HamburgerMenu from "@/components/HamburgerMenu";
 
 const LogoPrimary = "/logo/logomark-primary.svg";
 const LogoSecondary = "/logo/logomark-secondary.svg";
@@ -19,6 +20,7 @@ export default function Navbar() {
     const router = useRouter();
     const pathname = usePathname();
     const [scrolled, setScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const goHome = (hash?: string, e?: React.MouseEvent) => {
         e?.preventDefault();
@@ -54,8 +56,29 @@ export default function Navbar() {
         }
     }, [pathname]);
 
+    const handleMenuOpen = () => {
+        setIsMenuOpen(true);
+    };
+
+    const handleMenuClose = () => {
+        setIsMenuOpen(false);
+    };
+
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMenuOpen]);
+
+
     return (
         <header className={'section w-full fixed top-0 left-1/2 -translate-x-1/2 z-[99]'}>
+            <HamburgerMenu isOpen={isMenuOpen} onClose={handleMenuClose} />
             <nav
                 className={`nav-section h-20 flex items-center justify-between transition-all duration-500 rounded-full
                     ${scrolled
@@ -67,7 +90,10 @@ export default function Navbar() {
                 <Link href="/" onClick={(e) => goHome(undefined, e)}>
                     <Image width={56} height={56} src={theme === "dark" ? LogoPrimary : LogoSecondary} alt="Logo" className="cursor-pointer" priority unoptimized/>
                 </Link>
-                <TbMenuDeep className={'block md:hidden text w-8 h-8'}/>
+                <TbMenuDeep
+                    onClick={handleMenuOpen}
+                    className="block md:hidden text w-8 h-8 cursor-pointer"
+                />
                 <ul className="gap-[clamp(_26px,_2vw,_48px)] font-secondary font-bold text-md hidden md:flex">
                     <li><Link className={'text'} href="/" onClick={(e) => goHome(undefined, e)}>{dict.nav.Home}</Link></li>
                     <li><Link className={'text'} href="/#about" onClick={(e) => goHome('about', e)}>{dict.nav.About}</Link></li>
