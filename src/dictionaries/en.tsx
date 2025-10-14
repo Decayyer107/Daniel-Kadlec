@@ -5,7 +5,7 @@ const en = {
         heading: (): ReactNode => (
             <>
                 Frontend <span className="text-green">developer&nbsp;</span>&<br />
-                <span className="text-green">UX/UI</span> designér.
+                <span className="text-green">UX/UI</span> designer.
             </>
 
         ),
