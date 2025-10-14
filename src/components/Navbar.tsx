@@ -57,14 +57,13 @@ export default function Navbar() {
     return (
         <header className={'section w-full fixed top-0 left-1/2 -translate-x-1/2 z-[99]'}>
             <nav
-                className={`px-12 nav-section h-20 flex items-center justify-between transition-all duration-500 rounded-full
+                className={`nav-section h-20 flex items-center justify-between transition-all duration-500 rounded-full
                     ${scrolled
-                    ? 'w-[90%] mt-4 border border-neutral-300/100 dark:border-neutral-700/100 bg-offwhite/70 dark:bg-offblack/70 backdrop-blur-sm shadow-md'
-                    : 'w-full border border-neutral-300/0 dark:border-neutral-700/0 bg-transparent backdrop-blur-0 shadow-none'
+                    ? 'w-[90%] px-[clamp(_18px,_6vw,_42px)] mt-4 border border-neutral-300/100 dark:border-neutral-700/100 bg-offwhite/70 dark:bg-offblack/70 backdrop-blur-sm shadow-md'
+                    : 'w-full px-0 border border-neutral-300/0 dark:border-neutral-700/0 bg-transparent backdrop-blur-0 shadow-none'
                 }`
                 }
             >
-
                 <Link href="/" onClick={(e) => goHome(undefined, e)}>
                     <Image width={56} height={56} src={theme === "dark" ? LogoPrimary : LogoSecondary} alt="Logo" className="cursor-pointer" priority unoptimized/>
                 </Link>
