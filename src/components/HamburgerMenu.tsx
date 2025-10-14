@@ -56,23 +56,24 @@ export default function HamburgerMenu({ isOpen, onClose }: HamburgerMenuProps) {
     return (
         <nav
             className={`fixed left-0 top-0 w-screen h-screen bg-white/90 dark:bg-black/90 backdrop-blur-xs
-        flex flex-col justify-center items-center z-[200] transition-all duration-[500ms]
+        z-[200] transition-all duration-[500ms]
         ${isOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"}`}
         >
             <IoIosClose className="text text-[64px] cursor-pointer absolute top-6 right-6" onClick={onClose} />
-            <div className="flex gap-2 justify-center items-center mb-8">
-                <div className="relative w-20 h-20">
-                    <Image
-                        src={theme === "dark" ? LogoPrimary : LogoSecondary}
-                        alt="Logo"
-                        fill
-                        className="object-contain cursor-pointer"
-                        priority
-                        unoptimized
-                    />
-                </div>
-                <span className="text font-primary font-bold text-4xl">Daniel <span className="text-green">Kadlec</span></span>
-            </div>            <ul className="flex flex-col items-center gap-8 font-secondary font-bold text-lg text">
+            <div className={'flex flex-col justify-center items-center h-full -mt-7'}>
+                <div className="flex gap-2 justify-center items-center mb-8">
+                    <div className="relative w-20 h-20">
+                        <Image
+                            src={theme === "dark" ? LogoPrimary : LogoSecondary}
+                            alt="Logo"
+                            fill
+                            className="object-contain cursor-pointer"
+                            priority
+                            unoptimized
+                        />
+                    </div>
+                    <span className="text font-primary font-bold text-4xl">Daniel <span className="text-green">Kadlec</span></span>
+                </div>            <ul className="flex flex-col items-center gap-8 font-secondary font-bold text-lg text">
                 <li>
                     <Link href="/" onClick={(e) => goHome(undefined, e)}>{dict.nav.Home}</Link>
                 </li>
@@ -86,9 +87,10 @@ export default function HamburgerMenu({ isOpen, onClose }: HamburgerMenuProps) {
                     <Link href="/#contact" onClick={(e) => goHome("contact", e)}>{dict.nav.Contact}</Link>
                 </li>
             </ul>
-            <div className={'flex justify-center items-center gap-4 mt-12 scale-[130%]'}>
-                <LanguageSwitcher/>
-                <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
+                <div className={'flex justify-center items-center gap-4 mt-12 scale-[130%]'}>
+                    <LanguageSwitcher/>
+                    <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
+                </div>
             </div>
         </nav>
     );

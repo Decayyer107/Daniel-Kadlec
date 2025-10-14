@@ -32,6 +32,20 @@ html{
 [id] {
     scroll-margin-top: 25vh;
 }
+
+@media (max-width: 768px) {
+    [id] {
+        scroll-margin-top: 15vh;
+    }
+}
+
+
+@media (max-width: 768px) {
+    [id] {
+        scroll-margin-top: 120px;
+    }
+}
+
 .section {
     @apply mx-auto max-w-[1350px] px-[clamp(20px,_6vw,_100px)];
 }
