@@ -4,7 +4,7 @@ const en = {
     hero: {
         heading: (): ReactNode => (
             <>
-                Frontend <span className="text-green">vývojář&nbsp;&</span><br />
+                Frontend <span className="text-green">developer&nbsp;</span>&<br />
                 <span className="text-green">UX/UI</span> designér.
             </>
 
