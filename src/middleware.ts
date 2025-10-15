@@ -14,8 +14,6 @@ export function middleware(request: NextRequest) {
     const response = NextResponse.next();
     const locale = getLocale(request);
 
-    response.cookies.set('locale', locale, { path: '/' });
-
     return response;
 }
 export const config = { matcher: ['/((?!_next).*)'] };

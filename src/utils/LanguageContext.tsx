@@ -10,20 +10,23 @@ type LanguageContextType = {
     setLang: (l: Locale) => void;
 };
 
-const getCookieLang = (): Locale => {
-    const match = document.cookie.match(/(^| )locale=([^;]+)/);
-    return match ? (match[2] as Locale) : defaultLocale;
+const getStoredLang = (): Locale => {
+    if (typeof window !== 'undefined') {
+        const stored = localStorage.getItem('locale');
+        if (stored && (stored === 'cz' || stored === 'en')) return stored as Locale;
+    }
+    return defaultLocale;
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-    const [lang, setLangState] = useState<Locale>(getCookieLang());
+    const [lang, setLangState] = useState<Locale>(getStoredLang());
     const dict = getDictionary(lang);
 
     const setLang = (newLang: Locale) => {
         setLangState(newLang);
-        document.cookie = `locale=${newLang}; path=/; max-age=${60 * 60 * 24 * 365}`;
+        localStorage.setItem('locale', newLang);
     };
 
     return (
