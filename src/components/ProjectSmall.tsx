@@ -16,7 +16,7 @@ export default function ProjectSmall({ title, subtitle, techs, image, link }: Pr
     return (
         <div className="flex flex-col md:flex-row gap-[clamp(14px,_2.5vw,_48px)]">
             <div
-                className="aspect-[16/9] rounded-2xl shadow-md bg-cover bg-center  w-1/2"
+                className="aspect-[16/9] rounded-2xl shadow-md bg-cover bg-center w-full md:w-1/2"
                 style={{ backgroundImage: `url(${image})` }}
             ></div>
             <div className="flex flex-col justify-between">

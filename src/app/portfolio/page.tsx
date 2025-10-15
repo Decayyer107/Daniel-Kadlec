@@ -3,16 +3,18 @@
 import { useLanguage } from "@/utils/LanguageContext";
 import ProjectBig from "@/components/ProjectBig";
 import Heading from "@/components/Heading";
-import projectsEn from "@/data/projects/projects.en.json";
-import projectsCz from "@/data/projects/projects.cz.json";
+import projectsEn from "@/data/projects/projects.en.json" assert { type: "json" };
+import projectsCz from "@/data/projects/projects.cz.json" assert { type: "json" };
+
 
 export default function Portfolio() {
     const { lang, dict } = useLanguage();
     const projects = lang === "cz" ? projectsCz : projectsEn;
 
     return (
-        <section className="section min-h-screen mb-[clamp(64px,_20vw,_128px)] mt-[clamp(112px,_25vw,_224px)]">
+        <section className="section min-h-screen mb-[clamp(64px,_20vw,_128px)]">
             <Heading
+                className={'mt-[clamp(112px,_25vw,_224px)]'}
                 Heading={dict.portfolio.heading()}
                 Subheading={dict.portfolio.subheading}
             />
