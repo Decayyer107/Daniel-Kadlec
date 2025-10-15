@@ -4,50 +4,17 @@ import { useTheme } from '@/utils/ThemeContext';
 import LanguageSwitcher from './LanguageSwicther';
 import ThemeSwitcher from './ThemeSwitcher';
 
-import { useLanguage } from '@/utils/LanguageContext';
 import HopperElement from "@/components/HopperElement";
 import SocialIcons from "@/components/SocialIcons";
 import Image from "next/image";
-import Link from "next/link";
-import {usePathname, useRouter} from "next/navigation";
-import {useEffect} from "react";
+import NavLinks from "@/components/NavLinks";
 
 const LogoPrimary = "/logo/logomark-primary.svg";
 const LogoSecondary = "/logo/logomark-secondary.svg";
 
 
 export default function Footer() {
-    const { dict } = useLanguage();
     const { theme, toggleTheme } = useTheme();
-
-    const router = useRouter();
-    const pathname = usePathname();
-
-    const goHome = (hash?: string, e?: React.MouseEvent) => {
-        e?.preventDefault();
-        if (pathname === '/') {
-            if (hash) document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' });
-            else window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-            router.push(hash ? `/#${hash}` : '/');
-        }
-    };
-
-    const goPortfolio = (e?: React.MouseEvent) => {
-        e?.preventDefault();
-        if (pathname === '/portfolio') {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-            router.push('/portfolio');
-        }
-    };
-
-    useEffect(() => {
-        if (pathname === '/' && window.location.hash) {
-            const id = window.location.hash.slice(1);
-            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-        }
-    }, [pathname]);
 
     return (
         <footer className="section ">
@@ -70,12 +37,7 @@ export default function Footer() {
                         <span className="text font-primary font-bold text-[clamp(_20px,_3vw,_30px)]">Daniel <span className="text-green">Kadlec</span></span>
                     </div>
                     <div>
-                        <ul className="flex gap-[clamp(_20px,_3vw,_42px)] font-secondary font-bold text-[clamp(_14px,_2.5vw,_18px)]">
-                            <li><Link className={'text'} href="/" onClick={(e) => goHome(undefined, e)}>{dict.nav.Home}</Link></li>
-                            <li><Link className={'text'} href="/#about" onClick={(e) => goHome('about', e)}>{dict.nav.About}</Link></li>
-                            <li><Link className={'text'} href="/portfolio" onClick={(e) => goPortfolio(e)}>{dict.nav.Portfolio}</Link></li>
-                            <li><Link className={'text'} href="/#contact" onClick={(e) => goHome('contact', e)}>{dict.nav.Contact}</Link></li>
-                        </ul>
+                        <NavLinks/>
                     </div>
                     <div className="flex gap-[clamp(_16px,_3vw,_32px)] justify-center items-center">
                         <LanguageSwitcher />

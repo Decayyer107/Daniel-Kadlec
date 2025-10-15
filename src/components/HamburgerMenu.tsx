@@ -9,6 +9,7 @@ import { useLanguage } from "@/utils/LanguageContext";
 import { useRouter, usePathname } from "next/navigation";
 import { useTheme } from '@/utils/ThemeContext';
 import Image from "next/image";
+import NavLinks from "@/components/NavLinks";
 
 const LogoPrimary = "/logo/logomark-primary.svg";
 const LogoSecondary = "/logo/logomark-secondary.svg";
@@ -73,20 +74,8 @@ export default function HamburgerMenu({ isOpen, onClose }: HamburgerMenuProps) {
                         />
                     </div>
                     <span className="text font-primary font-bold text-4xl">Daniel <span className="text-green">Kadlec</span></span>
-                </div>            <ul className="flex flex-col items-center gap-8 font-secondary font-bold text-lg text">
-                <li>
-                    <Link href="/" onClick={(e) => goHome(undefined, e)}>{dict.nav.Home}</Link>
-                </li>
-                <li>
-                    <Link href="/#about" onClick={(e) => goHome("about", e)}>{dict.nav.About}</Link>
-                </li>
-                <li>
-                    <Link href="/portfolio" onClick={(e) => goPortfolio(e)}>{dict.nav.Portfolio}</Link>
-                </li>
-                <li>
-                    <Link href="/#contact" onClick={(e) => goHome("contact", e)}>{dict.nav.Contact}</Link>
-                </li>
-            </ul>
+                </div>
+                <NavLinks className="!flex !flex-col !text-center" onLinkClick={onClose} />
                 <div className={'flex justify-center items-center gap-4 mt-12 scale-[130%]'}>
                     <LanguageSwitcher/>
                     <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
