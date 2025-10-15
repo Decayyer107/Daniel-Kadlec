@@ -29,7 +29,7 @@ export default function Footer() {
                                 src={theme === "dark" ? LogoPrimary : LogoSecondary}
                                 alt="Logo"
                                 fill
-                                className="object-contain cursor-pointer"
+                                className="object-contain"
                                 priority
                                 unoptimized
                             />
@@ -37,7 +37,7 @@ export default function Footer() {
                         <span className="text font-primary font-bold text-[clamp(_20px,_3vw,_30px)]">Daniel <span className="text-green">Kadlec</span></span>
                     </div>
                     <div>
-                        <NavLinks/>
+                        <NavLinks className={'!flex'}/>
                     </div>
                     <div className="flex gap-[clamp(_16px,_3vw,_32px)] justify-center items-center">
                         <LanguageSwitcher />
