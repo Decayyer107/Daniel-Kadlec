@@ -1,0 +1,22 @@
+[
+  {
+    "id": "zahrada-smutku",
+    "title": "Zahrada smutku",
+    "subtitle": "UX/UI design webové stránky",
+    "description": "Konceptuální UX/UI design zaměřený na emocionální příběh.",
+    "technologies": ["figma", "css", "html"],
+    "image": "/projects/zahrada-smutku/thumbnail.png",
+    "link": "#",
+    "featured": true
+  },
+  {
+    "id": "portfolio",
+    "title": "Osobní portfolio",
+    "subtitle": "Full-stack Next.js web",
+    "description": "Můj vlastní web pro prezentaci designérské a vývojářské práce.",
+    "technologies": ["nextjs", "tailwind", "framer-motion"],
+    "image": "/projects/portfolio/thumbnail.png",
+    "link": "#",
+    "featured": false
+  }
+]

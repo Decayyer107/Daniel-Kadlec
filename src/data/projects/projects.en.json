@@ -1,0 +1,22 @@
+[
+  {
+    "id": "zahrada-smutku",
+    "title": "Garden of Sorrow",
+    "subtitle": "UX/UI design for a website",
+    "description": "A conceptual UX/UI design project focused on emotional storytelling.",
+    "technologies": ["figma", "css", "html"],
+    "image": "/projects/zahrada-smutku/thumbnail.png",
+    "link": "#",
+    "featured": true
+  },
+  {
+    "id": "portfolio",
+    "title": "Personal Portfolio",
+    "subtitle": "Full-stack Next.js website",
+    "description": "My own portfolio to showcase design and development work.",
+    "technologies": ["nextjs", "tailwind", "framer-motion"],
+    "image": "/projects/portfolio/thumbnail.png",
+    "link": "#",
+    "featured": false
+  }
+]
