@@ -1,6 +1,6 @@
 import {useLanguage} from "@/utils/LanguageContext";
 import Button from "../../components/Button"
-
+import Link from "next/link";
 
 
 import HeroElement from "@/components/HeroElement";
@@ -23,7 +23,9 @@ export default function Hero() {
 
             <div className="relative z-10 flex flex-col items-end gap-[clamp(10px,_4vw,_20px)] mt-[clamp(48px,_4vw,_32px)]">
                 <SocialIcons isSmall={false}/>
-                <Button link={"/portfolio"}>{dict.hero.button}</Button>
+                <Link href={"/portfolio"}>
+                    <Button>{dict.hero.button}</Button>
+                </Link>
             </div>
         </section>
     );

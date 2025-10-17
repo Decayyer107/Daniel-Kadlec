@@ -6,7 +6,7 @@
     "description": "A conceptual UX/UI design project focused on emotional storytelling.",
     "technologies": ["figma", "css", "html"],
     "image": "/projects/zahrada-smutku/thumbnail.png",
-    "link": "#",
+    "link": "zahrada-smutku",
     "featured": true
   },
   {
@@ -16,7 +16,7 @@
     "description": "My own portfolio to showcase design and development work.",
     "technologies": ["nextjs", "tailwind", "framer-motion"],
     "image": "/projects/portfolio/thumbnail.png",
-    "link": "#",
+    "link": "my-portfolio",
     "featured": false
   }
 ]

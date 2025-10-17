@@ -6,7 +6,7 @@
     "description": "Konceptuální UX/UI design zaměřený na emocionální příběh.",
     "technologies": ["figma", "css", "html"],
     "image": "/projects/zahrada-smutku/thumbnail.png",
-    "link": "#",
+    "link": "zahrada-smutku",
     "featured": true
   },
   {
@@ -16,7 +16,7 @@
     "description": "Můj vlastní web pro prezentaci designérské a vývojářské práce.",
     "technologies": ["nextjs", "tailwind", "framer-motion"],
     "image": "/projects/portfolio/thumbnail.png",
-    "link": "#",
+    "link": "my-portfolio",
     "featured": false
   }
 ]
