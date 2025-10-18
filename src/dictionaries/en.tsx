@@ -58,19 +58,22 @@ const en = {
                 <span className={'text-green'}>Frontend </span>development
             </>
         ),
-        card_1_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
+        card_1_paragraph:'I build modern, responsive websites with a focus on clean and functional code. I enjoy turning designs into real interfaces where everything works as it should and users have a smooth experience.\n' +
+            'I treat each project as a challenge to balance aesthetics with practicality. I prefer sticking to proven techniques rather than experimenting with untested trends, ensuring reliable results every time.',
         card_2_heading: (): ReactNode => (
             <>
                 <span className={'text-green'}>UX/UI </span>design
             </>
         ),
-        card_2_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
+        card_2_paragraph:'I design interfaces that are not just visually appealing, but also memorable and enjoyable to use. I believe that the secret to a good website isn’t just colors, fonts, or layout — it’s the way the site communicates with the user, the animations, and the overall feel.\n' +
+            'I aim to make every click and interaction intuitive, so users feel naturally guided through the experience.',
         card_3_heading: (): ReactNode => (
             <>
                 <span className={'text-green'}>Brand </span>design
             </>
         ),
-        card_3_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
+        card_3_paragraph:'Branding isn’t my main specialty, but I have a foundational understanding of the principles and theoretical knowledge in this area. I understand how to create visual consistency for a brand and work with logos, color palettes, and typography.\n' +
+            'My experience is limited, so when branding is involved in a project, I focus on supporting the design rather than leading the full identity process.',
 
     },
     contact: {

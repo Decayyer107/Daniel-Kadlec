@@ -59,19 +59,22 @@ const cs = {
                 <span className={'text-green'}>Frontend </span>vývoj
             </>
         ),
-        card_1_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
+        card_1_paragraph:'Tvořím moderní a responzivní weby s důrazem na čistý a funkční kód. Baví mě přetvářet design do reálných rozhraní, kde všechno funguje tak, jak má, a uživatel má plynulý zážitek.\n' +
+            'Každý projekt vnímám jako úkol, kde je potřeba skloubit estetiku s praktičností. Raději držím osvědčené postupy a techniky, než experimentovat s neověřenými trendy, abych zajistil spolehlivý výsledek.',
         card_2_heading: (): ReactNode => (
             <>
                 <span className={'text-green'}>UX/UI </span>design
             </>
         ),
-        card_2_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
+        card_2_paragraph:'Navrhuji rozhraní, která nejsou jen vizuálně přitažlivá, ale hlavně působí zapamatovatelně a příjemně. Věřím, že tajemství dobré stránky není jen v barvách, fontech nebo layoutu, ale hlavně ve způsobu, jak stránka komunikuje s uživatelem, v animacích a celkovém pocitu z používání.\n' +
+            'Snažím se, aby každý klik a pohyb na stránce dával smysl a uživatel se cítil intuitivně vedený.',
         card_3_heading: (): ReactNode => (
             <>
                 <span className={'text-green'}>Brand </span>design
             </>
         ),
-        card_3_paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero semper, congue quam at, pretium purus. Ut sed tempor dolor. Donec pretium elit sit amet tempor condimentum. Quisque accumsan suscipit sapien sit amet accumsan. Phasellus sagittis accumsan nibh, et viverra lorem ',
+        card_3_paragraph:'Branding není moje hlavní specializace, ale mám základní znalosti principů a teoretickou přípravu v této oblasti. Rozumím tomu, jak vytvářet vizuální jednotnost značky a pracovat s logy, barevnými paletami nebo typografií.\n' +
+            'Moje zkušenosti jsou spíše okrajové, takže u projektů, kde se branding řeší, se soustředím spíše na podporu designu než na kompletní vedení identity.',
 
     },
     contact: {
