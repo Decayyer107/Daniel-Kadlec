@@ -1,3 +1,5 @@
+'use client'
+
 import { useLanguage } from "@/utils/LanguageContext";
 import Heading from "@/components/Heading";
 import Input from "@/components/Input";

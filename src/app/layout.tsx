@@ -42,7 +42,7 @@ function BackgroundLayers() {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
+        <html lang="en" >
         <body className={''}>
         <ThemeProvider>
             <LanguageProvider>

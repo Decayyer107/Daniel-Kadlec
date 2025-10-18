@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";

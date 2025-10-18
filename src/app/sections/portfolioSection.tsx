@@ -1,3 +1,5 @@
+'use client'
+
 import { useLanguage } from "@/utils/LanguageContext";
 import ProjectSmall from "@/components/ProjectSmall";
 import Heading from "@/components/Heading";
@@ -5,7 +7,7 @@ import projectsEn from "@/data/projects/projects.en.json" assert { type: "json" 
 import projectsCz from "@/data/projects/projects.cz.json" assert { type: "json" };
 
 
-export default function Portfolio() {
+export default function PortfolioSection() {
     const { lang, dict } = useLanguage();
     const projects = lang === "cz" ? projectsCz : projectsEn;
 

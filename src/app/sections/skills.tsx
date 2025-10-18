@@ -1,3 +1,5 @@
+'use client'
+
 import {useLanguage} from "@/utils/LanguageContext";
 import Skill from "../../components/Skill";
 import Heading from "../../components/Heading";

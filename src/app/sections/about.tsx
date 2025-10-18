@@ -1,3 +1,5 @@
+'use client'
+
 import HopperElement from "@/components/HopperElement";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
