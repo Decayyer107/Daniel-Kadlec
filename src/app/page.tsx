@@ -7,8 +7,8 @@ import {About as Contact} from "./sections/contact";
 import {Metadata} from "next";
 
 export const metadata = {
-    title: "Daniel Kadlec ● Home",
-    description: "Welcome to my personal portfolio showcasing design and development projects."
+    title: "Daniel Kadlec ● Domů",
+    description: "Vítejte v mém osobním portfoliu, které představuje projekty z oblasti designu a vývoje."
 };
 
 

@@ -2,7 +2,7 @@ import PortfolioPage from "@/app/sections/portfolioPage";
 
 export const metadata = {
     title: "Daniel Kadlec ● Portfolio",
-    description: "Welcome to my personal portfolio showcasing design and development projects."
+    description: "Vítejte v mém osobním portfoliu, které představuje projekty z oblasti designu a vývoje."
 };
 
 export default function Portfolio() {
