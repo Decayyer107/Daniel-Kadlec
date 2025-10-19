@@ -2,6 +2,7 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import Technologies, { TechName } from "@/components/Technologies";
 import { useLanguage } from "@/utils/LanguageContext";
+import Image from "next/image";
 
 type ProjectProps = {
     title: string;
@@ -19,10 +20,14 @@ export default function ProjectSmall({ title, subtitle, techs, image, link, from
 
     return (
         <div className="flex flex-col md:flex-row gap-[clamp(14px,_2.5vw,_48px)]">
-            <div
-                className="aspect-[16/9] rounded-2xl shadow-md bg-cover bg-center w-full md:w-1/2"
-                style={{ backgroundImage: `url(${image})` }}
-            ></div>
+            <div className="relative aspect-[16/9] w-full md:w-1/2 rounded-2xl shadow-md overflow-hidden">
+                <Image
+                    src={image}
+                    alt="Preview"
+                    fill
+                    className="object-cover object-center"
+                />
+            </div>
             <div className="flex flex-col justify-between">
                 <div className="px-1 md:px-0">
                     <h1 className="text-h2">{title}</h1>

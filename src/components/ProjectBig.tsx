@@ -2,6 +2,8 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import Technologies, { TechName } from "@/components/Technologies";
 import { useLanguage } from "@/utils/LanguageContext";
+import Image from "next/image";
+
 
 type ProjectProps = {
     title: string;
@@ -18,10 +20,14 @@ export default function ProjectBig({ title, subtitle, techs, image, link, from =
 
     return (
         <div className="flex flex-col gap-[clamp(14px,_2vw,_32px)]">
-            <div
-                className="aspect-[16/9] rounded-2xl shadow-md bg-cover bg-center"
-                style={{ backgroundImage: `url(${image})` }}
-            ></div>
+            <div className="relative aspect-[16/9] rounded-2xl shadow-md overflow-hidden">
+                <Image
+                    src={image}
+                    alt="Background image"
+                    fill
+                    className="object-cover object-center"
+                />
+            </div>
 
             <div className="flex flex-col justify-between px-1 md:px-0">
                 <div>
