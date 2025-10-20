@@ -43,7 +43,8 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
     const pathname = usePathname();
 
     const shouldHideNav =
-        /^\/[^/]+$/.test(pathname) || /^\/portfolio\/[^/]+$/.test(pathname);
+        /^\/(?!portfolio$)[^/]+$/.test(pathname) || // "/slug" but NOT "/portfolio"
+        /^\/portfolio\/[^/]+$/.test(pathname);      // "/portfolio/slug"
 
     return (
         <ThemeProvider>
