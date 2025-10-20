@@ -8,6 +8,7 @@
     "image": "/projects/zahrada-smutku/thumbnail.png",
     "link": "zahrada-smutku",
     "featured": true,
+    "technical_description": "bla bla bla",
     "category": ["development", "design"]
   },
   {
@@ -19,6 +20,7 @@
     "image": "/projects/portfolio/thumbnail.png",
     "link": "my-portfolio",
     "featured": false,
+    "technical_description": "bla bla bla",
     "category": ["development", "design"]
   }
 ]

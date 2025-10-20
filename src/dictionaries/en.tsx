@@ -108,6 +108,10 @@ const en = {
         filters_design: "Design",
 
     },
+    project: {
+        technical_title: "Technical solution",
+        technical_subtitle: "A look behind the scenes",
+    },
     nav: {
         Home: "Home",
         Contact: "Contact",

@@ -88,9 +88,14 @@ html{
 .hopper-element{
     @apply rounded-[500px] bg-offwhite dark:bg-gray-900 transition-all duration-500 shadow-[inset_4px_4px_6px_rgba(210,210,221,0.3)] dark:shadow-[rgba(7,7,8,0.8)];
 }
+
 .project-section{
     @apply bg-gray-900 p-8 rounded-2xl shadow-md;
 }
+.project-image-small{
+    @apply relative aspect-[14/9] rounded-2xl shadow-xl overflow-hidden;
+}
+
 .contact-link{
     @apply flex gap-[clamp(12px,2vw,24px)] items-center;
 }

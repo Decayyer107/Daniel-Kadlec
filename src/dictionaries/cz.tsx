@@ -109,6 +109,10 @@ const cs = {
         filters_design: "Design",
 
     },
+    project: {
+        technical_title: "Technické řešení",
+        technical_subtitle: "Pohled do zákulisí",
+    },
     nav: {
         Home: "Domů",
         Contact: "Kontakt",
