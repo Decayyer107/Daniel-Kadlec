@@ -16,15 +16,17 @@ export default function ProjectPage() {
     if (!project) return <div className="p-10">Project not found.</div>;
 
     return (
-        <section className="section min-h-screen flex flex-col gap-8 py-20">
+        <section className="section !max-w-[1550px] min-h-screen flex flex-col gap-8 py-20">
             <Button onClick={() => router.back()} className="w-fit">
                 ← Back
             </Button>
 
-            <div
-                className="aspect-[16/9] rounded-2xl bg-cover bg-center shadow-md"
-                style={{ backgroundImage: `url(${project.image})` }}
-            ></div>
+            <div className={'bg-gray-900'}>
+                <div
+                    className="aspect-[16/9] rounded-2xl bg-cover bg-center shadow-md"
+                    style={{ backgroundImage: `url(${project.image})` }}
+                ></div>
+            </div>
 
             <h1 className="text-h1">{project.title}</h1>
             <h2 className="text-subheading-green">{project.subtitle}</h2>

@@ -5,6 +5,7 @@ import { useLanguage } from "@/utils/LanguageContext";
 import { getProject } from "@/utils/GetProject";
 import Button from "@/components/Button";
 import Technologies from "@/components/Technologies";
+import Image from "next/image";
 
 export default function ProjectPage() {
     const params = useParams();
@@ -16,15 +17,28 @@ export default function ProjectPage() {
     if (!project) return <div className="p-10">Project not found.</div>;
 
     return (
-        <section className="section min-h-screen flex flex-col gap-8 py-20">
+        <section className="section !max-w-[1550px] min-h-screen flex flex-col gap-8 py-20">
             <Button onClick={() => router.back()} className="w-fit">
                 ← Back
             </Button>
 
-            <div
-                className="aspect-[16/9] rounded-2xl bg-cover bg-center shadow-md"
-                style={{ backgroundImage: `url(${project.image})` }}
-            ></div>
+
+            <div className={''}>
+                {/*main image*/}
+                <div className={'project-section'}>
+                    <div className="relative aspect-[16/9] rounded-2xl shadow-md overflow-hidden">
+                        <Image
+                            src={project.image}
+                            alt="Background image"
+                            fill
+                            className="object-cover object-center"
+                        />
+                    </div>
+                </div>
+                <div className={'project-section'}>
+
+                </div>
+            </div>
 
             <h1 className="text-h1">{project.title}</h1>
             <h2 className="text-subheading-green">{project.subtitle}</h2>
