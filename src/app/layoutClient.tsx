@@ -42,7 +42,7 @@ function BackgroundLayers() {
 export default function ClientRoot({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
 
-    const shouldHideNavbar =
+    const shouldHideNav =
         /^\/[^/]+$/.test(pathname) || /^\/portfolio\/[^/]+$/.test(pathname);
 
     return (
@@ -51,9 +51,9 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
                 <div className="relative min-h-screen overflow-x-hidden antialiased">
                     <BackgroundLayers />
                     <div className="relative z-10 transition-all duration-500">
-                        {!shouldHideNavbar && <Navbar />}
+                        {!shouldHideNav && <Navbar />}
                         {children}
-                        <Footer />
+                        {!shouldHideNav && <Footer />}
                     </div>
                 </div>
             </LanguageProvider>
