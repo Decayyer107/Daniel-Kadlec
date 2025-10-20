@@ -12,15 +12,15 @@ type ProjectProps = {
     link: string;
     from?: "index" | "portfolio";
 };
-
+// PORTFOLIO SECTION
 export default function ProjectSmall({ title, subtitle, techs, image, link, from = "index" }: ProjectProps) {
     const { dict } = useLanguage();
 
     const href = from === "index" ? `/${link}` : `/portfolio/${link}`;
 
     return (
-        <div className="flex flex-col md:flex-row gap-[clamp(14px,_2.5vw,_48px)]">
-            <div className="relative aspect-[16/9] w-full md:w-1/2 rounded-2xl shadow-md overflow-hidden">
+        <div className="flex flex-col md:flex-row gap-[clamp(14px,_2vw,_38px)]">
+            <div className="relative aspect-[15/9] w-full md:w-1/2 rounded-2xl shadow-md overflow-hidden">
                 <Image
                     src={image}
                     alt="Preview"
@@ -35,8 +35,8 @@ export default function ProjectSmall({ title, subtitle, techs, image, link, from
                     <Technologies className="mt-[clamp(4px,_2.5vw,_8px)]" techs={techs} />
                 </div>
                 <div className="w-full flex justify-end">
-                    <Link href={href}>
-                        <Button className="w-full xs:w-1/2 md:w-fit py-[clamp(12px,_2vw,_15px)] md:!py-[clamp(8px,_1vw,_12px)] !rounded-[14px] md:!rounded-[12px] lg:!rounded-[14px] mt-[clamp(18px,_1vw,_24px)]">
+                    <Link href={href} className={'w-full flex justify-end'}>
+                        <Button className="w-full xs:w-1/2 md:w-2/3 py-[clamp(12px,_2vw,_15px)] md:!py-[clamp(8px,_1vw,_12px)] !rounded-[14px] md:!rounded-[12px] lg:!rounded-[14px] mt-[clamp(18px,_1vw,_24px)]">
                             {dict.portfolioSection.project_button}
                         </Button>
                     </Link>

@@ -14,6 +14,7 @@ type ProjectProps = {
     from?: "index" | "portfolio";
 };
 
+// PORTFOLIO PAGE
 export default function ProjectBig({ title, subtitle, techs, image, link, from = "portfolio" }: ProjectProps) {
     const { dict } = useLanguage();
     const href = from === "index" ? `/${link}` : `/portfolio/${link}`;
@@ -37,8 +38,8 @@ export default function ProjectBig({ title, subtitle, techs, image, link, from =
                 </div>
 
                 <div className="w-full flex justify-end">
-                    <Link href={href}>
-                        <Button className="w-full xs:w-1/2 sm:w-1/2 lg:w-fit md:!py-[clamp(8px,_1vw,_12px)] mt-[clamp(18px,_1vw,_24px)]">
+                    <Link href={href} className={'w-full flex justify-end'}>
+                        <Button className="w-full xs:w-1/2 sm:w-1/3 lg:w-fit md:!py-[clamp(8px,_2vw,_12px)] mt-[clamp(18px,_1vw,_24px)]">
                             {dict.portfolioSection.project_button}
                         </Button>
                     </Link>
