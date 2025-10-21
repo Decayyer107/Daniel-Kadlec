@@ -10,6 +10,7 @@ import { IoPlayBackCircle } from "react-icons/io5";
 import {useState} from "react";
 import Link from "next/link";
 import { TechName } from "@/components/Technologies";
+import HopperElement from "@/components/HopperElement";
 
 
 export default function Project(){
@@ -53,8 +54,9 @@ export default function Project(){
                 <h2 className={'text-subheading-green'}>{project.subtitle}</h2>
                 <p className={'text-secondary mt-8'}>{project.description}</p>
             </div>
+
             <div className={'flex flex-col lg:flex-row justify-between gap-8 sm:gap-12 mt-12'}>
-                <div className={'project-section w-full flex flex-col gap-6'}>
+                <div className={'project-section !p-[clamp(24px,_2vw,_32px)] w-full flex flex-col gap-6'}>
                     <div>
                         <h2 className={'text-h2'}>{dict.project.technical_title}</h2>
                         <h3 className={'text-subheading-green'}>{dict.project.technical_subtitle}</h3>
@@ -62,18 +64,31 @@ export default function Project(){
                     <p className={'text-secondary'}>{project.technical_description}</p>
                     <Technologies techs={project.technologies as TechName[]} />
                 </div>
-                <div className={'flex flex-col gap-6 items-start lg:items-end justify-end text text-left lg:text-right font-secondary w-full'}>
-                <span className={'flex flex-col'}>
-                    <h3 className={'text-h2'}>{project.anchorTitle1}</h3>
-                    <Link className={'text-body-large !mt-0 !text-gray-400'} href={"#"}>{project.anchor1}</Link>
-                </span>
-                <span className={'flex flex-col'}>
-                    <h3 className={'text-h2'}>{project.anchorTitle2}</h3>
-                    <Link className={'text-body-large !mt-0 !text-gray-400'} href={"#"}>{project.anchor2}</Link>
-                </span>
+                <div className={'flex flex-col gap-0 lg:gap-6 justify-between font-secondary w-full'}>
+                    <div className={'w-full'}>
+                        <div className={'scale-y-[-1] hidden lg:block'}>
+                            <HopperElement/>
+                        </div>
+                    </div>
+                    <div className={'flex flex-row lg:flex-col justify-between items-center lg:justify-end gap-6 text text-left lg:text-right'}>
+                        <div>
+                            <span className={'flex flex-col'}>
+                                <h3 className={'text-h2'}>{project.anchorTitle1}</h3>
+                                <Link className={'text-body-large !mt-0 !text-gray-400'} href={"#"}>{project.anchor1}</Link>
+                            </span>
+                            <span className={'flex flex-col'}>
+                                <h3 className={'text-h2'}>{project.anchorTitle2}</h3>
+                                <Link className={'text-body-large !mt-0 !text-gray-400'} href={"#"}>{project.anchor2}</Link>
+                            </span>
+                        </div>
+                        <div className={'hidden sm:block lg:hidden scale-x-[-1]'}>
+                            <HopperElement/>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className={'project-section w-full mt-10 sm:mt-16'}>
+
+            <div className={'project-section w-full mt-8 sm:mt-16'}>
                 <div className="relative aspect-[16/9] rounded-2xl shadow-md overflow-hidden">
                     <Image
                         src={project.image}
