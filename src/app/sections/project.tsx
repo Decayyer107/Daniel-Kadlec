@@ -7,97 +7,115 @@ import {useParams, useRouter} from "next/navigation";
 import {useLanguage} from "@/utils/LanguageContext";
 import {getProject} from "@/utils/GetProject";
 import { IoPlayBackCircle } from "react-icons/io5";
+import {useState} from "react";
+import Link from "next/link";
+
 export default function Project(){
     const params = useParams();
     const router = useRouter();
     const { lang, dict } = useLanguage();
+    const [animated, setAnimated] = useState(false);
 
     const project = getProject(params.project as string, lang);
 
+    const handleHover = () => {
+        setAnimated(true);
+
+        setTimeout(() => {
+            setAnimated(false);
+        }, 600);
+    };
+
     if (!project) return <div className="p-10 text-h1">Project not found.</div>;
     return(
-        <section className="section !max-w-[1550px] relative flex justify-center items-center">
+        <section className="section !max-w-[1550px] relative py-[clamp(112px,_25vw,_150px)]">
             <Button
+                onMouseEnter={handleHover}
                 onClick={() => {
                     document.documentElement.style.scrollBehavior = "auto";
-
                     router.back();
-
                     setTimeout(() => {
                         document.documentElement.style.scrollBehavior = "";
                     }, 100);
                 }}
-                className="group absolute w-12 h-12 !p-0 !rounded-full top-6 left-6 flex items-center justify-center transition-all duration-300"
+                className="group absolute w-12 h-12 !p-0 !rounded-full top-6 left-6 flex items-center justify-center"
             >
-                <IoPlayBackCircle className="text w-9 h-9 transition-all duration-300 group-hover:w-full group-hover:h-full" />
+                <IoPlayBackCircle
+                    className={`text w-full h-full ${
+                        animated ? "animate-[back-button_0.6s_ease_forwards]" : ""
+                    }`}
+                />
             </Button>
-
-
-            <div className={'w-full h-full flex flex-col gap-12 '}>
-                <div className={'flex justify-between gap-12'}>
-                    {/*top left*/}
-                    <div className={'project-section w-3/5'}>
-                        <div className="relative aspect-[16/9] rounded-2xl shadow-md overflow-hidden">
-                            <Image
-                                src={project.image}
-                                alt="Background image"
-                                fill
-                                className="object-cover object-center"
-                            />
-                        </div>
+            <div className={'flex flex-col'}>
+                <h1 className={'text-h1'}>{project.title}</h1>
+                <h2 className={'text-subheading-green'}>{project.subtitle}</h2>
+                <p className={'text-secondary mt-8'}>{project.description}</p>
+            </div>
+            <div className={'flex flex-col lg:flex-row justify-between gap-8 sm:gap-12 mt-12'}>
+                <div className={'project-section w-full flex flex-col gap-6'}>
+                    <div>
+                        <h2 className={'text-h2'}>{dict.project.technical_title}</h2>
+                        <h3 className={'text-subheading-green'}>{dict.project.technical_subtitle}</h3>
                     </div>
-                    {/*top right*/}
-                    <div className={'project-section w-2/5'}>
-                        <h1 className={'text-h1'}>{project.title}</h1>
-                        <h2 className={'text-subheading-green'}>{project.subtitle}</h2>
-                        <p className={'text'}>{project.description}</p>
-                    </div>
+                    <p className={'text-secondary'}>{project.technical_description}</p>
+                    <Technologies techs={project.technologies}/>
                 </div>
-                <div className={'flex justify-between gap-12'}>
-                    {/*bottom left*/}
-                    <div className={'project-section w-2/5 flex flex-col'}>
-                        <h1 className={'text-h1'}>{dict.project.technical_title}</h1>
-                        <h2 className={'text-subheading-green'}>{dict.project.technical_subtitle}</h2>
-                        <p className={'text'}>{project.technical_description}</p>
-                        <Technologies techs={project.technologies as import("@/components/Technologies").TechName[]} />
-                    </div>
-                    {/*bottom right*/}
-                    <div className={'project-section w-3/5 grid grid-cols-2 gap-6 justify-center items-center'}>
-                        <div className="project-image-small">
-                            <Image
-                                src={project.image}
-                                alt="Background image"
-                                fill
-                                className="object-cover object-center"
-                            />
-                        </div>
-                        <div className="project-image-small">
-                            <Image
-                                src={project.image}
-                                alt="Background image"
-                                fill
-                                className="object-cover object-center"
-                            />
-                        </div>
-                        <div className="project-image-small">
-                            <Image
-                                src={project.image}
-                                alt="Background image"
-                                fill
-                                className="object-cover object-center"
-                            />
-                        </div>
-                        <div className="project-image-small">
-                            <Image
-                                src={project.image}
-                                alt="Background image"
-                                fill
-                                className="object-cover object-center"
-                            />
-                        </div>
-                    </div>
+                <div className={'flex flex-col gap-6 items-start lg:items-end justify-end text text-left lg:text-right font-secondary w-full'}>
+                <span className={'flex flex-col'}>
+                    <h3 className={'text-h2'}>{project.anchorTitle1}</h3>
+                    <Link className={'text-body-large !mt-0 !text-gray-400'} href={"#"}>{project.anchor1}</Link>
+                </span>
+                <span className={'flex flex-col'}>
+                    <h3 className={'text-h2'}>{project.anchorTitle2}</h3>
+                    <Link className={'text-body-large !mt-0 !text-gray-400'} href={"#"}>{project.anchor2}</Link>
+                </span>
                 </div>
             </div>
+            <div className={'project-section w-full mt-10 sm:mt-16'}>
+                <div className="relative aspect-[16/9] rounded-2xl shadow-md overflow-hidden">
+                    <Image
+                        src={project.image}
+                        alt="Background image"
+                        fill
+                        className="object-cover object-center"
+                    />
+                </div>
+            </div>
+            <div className={'project-section w-full grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center mt-8'}>
+                <div className="project-image-small">
+                    <Image
+                        src={project.image}
+                        alt="Background image"
+                        fill
+                        className="object-cover object-center"
+                    />
+                </div>
+                <div className="project-image-small">
+                    <Image
+                        src={project.image}
+                        alt="Background image"
+                        fill
+                        className="object-cover object-center"
+                    />
+                </div>
+                <div className="project-image-small">
+                    <Image
+                        src={project.image}
+                        alt="Background image"
+                        fill
+                        className="object-cover object-center"
+                    />
+                </div>
+                <div className="project-image-small">
+                    <Image
+                        src={project.image}
+                        alt="Background image"
+                        fill
+                        className="object-cover object-center"
+                    />
+                </div>
+            </div>
+            );
         </section>
     );
 }

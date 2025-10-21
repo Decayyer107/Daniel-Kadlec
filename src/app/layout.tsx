@@ -1,7 +1,8 @@
 import "./globals.css";
 import ClientRoot from "./layoutClient";
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata  = {
     title: "Your Site",
     description: "Your site description",
 };

@@ -54,7 +54,7 @@ html{
 }
 
 .text-h1{
-    @apply text-offblack dark:text-offwhite font-primary text-[clamp(_42px,_7vw,_64px)] leading-[clamp(38px,_calc(4vw+16px),_58px)];
+    @apply text-offblack dark:text-offwhite font-primary text-[clamp(_42px,_5vw,_64px)] leading-[clamp(38px,_calc(4vw+16px),_58px)];
 }
 .text-h2{
     @apply text-offblack dark:text-offwhite font-primary text-[clamp(_36px,_calc(4vw+4px),_58px)] leading-[clamp(34px,_calc(2vw+20px),_58px)];
@@ -90,10 +90,10 @@ html{
 }
 
 .project-section{
-    @apply bg-gray-900 p-8 rounded-2xl shadow-md;
+    @apply bg-gray-900 p-[clamp(12px,_3vw,_32px)] rounded-2xl shadow-md;
 }
 .project-image-small{
-    @apply relative aspect-[14/9] rounded-2xl shadow-xl overflow-hidden;
+    @apply relative aspect-[16/9] rounded-2xl shadow-xl overflow-hidden;
 }
 
 .contact-link{
@@ -120,4 +120,18 @@ html{
         animation: marquee 15s linear infinite;
     }
 }
+@keyframes back-button {
+    0%   { transform: rotate(0deg); }
+    33%   { transform: rotate(20deg); }
+    66%  { transform: rotate(-20deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+@layer utilities {
+    .animate-back-button {
+        animation: back-button 0.4s ease;
+    }
+}
+
 

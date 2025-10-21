@@ -5,8 +5,7 @@ import PortfolioSection from "./sections/portfolioSection";
 import Skills from "./sections/skills";
 import {About as Contact} from "./sections/contact";
 import {Metadata} from "next";
-
-export const metadata = {
+export const metadata:Metadata = {
     title: "Daniel Kadlec ● Domů",
     description: "Vítejte v mém osobním portfoliu, které představuje projekty z oblasti designu a vývoje."
 };

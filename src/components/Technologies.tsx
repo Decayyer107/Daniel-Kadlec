@@ -2,45 +2,80 @@
 
 import React from "react";
 import {
-    ReactOriginal,
-    TailwindcssOriginal,
+    // Frontend
     Html5Original,
     Css3Original,
     JavascriptOriginal,
     TypescriptOriginal,
+    ReactOriginal,
+    TailwindcssOriginal,
+
+    // Frameworks / Build tools
     NextjsOriginal,
+    VitejsOriginal,
+    FramermotionOriginal,
+
+    // Backend
     NodejsOriginal,
+
+    // Design
     FigmaOriginal,
     PhotoshopOriginal,
     IllustratorOriginal,
-} from "devicons-react";
 
+    // Version control
+    GitOriginal,
+} from "devicons-react";
 export type TechName =
-    | "react"
-    | "tailwind"
+// Frontend
     | "html"
     | "css"
     | "javascript"
     | "typescript"
+    | "react"
+    | "tailwind"
+
+    // Frameworks / Build tools
     | "nextjs"
+    | "vite"
+    | "framer"
+
+    // Backend
     | "nodejs"
+
+    // Design
     | "figma"
     | "photoshop"
-    | "illustrator";
+    | "illustrator"
+
+    // Version control
+    | "git";
 
 export const getTechMap = (size = 20) =>
     ({
-        react: { icon: <ReactOriginal size={size} />, label: "React" },
-        tailwind: { icon: <TailwindcssOriginal size={size} />, label: "Tailwind CSS" },
+        // 🖥️ Frontend
         html: { icon: <Html5Original size={size} />, label: "HTML5" },
         css: { icon: <Css3Original size={size} />, label: "CSS3" },
         javascript: { icon: <JavascriptOriginal size={size} />, label: "JavaScript" },
         typescript: { icon: <TypescriptOriginal size={size} />, label: "TypeScript" },
+        react: { icon: <ReactOriginal size={size} />, label: "React" },
+        tailwind: { icon: <TailwindcssOriginal size={size} />, label: "Tailwind CSS" },
+
+        // ⚙️ Frameworks / Build Tools
         nextjs: { icon: <NextjsOriginal size={size} />, label: "Next.js" },
+        vite: { icon: <VitejsOriginal size={size} />, label: "Vite" },
+        framer: { icon: <FramermotionOriginal size={size} />, label: "Framer Motion" },
+
+        // 🔌 Backend
         nodejs: { icon: <NodejsOriginal size={size} />, label: "Node.js" },
+
+        // 🎨 Design
         figma: { icon: <FigmaOriginal size={size} />, label: "Figma" },
         photoshop: { icon: <PhotoshopOriginal size={size} />, label: "Photoshop" },
         illustrator: { icon: <IllustratorOriginal size={size} />, label: "Illustrator" },
+
+        // 🛠️ Version Control
+        git: { icon: <GitOriginal size={size} />, label: "Git" },
     } as const);
 
 interface TechStackProps {
@@ -53,7 +88,7 @@ export default function TechStack({ techs, className = "", size = 20 }: TechStac
     const techMap = getTechMap(size);
 
     return (
-        <div className={`flex gap-[clamp(12px,_1vw,_24px)] text-center ${className}`}>
+        <div className={`flex flex-wrap gap-[clamp(12px,_1vw,_24px)] text-center ${className}`}>
             {techs.map((tech) => {
                 const item = techMap[tech];
                 if (!item) return null;

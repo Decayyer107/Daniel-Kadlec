@@ -1,26 +1,30 @@
 [
   {
     "id": "zahrada-smutku",
+    "link": "zahrada-smutku",
     "title": "Zahrada smutku",
     "subtitle": "UX/UI design webové stránky",
-    "description": "Konceptuální UX/UI design zaměřený na emocionální příběh.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nulla nunc. Quisque purus leo, auctor vehicula faucibus ac, dignissim nec eros. Fusce sodales purus sit amet urna semper mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras cursus augue risus, nec dictum augue aliquet ac. Duis eleifend auctor faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas nec purus eget massa scelerisque blandit. In hac habitasse platea dictumst. Maecenas scelerisque risus id purus vehicula sagittis. Nulla vestibulum, eros at ultrices lobortis, elit nisi faucibus dolor, ut vestibulum orci ligula nec nisi. Fusce sit amet leo ac quam fermentum feugiat.",
     "technologies": ["figma", "css", "html"],
     "image": "/projects/zahrada-smutku/thumbnail.png",
-    "link": "zahrada-smutku",
+    "technical_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nulla nunc. Quisque purus leo, auctor vehicula faucibus ac, dignissim nec eros. Fusce sodales purus sit amet urna semper mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras cursus augue risus, nec dictum augue aliquet ac. Duis eleifend auctor faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+    "anchorTitle1":"Odkaz 1",
+    "anchor1":"zahradasmutku.cz",
+    "anchorTitle2":"Odkaz 2",
+    "anchor2":"zahradasmutku.cz",
     "featured": true,
-    "technical_description": "bla bla bla",
-    "category": ["development", "design"]
+    "category": ["design"]
   },
   {
     "id": "portfolio",
+    "link": "my-portfolio",
     "title": "Osobní portfolio",
     "subtitle": "Full-stack Next.js web",
     "description": "Můj vlastní web pro prezentaci designérské a vývojářské práce.",
     "technologies": ["nextjs", "tailwind", "framer-motion"],
     "image": "/projects/portfolio/thumbnail.png",
-    "link": "my-portfolio",
-    "featured": false,
     "technical_description": "bla bla bla",
-    "category": ["development", "design"]
+    "featured": false,
+    "category": ["development"]
   }
 ]
