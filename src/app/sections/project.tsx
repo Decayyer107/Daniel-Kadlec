@@ -9,6 +9,8 @@ import {getProject} from "@/utils/GetProject";
 import { IoPlayBackCircle } from "react-icons/io5";
 import {useState} from "react";
 import Link from "next/link";
+import { TechName } from "@/components/Technologies";
+
 
 export default function Project(){
     const params = useParams();
@@ -58,7 +60,7 @@ export default function Project(){
                         <h3 className={'text-subheading-green'}>{dict.project.technical_subtitle}</h3>
                     </div>
                     <p className={'text-secondary'}>{project.technical_description}</p>
-                    <Technologies techs={project.technologies}/>
+                    <Technologies techs={project.technologies as TechName[]} />
                 </div>
                 <div className={'flex flex-col gap-6 items-start lg:items-end justify-end text text-left lg:text-right font-secondary w-full'}>
                 <span className={'flex flex-col'}>
