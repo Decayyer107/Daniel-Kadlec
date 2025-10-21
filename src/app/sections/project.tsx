@@ -7,8 +7,6 @@ import {useParams, useRouter} from "next/navigation";
 import {useLanguage} from "@/utils/LanguageContext";
 import {getProject} from "@/utils/GetProject";
 import { IoPlayBackCircle } from "react-icons/io5";
-
-
 export default function Project(){
     const params = useParams();
     const router = useRouter();
@@ -16,11 +14,19 @@ export default function Project(){
 
     const project = getProject(params.project as string, lang);
 
-    if (!project) return <div className="p-10">Project not found.</div>;
+    if (!project) return <div className="p-10 text-h1">Project not found.</div>;
     return(
-        <section className="section !max-w-[1550px] min-h-screen relative flex justify-center items-center">
+        <section className="section !max-w-[1550px] relative flex justify-center items-center">
             <Button
-                onClick={() => router.back()}
+                onClick={() => {
+                    document.documentElement.style.scrollBehavior = "auto";
+
+                    router.back();
+
+                    setTimeout(() => {
+                        document.documentElement.style.scrollBehavior = "";
+                    }, 100);
+                }}
                 className="group absolute w-12 h-12 !p-0 !rounded-full top-6 left-6 flex items-center justify-center transition-all duration-300"
             >
                 <IoPlayBackCircle className="text w-9 h-9 transition-all duration-300 group-hover:w-full group-hover:h-full" />

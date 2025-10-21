@@ -38,20 +38,16 @@ export default function PortfolioPage(){
 
             <div className="w-full flex justify-end mt-12 sm:mt-0">
                 <div className="flex flex-col justify-end">
-                    <span className="font-primary font-bold text-[clamp(18px,_3vw,_30px)] text-green tracking-wider text-right mb-[clamp(0px,_1vw,_12px)]">
-                        {dict.portfolio.filters_heading}
-                    </span>
-
-                    <div className="flex gap-3 sm:gap-5 text-[clamp(16px,_2.5vw,_20px)] font-bold flex-wrap justify-end relative">
+                    <div className="flex gap-1 sm:gap-3 text-[clamp(16px,_2.5vw,_20px)] font-bold flex-wrap justify-end relative">
                         {filters.map((filter) => (
                             <button
                                 key={filter.key}
                                 onClick={() => setActiveFilter(filter.key)}
-                                className="relative px-8 py-2 transition-all duration-200 text-center"
+                                className="relative px-5 py-2 sm:px-8 sm:py-2 transition-all duration-200 text-center"
                             >
                                 {/*Background*/}
                                 <span
-                                    className={`absolute inset-0 rounded-full bg-gray-700 scale-95 opacity-0 transition-all duration-300 ${
+                                    className={`absolute inset-0 rounded-full bg-[#d3d3de] dark:bg-gray-700 scale-95 opacity-0 transition-all duration-300 ${
                                         activeFilter === filter.key
                                             ? "opacity-100 scale-100"
                                             : ""
@@ -75,7 +71,8 @@ export default function PortfolioPage(){
                     grid-cols-1
                     lg:grid-cols-2
                     gap-[clamp(52px,_4vw,_64px)]
-                    mt-[clamp(42px,_4vw,_64px)]
+                    mt-8
+                    lg:mt-4
                     [&>*:nth-child(even)]:mt-[clamp(16px,_2vw,_32px)]
                     max-md:[&>*:nth-child(even)]:mt-0
                 "
