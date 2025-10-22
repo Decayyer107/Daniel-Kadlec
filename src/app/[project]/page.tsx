@@ -2,14 +2,18 @@ import { notFound } from "next/navigation";
 import { getProject } from "@/utils/GetProject";
 import Project from "../sections/project";
 
-
-export default function ProjectPage({params}:{params: { project: string };
+export default async function ProjectPage({
+                                              params,
+                                          }: {
+    params: Promise<{ project: string }>;
 }) {
-    const project = getProject(params.project, "cz");
+    const { project } = await params;
 
-    if (!project) {
+    const data = getProject(project, "cz");
+
+    if (!data) {
         notFound();
     }
 
-    return <Project project={project} />;
+    return <Project project={data} />;
 }
