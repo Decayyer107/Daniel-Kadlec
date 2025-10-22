@@ -32,7 +32,7 @@ export default function Project({ project }: { project: ProjectType }) {
     };
 
     if (!project) {
-        notFound(); // ✅ shows your app/not-found.tsx page
+        notFound();
     }
 
     return(
@@ -75,15 +75,15 @@ export default function Project({ project }: { project: ProjectType }) {
                             <HopperElement/>
                         </div>
                     </div>
-                    <div className={'flex flex-row lg:flex-col justify-between items-center lg:justify-end gap-6 text text-left lg:text-right'}>
-                        <div>
+                    <div className={'flex flex-row lg:flex-col justify-between items-end lg:justify-end gap-6 text text-left lg:text-right'}>
+                        <div className={'flex flex-col gap-3'}>
                             <span className={'flex flex-col'}>
                                 <h3 className={'text-h2'}>{project.anchorTitle1}</h3>
-                                <Link className={'text-body-large !mt-0 !text-gray-400'} href={"#"}>{project.anchor1}</Link>
+                                <Link className={'text-body-large !mt-1 !text-gray-400 hover:underline'} href={"#"}>{project.anchor1}</Link>
                             </span>
                             <span className={'flex flex-col'}>
                                 <h3 className={'text-h2'}>{project.anchorTitle2}</h3>
-                                <Link className={'text-body-large !mt-0 !text-gray-400'} href={"#"}>{project.anchor2}</Link>
+                                <Link className={'text-body-large !mt-1 !text-gray-400 hover:underline'} href={"#"}>{project.anchor2}</Link>
                             </span>
                         </div>
                         <div className={'hidden sm:block lg:hidden scale-x-[-1]'}>
