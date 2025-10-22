@@ -3,8 +3,8 @@
 import { useLanguage } from "@/utils/LanguageContext";
 import ProjectSmall from "@/components/ProjectSmall";
 import Heading from "@/components/Heading";
-import projectsEn from "@/data/projects/projects.en";
-import projectsCz from "@/data/projects/projects.cz";
+import {projectsEn} from "@/data/projects/projects.en";
+import {projectsCz} from "@/data/projects/projects.cz";
 
 
 export default function PortfolioSection() {

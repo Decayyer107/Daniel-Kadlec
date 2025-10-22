@@ -1,8 +1,8 @@
 'use client'
 
 import {useLanguage} from "@/utils/LanguageContext";
-import projectsCz from "@/data/projects/projects.cz";
-import projectsEn from "@/data/projects/projects.en";
+import {projectsCz} from "@/data/projects/projects.cz";
+import {projectsEn} from "@/data/projects/projects.en";
 import {useState} from "react";
 import Heading from "@/components/Heading";
 import ProjectBig from "@/components/ProjectBig";

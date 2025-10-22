@@ -1,6 +1,6 @@
 import type { ProjectType } from "@/app/types/project";
 
-export const projectsCz: ProjectType[] = [
+export const projectsEn: ProjectType[] = [
     {
         "id": "1",
         "link": "zahrada-smutku",
@@ -15,6 +15,6 @@ export const projectsCz: ProjectType[] = [
         "anchorTitle2":"Figma project",
         "anchor2":"figma/zahradasmutku.com",
         "featured": true,
-        "category": ["design"]
+        "category": ["design"],
     },
 ];
