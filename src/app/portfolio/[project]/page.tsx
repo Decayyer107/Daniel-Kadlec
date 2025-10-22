@@ -1,15 +1,15 @@
+import { notFound } from "next/navigation";
+import { getProject } from "@/utils/GetProject";
 import Project from "../../sections/project";
-import type { Metadata } from 'next'
 
+export default function ProjectPage({params}:{params: { project: string };
+}) {
+    const project = getProject(params.project, "cz");
 
-export const metadata:Metadata = {
-    title: "Daniel Kadlec ● Projekt",
-    description: "Vítejte v mém osobním portfoliu, které představuje projekty z oblasti designu a vývoje."
-};
+    if (!project) {
+        notFound();
+    }
 
-export default function ProjectPage() {
-
-    return (
-        <Project/>
-    );
+    return <Project project={project} />;
 }
+

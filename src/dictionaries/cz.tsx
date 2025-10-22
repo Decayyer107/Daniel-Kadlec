@@ -119,5 +119,9 @@ const cs = {
         About: "O mně",
         Portfolio: "Portfolio",
     },
+    error:{
+        Description: "Tato stránka neexistuje, nebo byla přesunuta.",
+        Button: "Zpět domů",
+    }
 };
 export default cs;

@@ -11,15 +11,17 @@ import {useState} from "react";
 import Link from "next/link";
 import { TechName } from "@/components/Technologies";
 import HopperElement from "@/components/HopperElement";
+import { notFound } from "next/navigation";
+import {ProjectType} from "../types/project"
 
 
-export default function Project(){
+export default function Project({ project }: { project: ProjectType }) {
     const params = useParams();
     const router = useRouter();
     const { lang, dict } = useLanguage();
     const [animated, setAnimated] = useState(false);
 
-    const project = getProject(params.project as string, lang);
+    project = getProject(params.project as string, lang)!;
 
     const handleHover = () => {
         setAnimated(true);
@@ -29,7 +31,10 @@ export default function Project(){
         }, 600);
     };
 
-    if (!project) return <div className="p-10 text-h1">Project not found.</div>;
+    if (!project) {
+        notFound(); // ✅ shows your app/not-found.tsx page
+    }
+
     return(
         <section className="section !max-w-[1550px] relative py-[clamp(112px,_25vw,_150px)]">
             <Button

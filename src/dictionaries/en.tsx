@@ -118,5 +118,9 @@ const en = {
         About: "About",
         Portfolio: "Portfolio",
     },
+    error:{
+        Description: "The page you’re looking for doesn’t exist or has been moved.",
+        Button: "Go back home",
+    }
 };
 export default en;
