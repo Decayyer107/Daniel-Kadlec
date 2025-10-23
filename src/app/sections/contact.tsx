@@ -123,13 +123,6 @@ export default function Contact() {
                             ? dict.contact.contact_form_email || "Sending..."
                             : dict.contact.contact_form_button}
                     </button>
-
-                    {success === true && (
-                        <p className="text-green-600 mt-2">✅ Message sent! Check your inbox for confirmation.</p>
-                    )}
-                    {success === false && (
-                        <p className="text-red-600 mt-2">❌ Failed to send. Please try again later.</p>
-                    )}
                 </form>
             </div>
         </section>
