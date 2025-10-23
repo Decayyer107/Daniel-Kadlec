@@ -103,36 +103,3 @@ html{
     @apply text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px];
 }
 
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-.animate-marquee {
-    animation: marquee 30s linear infinite;
-}
-@media (max-width: 768px) {
-    .animate-marquee {
-        animation: marquee 15s linear infinite;
-    }
-}
-@keyframes back-button {
-    0%   { transform: rotate(0deg); }
-    25%   { transform: rotate(25deg); }
-    50%  { transform: rotate(-15deg); }
-    75%  { transform: rotate(10deg); }
-    100% { transform: rotate(0deg); }
-}
-
-
-@layer utilities {
-    .animate-back-button {
-        animation: back-button 0.4s ease;
-    }
-}
-
-

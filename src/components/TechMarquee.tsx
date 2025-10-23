@@ -1,7 +1,9 @@
 "use client";
 
-import React from "react";
+import {useEffect, useState} from "react";
 import { getTechMap, TechName } from "./Technologies";
+import { motion } from "motion/react"
+
 
 export default function TechMarquee() {
     const techMap = getTechMap();
@@ -9,8 +11,10 @@ export default function TechMarquee() {
 
     const scrollingTechs = [...techs, ...techs];
 
+
+
     return (
-        <div
+        <motion.div
             className="overflow-hidden whitespace-nowrap py-4 mb-[clamp(12px,_2vw,_32px)] relative"
             style={{
                 WebkitMaskImage:
@@ -23,7 +27,15 @@ export default function TechMarquee() {
                 maskSize: "100% 100%",
             }}
         >
-            <div className="animate-marquee flex gap-[clamp(_4px,_2vw,_46px)]">
+            <motion.div
+                animate={{ x: ["0%", "-100%"] }}
+                transition={{
+                    duration: 30,
+                    ease: "linear",
+                    repeat: Infinity,
+                }}
+                className="flex gap-[clamp(_4px,_2vw,_46px)] justify-between"
+            >
                 {scrollingTechs.map((tech, idx) => {
                     const key = techs[idx % techs.length];
                     const item = techMap[key];
@@ -34,13 +46,12 @@ export default function TechMarquee() {
                         >
                             {item.icon}
                             <span className="!text-[clamp(_12px,_2vw,_18px)] font-medium text-secondary">
-                              {item.label}
-                            </span>
+                {item.label}
+              </span>
                         </div>
                     );
                 })}
-            </div>
-
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }

@@ -13,23 +13,24 @@ import { TechName } from "@/components/Technologies";
 import HopperElement from "@/components/HopperElement";
 import { notFound } from "next/navigation";
 import {ProjectType} from "../types/project"
+import { motion } from "motion/react"
 
 
 export default function Project({ project }: { project: ProjectType }) {
     const params = useParams();
     const router = useRouter();
     const { lang, dict } = useLanguage();
-    const [animated, setAnimated] = useState(false);
+
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const handleAnimate = () => {
+        if (!isAnimating) {
+            setIsAnimating(true);
+            setTimeout(() => setIsAnimating(false), 500);
+        }
+    };
 
     project = getProject(params.project as string, lang)!;
-
-    const handleHover = () => {
-        setAnimated(true);
-
-        setTimeout(() => {
-            setAnimated(false);
-        }, 600);
-    };
 
     if (!project) {
         notFound();
@@ -37,8 +38,21 @@ export default function Project({ project }: { project: ProjectType }) {
 
     return(
         <section className="section !max-w-[1550px] relative py-[clamp(112px,_25vw,_150px)]">
-            <Button
-                onMouseEnter={handleHover}
+            <motion.div
+                onHoverStart={handleAnimate}
+                animate={
+                    isAnimating
+                        ? { rotate: [0, 30, -30, 15, -10, 0] }
+                        : { rotate: 0 }
+                }
+                transition={
+                    isAnimating
+                        ? {
+                            duration: 0.7,
+                            ease: "easeInOut",
+                        }
+                        : {}
+                }
                 onClick={() => {
                     document.documentElement.style.scrollBehavior = "auto";
                     router.back();
@@ -46,14 +60,10 @@ export default function Project({ project }: { project: ProjectType }) {
                         document.documentElement.style.scrollBehavior = "";
                     }, 100);
                 }}
-                className="group absolute w-12 h-12 !p-0 !rounded-full top-6 left-6 flex items-center justify-center"
+                className="p-[1px] border-offblack dark:border-offwhite border-2 rounded-full w-14 h-14 absolute top-6 left-6"
             >
-                <IoPlayBackCircle
-                    className={`text w-full h-full ${
-                        animated ? "animate-[back-button_0.6s_ease_forwards]" : ""
-                    }`}
-                />
-            </Button>
+                <IoPlayBackCircle className="text w-full h-full" />
+            </motion.div>
             <div className={'flex flex-col'}>
                 <h1 className={'text-h1'}>{project.title}</h1>
                 <h2 className={'text-subheading-green'}>{project.subtitle}</h2>
