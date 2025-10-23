@@ -12,7 +12,7 @@ function getLocale(request: NextRequest) {
 
 export function middleware(request: NextRequest) {
     const response = NextResponse.next();
-    const locale = getLocale(request);
+    // const locale = getLocale(request);
 
     return response;
 }

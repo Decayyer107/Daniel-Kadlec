@@ -3,7 +3,6 @@
 import LanguageSwitcher from "@/components/LanguageSwicther";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { IoIosClose } from "react-icons/io";
-import Link from "next/link";
 import { useEffect } from "react";
 import { useLanguage } from "@/utils/LanguageContext";
 import { useRouter, usePathname } from "next/navigation";
@@ -20,39 +19,7 @@ interface HamburgerMenuProps {
 }
 
 export default function HamburgerMenu({ isOpen, onClose }: HamburgerMenuProps) {
-    const { dict } = useLanguage();
-    const pathname = usePathname();
-    const router = useRouter();
     const { theme, toggleTheme } = useTheme();
-
-    const goHome = (hash?: string, e?: React.MouseEvent) => {
-        e?.preventDefault();
-        if (pathname === "/") {
-            if (hash) document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
-            else window.scrollTo({ top: 0, behavior: "smooth" });
-            onClose();
-        } else {
-            router.push(hash ? `/#${hash}` : "/");
-            onClose();
-        }
-    };
-
-    const goPortfolio = (e?: React.MouseEvent) => {
-        e?.preventDefault();
-        if (pathname === "/portfolio") {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        } else {
-            router.push("/portfolio");
-        }
-        onClose();
-    };
-
-    useEffect(() => {
-        if (pathname === "/" && window.location.hash) {
-            const id = window.location.hash.slice(1);
-            document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-        }
-    }, [pathname]);
 
     return (
         <nav

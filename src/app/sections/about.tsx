@@ -4,7 +4,6 @@ import HopperElement from "@/components/HopperElement";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
 import {useLanguage} from "@/utils/LanguageContext";
-import Link from "next/link";
 
 
 import { LuDownload } from "react-icons/lu";
