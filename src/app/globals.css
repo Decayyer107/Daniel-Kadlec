@@ -106,6 +106,13 @@ html, body {
     @apply h-full;
 }
 
+body {
+    @apply antialiased;
+    background: var(--color-offblack);
+    color: var(--color-offwhite);
+}
+
+
 #__next,
 main,
 #root {
