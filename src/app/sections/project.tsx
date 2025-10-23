@@ -147,7 +147,6 @@ export default function Project({ project }: { project: ProjectType }) {
                     />
                 </div>
             </div>
-            );
         </section>
     );
 }

@@ -102,4 +102,35 @@ html{
 .contact-icon{
     @apply text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px];
 }
+html, body {
+    @apply h-full;
+}
+
+body {
+    @apply antialiased;
+    background: var(--color-offblack);
+    color: var(--color-offwhite);
+}
+
+#__next, main, #root {
+    @apply min-h-screen;
+}
+.spinner {
+    width: 65px;
+    height: 65px;
+    border-radius: 9999px;
+    border-right-color: transparent;
+    animation: spin 0.8s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .spinner {
+        animation-duration: 5s;
+    }
+}
 
