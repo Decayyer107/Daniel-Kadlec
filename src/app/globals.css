@@ -106,26 +106,24 @@ html, body {
     @apply h-full;
 }
 
-body {
-    @apply antialiased;
-    background: var(--color-offblack);
-    color: var(--color-offwhite);
-}
-
-#__next, main, #root {
+#__next,
+main,
+#root {
     @apply min-h-screen;
 }
+
 .spinner {
-    width: 65px;
-    height: 65px;
-    border-radius: 9999px;
+    @apply w-16 h-16 rounded-full inline-block border-[8px] dark:border-offwhite border-offblack;
+
     border-right-color: transparent;
+
     animation: spin 0.8s linear infinite;
-    display: inline-block;
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -133,4 +131,3 @@ body {
         animation-duration: 5s;
     }
 }
-

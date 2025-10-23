@@ -65,7 +65,7 @@ export default function LoadingOverlay({
                     >
                         <div className="flex flex-col items-center gap-4">
                             <div
-                                className="spinner border-[8px] dark:border-offwhite border-offblack"
+                                className="spinner"
                                 role="status"
                                 aria-label="Loading"
                             />
