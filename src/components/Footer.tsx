@@ -37,14 +37,14 @@ export default function Footer() {
                         <span className="text font-primary font-bold text-[clamp(_20px,_3vw,_30px)]">Daniel <span className="text-green">Kadlec</span></span>
                     </div>
                     <div>
-                        <NavLinks className={'!flex'}/>
+                        <NavLinks className={'!flex !gap-[clamp(_14px,_3vw,_46px)]'}/>
                     </div>
                     <div className="flex gap-[clamp(_16px,_3vw,_32px)] justify-center items-center">
                         <LanguageSwitcher />
                         <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
                     </div>
                     <div>
-                <span className="flex gap-6 items-center">
+                <span className="flex items-center">
                     <SocialIcons isSmall={true}/>
                 </span>
                     </div>
