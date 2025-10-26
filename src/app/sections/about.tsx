@@ -32,7 +32,7 @@ export default function About(){
                 <p className="text-secondary">{dict.about.paragraph()}</p>
             </div>
             <div className={'md:hidden flex items-end gap-0 sm:gap-[clamp(_24px,_3vw,_48px)] mt-0 sm:-mt-6'}>
-                <a href="/zivotopis.pdf" download>
+                <a href="/zivotopis.pdf" download className={'w-full'}>
                     <Button className="w-full max-h-13 mb-6 mt-12 sm:mt-0">
                         {dict.about.button}
                         <LuDownload className="h-5 w-5 lg:h-6 lg:w-6" />
