@@ -89,11 +89,11 @@ export default function Project({ project }: { project: ProjectType }) {
                         <div className={'flex flex-col gap-3'}>
                             <span className={'flex flex-col'}>
                                 <h3 className={'text-h2'}>{project.anchorTitle1}</h3>
-                                <Link className={'text-body-large !mt-1 !text-gray-400 hover:underline'} href={"#"}>{project.anchor1}</Link>
+                                <Link className={'text-body-large !mt-1 !text-green-secondary dark:!text-gray-400 hover:underline'} href={"#"}>{project.anchor1}</Link>
                             </span>
                             <span className={'flex flex-col'}>
                                 <h3 className={'text-h2'}>{project.anchorTitle2}</h3>
-                                <Link className={'text-body-large !mt-1 !text-gray-400 hover:underline'} href={"#"}>{project.anchor2}</Link>
+                                <Link className={'text-body-large !mt-1 !text-green-secondary dark:!text-gray-400  hover:underline'} href={"#"}>{project.anchor2}</Link>
                             </span>
                         </div>
                         <div className={'hidden sm:block lg:hidden scale-x-[-1]'}>

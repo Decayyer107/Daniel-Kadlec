@@ -90,7 +90,7 @@ html{
 }
 
 .project-section{
-    @apply bg-gray-900 p-[clamp(12px,_3vw,_32px)] rounded-2xl shadow-md;
+    @apply bg-gray-200 dark:bg-gray-900 p-[clamp(12px,_3vw,_32px)] rounded-2xl shadow-md;
 }
 .project-image-small{
     @apply relative aspect-[16/9] rounded-2xl shadow-xl overflow-hidden;
