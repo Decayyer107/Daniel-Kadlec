@@ -194,18 +194,18 @@ export default function Contact() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: 30 }}
                                 transition={{ duration: 0.3, layout: { duration: 0.25 } }}
-                                className={`relative px-6 w-full sm:w-fit py-4 rounded-none sm:rounded-xl shadow-lg border-0 border-t-2 sm:border-2 overflow-hidden text flex flex-col bg-gray-200 dark:bg-gray-900
+                                className={`relative px-12 w-full sm:w-fit py-8 sm:py-6 rounded-none sm:rounded-xl shadow-lg border-0 border-t-2 sm:border-2 overflow-hidden text flex flex-col bg-gray-200 dark:bg-gray-900
           ${toast.success
                                     ? "border-gray-700 sm:border-green-primary"
                                     : "border-gray-700 sm:border-red-error"}`}
                             >
-                                <span className="font-secondary font-bold text-xl">
+                                <span className="font-secondary font-bold text-2xl">
                                   {toast.success ? dict.contact.toast_success_heading : dict.contact.toast_error_heading}
                                 </span>
-                                <span className={'text-md font-semibold'}>{toast.message}</span>
+                                <span className={'text-lg font-semibold'}>{toast.message}</span>
 
                                 <motion.div
-                                    className={`w-full h-1 absolute top-0 sm:bottom-0 left-0 ${
+                                    className={`w-full h-1 absolute top-0 sm:bottom-0 left-0 rounded-full ${
                                         toast.success ? "bg-green-primary" : "bg-red-error"
                                     }`}
                                     initial={{ scaleX: 1, transformOrigin: "left" }}

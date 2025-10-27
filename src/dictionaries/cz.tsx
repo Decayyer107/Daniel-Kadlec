@@ -99,7 +99,7 @@ const cs = {
         toast_success_heading: "E-mail odeslán!",
         toast_error_heading: "Chyba E-mailového formuláře",
 
-        toast_invalid_email: "Neplatný formát e-mailu.",
+        toast_invalid_email: "Neplatný formát e-mailové adresy.",
         toast_missing_fields: "Vyplňte prosím všechna povinná pole.",
         toast_success: "Zpráva byla úspěšně odeslána!",
         toast_error: "Chyba při odesílání zprávy.",
