@@ -14,7 +14,7 @@ export default function SocialIcons({ isSmall }: IconsProps) {
     const [hovered, setHovered] = useState<string | null>(null);
 
     const baseClasses =
-        "cursor-pointer transition-all duration-500 ease-out text";
+        "cursor-pointer transition-all duration-600 ease-out text";
 
     const getStyle = (id: string) => {
         const isHovered = hovered === id;
@@ -22,7 +22,7 @@ export default function SocialIcons({ isSmall }: IconsProps) {
 
         return `
       ${baseClasses}
-      ${isHovered ? " " : isOther ? "opacity-[70%]" : "opacity-100"}
+      ${isHovered ? " " : isOther ? "opacity-[30%] scale-[100%]" : "opacity-100 scale-[102%]"}
     `;
     };
 
@@ -32,39 +32,44 @@ export default function SocialIcons({ isSmall }: IconsProps) {
         : "w-[clamp(30px,5vw,32px)] h-[clamp(30px,5vw,32px)]"; // small variant
 
     const gapClass = !isSmall
-        ? "gap-[clamp(_12px,_2vw,_24px)]" // large variant
-        : "gap-[clamp(_18px,_2vw,_24px)]"; // small variant
+        ? "px-[clamp(_6px,_2vw,_15px)]" // large variant
+        : "px-[clamp(_6px,_2vw,_15px)]"; // small variant
 
     return (
-        <span className={`flex gap-[clamp(_12px,_2vw,_24px)] items-center ${gapClass}`}>
-          <a href="https://github.com/Decayyer107">
+        <span className={`flex items-center`}>
+          <a href="https://github.com/Decayyer107" className={`${gapClass}`}
+             onMouseEnter={() => setHovered("github")}
+             onMouseLeave={() => setHovered(null)}>
             <FaGithub
-                onMouseEnter={() => setHovered("github")}
-                onMouseLeave={() => setHovered(null)}
+
                 className={`${getStyle("github")} ${sizeClass}`}
             />
           </a>
 
-          <a href="https://x.com/dan_kadlec">
+          <a href="https://x.com/dan_kadlec" className={`${gapClass}`}
+             onMouseEnter={() => setHovered("twitter")}
+             onMouseLeave={() => setHovered(null)}
+          >
             <FaXTwitter
-                onMouseEnter={() => setHovered("twitter")}
-                onMouseLeave={() => setHovered(null)}
                 className={`${getStyle("twitter")} ${sizeClass}`}
             />
           </a>
 
-          <a href="https://www.linkedin.com/in/daniel-kadlec-903759379/">
+          <a href="https://www.linkedin.com/in/daniel-kadlec-903759379/" className={`${gapClass}`}
+             onMouseEnter={() => setHovered("linkedin")}
+             onMouseLeave={() => setHovered(null)}
+          >
             <FaLinkedin
-                onMouseEnter={() => setHovered("linkedin")}
-                onMouseLeave={() => setHovered(null)}
                 className={`${getStyle("linkedin")} ${sizeClass}`}
             />
           </a>
 
-          <a href="mailto:kontakt@danielkadlec.cz">
+          <a href="mailto:kontakt@danielkadlec.cz" className={`${gapClass}`}
+             onMouseEnter={() => setHovered("email")}
+             onMouseLeave={() => setHovered(null)}
+          >
             <FaEnvelope
-                onMouseEnter={() => setHovered("email")}
-                onMouseLeave={() => setHovered(null)}
+
                 className={`${getStyle("email")} ${sizeClass}`}
             />
           </a>
