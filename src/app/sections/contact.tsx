@@ -53,8 +53,8 @@ export default function Contact() {
         if (Object.values(newErrors).some(Boolean)) {
             setToastMessage(
                 data.email && !validateEmail(data.email)
-                    ? "Invalid email format."
-                    : "Please fill out all required fields."
+                    ? dict.contact.toast_invalid_email
+                    : dict.contact.toast_missing_fields
             );
             setShowToast(true);
             return;
@@ -62,6 +62,7 @@ export default function Contact() {
 
         setLoading(true);
         setSuccess(null);
+
 
         try {
             const res = await fetch("/api/contact", {
@@ -74,16 +75,16 @@ export default function Contact() {
 
             if (res.ok) {
                 setSuccess(true);
-                setToastMessage("Message sent successfully!");
+                setToastMessage(dict.contact.toast_success);
                 form.reset();
             } else {
                 setSuccess(false);
-                setToastMessage(result.error || "Error sending message.");
+                setToastMessage(result.error || dict.contact.toast_error);
             }
         } catch (err) {
             console.error(err);
             setSuccess(false);
-            setToastMessage("Unexpected error occurred.");
+            setToastMessage(dict.contact.toast_unexpected);
         } finally {
             setLoading(false);
             setShowToast(true);

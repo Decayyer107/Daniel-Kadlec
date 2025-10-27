@@ -80,12 +80,12 @@ const cs = {
     contact: {
         heading: (): ReactNode => (
             <>
-                Kontaktuje <span className={"text-green"}>mně</span>.
+                Kontaktujte <span className={"text-green"}>mně</span>.
             </>
         ),
         paragraph: (): ReactNode => (
             <>
-                Ať už hledáte <span className={'text-green'}>vývojáře, designéra</span>, nebo si jen chcete popovídat - <span className={'text-green'}>rád se vám ozvu</span>.
+                Ať už hledáte <span className={'text-green'}>vývojáře, designéra</span>, nebo si jen chcete popovídat — <span className={'text-green'}>rád se vám ozvu</span>.
             </>
         ),
         contact_twitter: "Platforma X",
@@ -95,7 +95,15 @@ const cs = {
         contact_form_subject: "Předmět",
         contact_form_message: "Zpráva",
         contact_form_button: "Odeslat",
+
+        // ✅ Toast messages
+        toast_invalid_email: "Neplatný formát e-mailu.",
+        toast_missing_fields: "Vyplňte prosím všechna povinná pole.",
+        toast_success: "Zpráva byla úspěšně odeslána!",
+        toast_error: "Chyba při odesílání zprávy.",
+        toast_unexpected: "Došlo k neočekávané chybě.",
     },
+
     portfolio: {
         heading: (): ReactNode => (
             <>
