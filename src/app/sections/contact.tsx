@@ -176,10 +176,16 @@ export default function Contact() {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="inline-flex justify-center items-center gap-2 py-[14px] px-14 border-2 rounded-[14px] font-secondary font-bold text-xl text-offblack dark:text-offwhite border-offblack dark:border-offwhite cursor-pointer disabled:opacity-50"
+                        className="inline-flex justify-center items-center gap-2 h-14 px-14 border-2 rounded-[14px] font-secondary font-bold text-xl text-offblack dark:text-offwhite border-offblack dark:border-offwhite cursor-pointer disabled:opacity-50"
                     >
                         {loading
-                            ? dict.contact.contact_form_email || "Sending..."
+                            ? <div className="flex flex-col items-center gap-4">
+                                <div
+                                    className="spinner !w-6 !h-6 !border-4"
+                                    role="status"
+                                    aria-label="Loading"
+                                />
+                            </div>
                             : dict.contact.contact_form_button}
                     </button>
                 </form>
