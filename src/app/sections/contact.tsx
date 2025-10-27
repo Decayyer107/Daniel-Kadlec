@@ -184,7 +184,7 @@ export default function Contact() {
                     </button>
                 </form>
 
-                <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-[99]">
+                <div className="fixed bottom-0 left-0 sm:left-auto sm:bottom-6 sm:right-6 flex flex-col gap-0 sm:gap-4 z-[99] w-full sm:w-auto">
                     <AnimatePresence>
                         {toasts.map((toast) => (
                             <motion.div
@@ -194,10 +194,10 @@ export default function Contact() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: 30 }}
                                 transition={{ duration: 0.3, layout: { duration: 0.25 } }}
-                                className={`relative px-6 py-4 rounded-xl shadow-lg border-2 overflow-hidden text flex flex-col
+                                className={`relative px-6 w-full sm:w-fit py-4 rounded-none sm:rounded-xl shadow-lg border-0 border-t-2 sm:border-2 overflow-hidden text flex flex-col bg-gray-200 dark:bg-gray-900
           ${toast.success
-                                    ? "border-green-primary"
-                                    : "border-red-error"}`}
+                                    ? "border-gray-700 sm:border-green-primary"
+                                    : "border-gray-700 sm:border-red-error"}`}
                             >
                                 <span className="font-secondary font-bold text-xl">
                                   {toast.success ? dict.contact.toast_success_heading : dict.contact.toast_error_heading}
@@ -205,7 +205,7 @@ export default function Contact() {
                                 <span className={'text-md font-semibold'}>{toast.message}</span>
 
                                 <motion.div
-                                    className={`w-full h-1 absolute bottom-0 left-0 ${
+                                    className={`w-full h-1 absolute top-0 sm:bottom-0 left-0 ${
                                         toast.success ? "bg-green-primary" : "bg-red-error"
                                     }`}
                                     initial={{ scaleX: 1, transformOrigin: "left" }}
