@@ -26,6 +26,7 @@ export default function SocialIcons({ isSmall }: IconsProps) {
     `;
     };
 
+    // Define responsive clamp-based size
     const sizeClass = !isSmall
         ? "w-[clamp(32px,5.5vw,48px)] h-[clamp(32px,5.5vw,48px)]" // large variant
         : "w-[clamp(30px,5vw,32px)] h-[clamp(30px,5vw,32px)]"; // small variant

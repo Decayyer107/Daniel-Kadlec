@@ -21,7 +21,7 @@ export default function About(){
                         <HopperElement classIndividual={'!bg-gray-200 dark:!bg-gray-900 !shadow-[inset_4px_4px_6px_rgba(210,210,221,0.6)] dark:shadow-![rgba(7,7,8,0.8)]'} className="" />
                     </div>
                     <a href="/zivotopis.pdf" download>
-                        <Button className="w-full max-h-13  mt-12 sm:mt-0">
+                        <Button className="w-full mt-12 sm:mt-0">
                             {dict.about.button}
                             <LuDownload className="h-5 w-5 lg:h-6 lg:w-6" />
                         </Button>
