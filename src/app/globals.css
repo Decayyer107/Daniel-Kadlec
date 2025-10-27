@@ -17,6 +17,9 @@
     --color-green-primary: #B5FF6D;
     --color-green-secondary: #30AF5B;
 
+    --color-red-error: #FF5C5C;
+
+
     --breakpoint-2xs: 21.875rem; /* 350px */
     --breakpoint-xs: 30rem;      /* 480px */
     --breakpoint-sm: 40rem;      /* 640px */

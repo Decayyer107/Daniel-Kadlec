@@ -14,7 +14,7 @@ export async function POST(req: Request) {
         await resend.emails.send({
             from: "Portfolio <no-reply@danielkadlec.cz>",
             to: "kontakt@danielkadlec.cz",
-            subject: `New message: ${subject || "(no subject)"}`,
+            subject: `Zpráva z portfolia: ${subject || "(Žádný předmět)"}`,
             replyTo: email,
             html: `
                 <h2>Nová zpráva z portfolia</h2>
@@ -32,7 +32,7 @@ export async function POST(req: Request) {
             from: "Daniel Kadlec <no-reply@danielkadlec.cz>",
             to: email,
             replyTo: "kontakt@danielkadlec.cz",
-            subject: "Your message has been received!",
+            subject: "Vaše zpráva byla přijata!",
             html: `
                 <h2>Díky, že jste mně kontaktovali!</h2>
                 <p>Obdržel jsem vaši zprávu:</p>
@@ -40,7 +40,9 @@ export async function POST(req: Request) {
                 <p>Brzy odpovím z adresy <a href="mailto:kontakt@danielkadlec.cz">kontakt@danielkadlec.cz</a>.</p>
                 <br/>
                 <p>- Daniel</p>
-
+                <br/>
+                <br/>
+                <p>*Toto je automatizovaná zpráva. Odpověď na tento e-mail nikam nedorazí :)</p>
       `,
         });
 
