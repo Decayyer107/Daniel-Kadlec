@@ -96,7 +96,6 @@ const cs = {
         contact_form_message: "Zpráva",
         contact_form_button: "Odeslat",
 
-        // ✅ Toast messages
         toast_invalid_email: "Neplatný formát e-mailu.",
         toast_missing_fields: "Vyplňte prosím všechna povinná pole.",
         toast_success: "Zpráva byla úspěšně odeslána!",

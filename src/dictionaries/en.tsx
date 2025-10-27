@@ -95,7 +95,6 @@ const en = {
         contact_form_message: "Message",
         contact_form_button: "Send",
 
-        // ✅ Toast messages
         toast_invalid_email: "Invalid email format.",
         toast_missing_fields: "Please fill out all required fields.",
         toast_success: "Message sent successfully!",

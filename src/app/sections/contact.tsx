@@ -99,7 +99,7 @@ export default function Contact() {
             <Heading className="!mb-[clamp(_0px,_3vw,_72px)]" Heading={dict.contact.heading()} />
             <div className="flex gap-8 lg:flex-row flex-col">
                 <div className="lg:w-1/2">
-                    <p className="text text-body-large font-bold">{dict.contact.paragraph()}</p>
+                    <p className="text text-body-large !mt-0 font-bold">{dict.contact.paragraph()}</p>
 
                     <div className="text text-[clamp(24px,3vw,36px)] font-bold flex justify-between px-12 xs:px-0 xs:grid xs:grid-cols-2 lg:flex lg:flex-col gap-6 mt-8">
                         <a href="https://github.com/Decayyer107" className="cursor-pointer w-fit hover:underline">
