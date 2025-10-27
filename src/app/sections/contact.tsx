@@ -3,19 +3,21 @@
 import { useLanguage } from "@/utils/LanguageContext";
 import Heading from "@/components/Heading";
 import Input from "@/components/Input";
-import Toast from "@/components/Toast";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+interface ToastItem {
+    id: number;
+    message: string;
+    success: boolean | null;
+}
 
 export default function Contact() {
     const { dict } = useLanguage();
 
     const [loading, setLoading] = useState(false);
-    const [success, setSuccess] = useState<null | boolean>(null);
-    const [showToast, setShowToast] = useState(false);
-    const [toastMessage, setToastMessage] = useState("");
-
     const [errors, setErrors] = useState({
         name: false,
         email: false,
@@ -23,6 +25,17 @@ export default function Contact() {
         subject: false,
     });
 
+    const [toasts, setToasts] = useState<ToastItem[]>([]);
+
+    function showToast(message: string, success: boolean | null) {
+        const id = Date.now();
+        const newToast: ToastItem = { id, message, success };
+        setToasts((prev) => [...prev, newToast]);
+
+        setTimeout(() => {
+            setToasts((prev) => prev.filter((t) => t.id !== id));
+        }, 4000);
+    }
 
     function validateEmail(email: string) {
         const regex = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gim;
@@ -47,22 +60,17 @@ export default function Contact() {
             subject: data.subject === "",
         };
 
-
         setErrors(newErrors);
 
         if (Object.values(newErrors).some(Boolean)) {
-            setToastMessage(
-                data.email && !validateEmail(data.email)
-                    ? dict.contact.toast_invalid_email
-                    : dict.contact.toast_missing_fields
-            );
-            setShowToast(true);
+            const msg = data.email && !validateEmail(data.email)
+                ? dict.contact.toast_invalid_email
+                : dict.contact.toast_missing_fields;
+            showToast(msg, false);
             return;
         }
 
         setLoading(true);
-        setSuccess(null);
-
 
         try {
             const res = await fetch("/api/contact", {
@@ -74,22 +82,19 @@ export default function Contact() {
             const result = await res.json();
 
             if (res.ok) {
-                setSuccess(true);
-                setToastMessage(dict.contact.toast_success);
+                showToast(dict.contact.toast_success, true);
                 form.reset();
             } else {
-                setSuccess(false);
-                setToastMessage(result.error || dict.contact.toast_error);
+                showToast(result.error || dict.contact.toast_error, false);
             }
         } catch (err) {
             console.error(err);
-            setSuccess(false);
-            setToastMessage(dict.contact.toast_unexpected);
+            showToast(dict.contact.toast_unexpected, false);
         } finally {
             setLoading(false);
-            setShowToast(true);
         }
     }
+
     function handleInputChange(field: keyof typeof errors, value: string) {
         setErrors(prev => ({ ...prev, [field]: false }));
     }
@@ -178,12 +183,40 @@ export default function Contact() {
                             : dict.contact.contact_form_button}
                     </button>
                 </form>
-                <Toast
-                    message={toastMessage}
-                    show={showToast}
-                    onClose={() => setShowToast(false)}
-                    success={success}
-                />
+
+                <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-[99]">
+                    <AnimatePresence>
+                        {toasts.map((toast) => (
+                            <motion.div
+                                key={toast.id}
+                                layout
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 30 }}
+                                transition={{ duration: 0.3, layout: { duration: 0.25 } }}
+                                className={`relative px-6 py-4 rounded-xl shadow-lg border-2 overflow-hidden text flex flex-col
+          ${toast.success
+                                    ? "border-green-primary"
+                                    : "border-red-error"}`}
+                            >
+                                <span className="font-secondary font-bold text-xl">
+                                  {toast.success ? dict.contact.toast_success_heading : dict.contact.toast_error_heading}
+                                </span>
+                                <span className={'text-md font-semibold'}>{toast.message}</span>
+
+                                <motion.div
+                                    className={`w-full h-1 absolute bottom-0 left-0 ${
+                                        toast.success ? "bg-green-primary" : "bg-red-error"
+                                    }`}
+                                    initial={{ scaleX: 1, transformOrigin: "left" }}
+                                    animate={{ scaleX: 0 }}
+                                    transition={{ duration: 4, ease: "linear" }}
+                                />
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
+                </div>
+
             </div>
         </section>
     );

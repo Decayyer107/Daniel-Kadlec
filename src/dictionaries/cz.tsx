@@ -96,6 +96,9 @@ const cs = {
         contact_form_message: "Zpráva",
         contact_form_button: "Odeslat",
 
+        toast_success_heading: "E-mail odeslán!",
+        toast_error_heading: "Chyba E-mail formuláře",
+
         toast_invalid_email: "Neplatný formát e-mailu.",
         toast_missing_fields: "Vyplňte prosím všechna povinná pole.",
         toast_success: "Zpráva byla úspěšně odeslána!",
