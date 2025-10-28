@@ -43,7 +43,7 @@ export default function Portfolio() {
             variants={container}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.7 }}
+            viewport={{ once: true, amount: 0.5 }}
         >
             <Heading
                 className="!mb-[clamp(12px,_2vw,_32px)]"

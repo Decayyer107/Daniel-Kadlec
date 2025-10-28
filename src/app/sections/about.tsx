@@ -41,7 +41,7 @@ export default function About() {
             variants={container}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.8}}
+            viewport={{ once: true, amount: 0.5}}
         >
             <motion.div
                 variants={item}

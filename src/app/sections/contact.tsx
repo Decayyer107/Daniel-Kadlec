@@ -127,11 +127,11 @@ export default function Contact() {
     return (
         <motion.section
             id="contact"
-            className="section flex mb-[clamp(124px,_25vw,_256px)] flex-col"
+            className="section flex mb-[clamp(64px,_15vw,_120px)] flex-col"
             initial="hidden"
             whileInView="visible"
             variants={container}
-            viewport={{ once: true, amount: 0.7 }}
+            viewport={{ once: true, amount: 0.5 }}
         >
             <Heading
                 className="!mb-[clamp(_0px,_3vw,_72px)]"

@@ -58,7 +58,7 @@ export default function Heading({ Heading, Subheading, className }: HeadingProps
 
             {Subheading && (
                 <motion.h2
-                    className="text-subheading mt-1 text-gray-300"
+                    className="text-subheading mt-3 sm:mt-0 text-gray-300"
                     initial={initial}
                     whileInView={whileInView}
                     viewport={{ once: true, amount: 0.6 }}
