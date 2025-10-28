@@ -4,8 +4,11 @@ import LoadingOverlay from "../components/LoadingOverlay";
 import ClientRoot from "./layoutClient";
 
 export const metadata: Metadata = {
-    title: "Your Site",
-    description: "Your site description",
+    title: "Daniel Kadlec",
+    description: "Vítejte v mém osobním portfoliu, které představuje projekty z oblasti designu a vývoje.",
+    icons: {
+        icon: '/icon.svg',
+    },
 };
 
 export default function RootLayout({
