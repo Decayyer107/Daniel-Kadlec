@@ -5,6 +5,8 @@ import ProjectSmall from "@/components/ProjectSmall";
 import Heading from "@/components/Heading";
 import {projectsEn} from "@/data/projects/projects.en";
 import {projectsCz} from "@/data/projects/projects.cz";
+import Button from "@/components/Button";
+import Link from "next/link";
 
 
 export default function PortfolioSection() {
@@ -12,7 +14,7 @@ export default function PortfolioSection() {
     const projects = lang === "cz" ? projectsCz : projectsEn;
 
     return (
-        <section className="section mb-[clamp(124px,_25vw,_256px)]">
+        <section id="portfolio" className="section mb-[clamp(124px,_25vw,_256px)]">
             <Heading
                 Heading={dict.portfolioSection.heading()}
                 Subheading={dict.portfolioSection.subheading}
@@ -32,6 +34,11 @@ export default function PortfolioSection() {
                         />
                     ))}
             </div>
+            <Link href="/portfolio">
+                <Button className="w-full mt-24">
+                    {dict.portfolioSection.button}
+                </Button>
+            </Link>
         </section>
     );
 }

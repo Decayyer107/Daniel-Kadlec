@@ -45,7 +45,7 @@ export default function NavLinks({className, onLinkClick}: NavLinksProps) {
         <ul className={`gap-[clamp(_15px,_2vw,_48px)] font-secondary font-bold text-md hidden md:flex text ${className}`}>
             <li><Link className={'text'} href="/" onClick={(e) => goHome(undefined, e)}>{dict.nav.Home}</Link></li>
             <li><Link className={'text'} href="/#about" onClick={(e) => goHome('about', e)}>{dict.nav.About}</Link></li>
-            <li><Link className={'text'} href="/portfolio" onClick={(e) => goPortfolio(e)}>{dict.nav.Portfolio}</Link></li>
+            <li><Link className={'text'} href="/portfolio" onClick={(e) => goHome('portfolio', e)}>{dict.nav.Portfolio}</Link></li>
             <li><Link className={'text'} href="/#contact" onClick={(e) => goHome('contact', e)}>{dict.nav.Contact}</Link></li>
         </ul>
     );
