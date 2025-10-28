@@ -80,33 +80,26 @@ export default function Hero() {
             {/* Social icons & button */}
             <motion.div
                 className="relative z-10 flex flex-col items-end gap-[clamp(10px,_4vw,_20px)] mt-[clamp(48px,_4vw,_32px)]"
-                initial={
-                    r
-                        ? { opacity: 0 }
-                        : { opacity: 0, y: 20, scale: 0.97, filter: "blur(8px)" }
-                }
-                animate={
-                    r
-                        ? { opacity: 1, transition: { duration: 0.5, ease: "easeOut" } }
-                        : {
-                            opacity: 1,
-                            y: 0,
-                            scale: 1,
-                            filter: "blur(0px)",
-                            transition: {
-                                delay: 0.8,
-                                duration: 0.9,
-                                ease: [0.22, 1, 0.36, 1],
-                                filter: { duration: 0.9 },
-                            },
-                        }
-                }
+                initial={{ opacity: 0, y: 20, scale: 0.95, filter: "blur(8px)" }}
+                animate={{
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    filter: "blur(0px)",
+                }}
+                transition={{
+                    delay: 0.8,
+                    duration: 0.9,
+                    ease: [0.22, 1, 0.36, 1],
+                }}
+                style={{ willChange: "filter" }}
             >
                 <SocialIcons isSmall={false} />
                 <Link href="/portfolio">
                     <Button>{dict.hero.button}</Button>
                 </Link>
             </motion.div>
+
         </section>
     );
 }
