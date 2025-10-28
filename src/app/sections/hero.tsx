@@ -23,7 +23,7 @@ export default function Hero() {
                     initial={
                         r
                             ? { opacity: 0 }
-                            : { opacity: 0, y: 20, scale: 0.97, filter: "blur(4px)", letterSpacing: "0.02em" }
+                            : { opacity: 0, y: 20, scale: 0.97, filter: "blur(4px)" }
                     }
                     animate={
                         r
@@ -33,7 +33,6 @@ export default function Hero() {
                                 y: 0,
                                 scale: 1,
                                 filter: "blur(0px)",
-                                letterSpacing: "0em",
                                 transition: {
                                     ease: [0.22, 1, 0.36, 1],
                                     opacity: { delay: 0.6, duration: 0.4 },
@@ -53,7 +52,7 @@ export default function Hero() {
                     initial={
                         r
                             ? { opacity: 0 }
-                            : { opacity: 0, y: 20, scale: 0.97, filter: "blur(4px)", letterSpacing: "0.02em" }
+                            : { opacity: 0, y: 20, scale: 0.97, filter: "blur(4px)" }
                     }
                     animate={
                         r
@@ -63,13 +62,12 @@ export default function Hero() {
                                 y: 0,
                                 scale: 1,
                                 filter: "blur(0px)",
-                                letterSpacing: "0em",
                                 transition: {
                                     ease: [0.22, 1, 0.36, 1],
-                                    opacity: { delay: 0.8, duration: 0.4 },
-                                    y: { delay: 0.8, duration: 0.6 },
-                                    filter: { delay: 0.8, duration: 0.8 },
-                                    letterSpacing: { delay: 0.8, duration: 0.8 },
+                                    opacity: { delay: 0.7, duration: 0.4 },
+                                    y: { delay: 0.7, duration: 0.6 },
+                                    filter: { delay: 0.7, duration: 0.8 },
+                                    letterSpacing: { delay: 0.7, duration: 0.8 },
                                 },
                             }
                     }
