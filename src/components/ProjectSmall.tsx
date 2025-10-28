@@ -28,7 +28,7 @@ export default function ProjectSmall({ title, subtitle, techs, image, link, from
                     className="object-cover object-center"
                 />
             </div>
-            <div className="flex flex-col justify-between w-1/2">
+            <div className="flex flex-col justify-between w-full md:w-1/2">
                 <div className="px-1 md:px-0">
                     <h1 className="text-h2">{title}</h1>
                     <h2 className="text-subheading-green">{subtitle}</h2>
