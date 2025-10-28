@@ -19,7 +19,7 @@ export default function ProjectSmall({ title, subtitle, techs, image, link, from
     const href = from === "index" ? `/${link}` : `/portfolio/${link}`;
 
     return (
-        <div className="flex flex-col md:flex-row gap-[clamp(14px,_2vw,_38px)]">
+        <div className="flex flex-col justify-between md:flex-row gap-[clamp(14px,_2vw,_38px)]">
             <div className="relative aspect-[15/9] w-full md:w-1/2 rounded-2xl shadow-md overflow-hidden">
                 <Image
                     src={image}
@@ -28,7 +28,7 @@ export default function ProjectSmall({ title, subtitle, techs, image, link, from
                     className="object-cover object-center"
                 />
             </div>
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col justify-between w-1/2">
                 <div className="px-1 md:px-0">
                     <h1 className="text-h2">{title}</h1>
                     <h2 className="text-subheading-green">{subtitle}</h2>
