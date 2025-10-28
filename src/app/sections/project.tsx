@@ -1,6 +1,5 @@
 'use client'
 
-import Button from "@/components/Button";
 import Image from "next/image";
 import Technologies from "@/components/Technologies";
 import { useParams, useRouter } from "next/navigation";

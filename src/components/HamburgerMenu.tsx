@@ -3,9 +3,6 @@
 import LanguageSwitcher from "@/components/LanguageSwicther";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { IoIosClose } from "react-icons/io";
-import { useEffect } from "react";
-import { useLanguage } from "@/utils/LanguageContext";
-import { useRouter, usePathname } from "next/navigation";
 import { useTheme } from '@/utils/ThemeContext';
 import Image from "next/image";
 import NavLinks from "@/components/NavLinks";

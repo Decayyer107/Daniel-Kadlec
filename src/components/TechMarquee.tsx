@@ -1,6 +1,5 @@
 "use client";
 
-import {useEffect, useState} from "react";
 import { getTechMap, TechName } from "./Technologies";
 import { motion } from "motion/react"
 

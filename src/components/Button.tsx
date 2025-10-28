@@ -1,17 +1,17 @@
 "use client";
 
 import { ButtonHTMLAttributes, ReactNode } from "react";
-import { motion } from "framer-motion";
+import { motion, MotionProps } from "framer-motion";
 
 type ButtonProps = {
     children: ReactNode;
     className?: string;
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+} & ButtonHTMLAttributes<HTMLButtonElement> & MotionProps;
 
 export default function Button({ children, className, ...props }: ButtonProps) {
     return (
         <motion.button
-            {...(props as any)}
+            {...props}
             initial="initial"
             whileHover="hover"
             className={`relative overflow-hidden flex justify-center items-center gap-2 py-[clamp(12px,_2vw,_15px)] px-[clamp(36px,_6vw,_56px)] border-2 rounded-[10px] sm:rounded-[14px] font-secondary font-bold text-[clamp(15px,_2vw,_20px)] text-offblack dark:text-offwhite hover:text-offwhite hover:dark:text-offblack border-offblack dark:border-offwhite transition-all cursor-pointer ${className}`}
@@ -28,5 +28,3 @@ export default function Button({ children, className, ...props }: ButtonProps) {
         </motion.button>
     );
 }
-
-

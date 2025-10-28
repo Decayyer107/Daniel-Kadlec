@@ -24,16 +24,6 @@ export default function NavLinks({className, onLinkClick}: NavLinksProps) {
         onLinkClick?.();
     };
 
-    const goPortfolio = (e?: React.MouseEvent) => {
-        e?.preventDefault();
-        if (pathname === '/portfolio') {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-            router.push('/portfolio');
-        }
-        onLinkClick?.();
-    };
-
     useEffect(() => {
         if (pathname === '/' && window.location.hash) {
             const id = window.location.hash.slice(1);
