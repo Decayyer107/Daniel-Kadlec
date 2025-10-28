@@ -85,7 +85,7 @@ const cs = {
         ),
         paragraph: (): ReactNode => (
             <>
-                Ať už hledáte <span className={'text-green'}>vývojáře, designéra</span>, nebo si jen chcete popovídat — <span className={'text-green'}>rád se vám ozvu</span>.
+                Ať už hledáte <span className={'text-green'}>vývojáře, designéra</span>, nebo si jen chcete popovídat - <span className={'text-green'}>rád se vám ozvu</span>.
             </>
         ),
         contact_twitter: "Platforma X",

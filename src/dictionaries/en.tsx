@@ -84,7 +84,7 @@ const en = {
         ),
         paragraph: (): ReactNode => (
             <>
-                Whether you&apos;re looking for a <span className={'text-green'}>developer, designer</span>, or just want to chat — <span className={'text-green'}>I&apos;d love to hear from you</span>.
+                Whether you&apos;re looking for a <span className={'text-green'}>developer, designer</span>, or just want to chat - <span className={'text-green'}>I&apos;d love to hear from you</span>.
             </>
         ),
         contact_twitter: "Platform X",

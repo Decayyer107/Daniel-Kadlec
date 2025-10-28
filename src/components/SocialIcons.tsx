@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
@@ -13,8 +14,7 @@ interface IconsProps {
 export default function SocialIcons({ isSmall }: IconsProps) {
     const [hovered, setHovered] = useState<string | null>(null);
 
-    const baseClasses =
-        "cursor-pointer transition-all duration-600 ease-out text";
+    const baseClasses = "cursor-pointer transition-all duration-600 ease-out text";
 
     const getStyle = (id: string) => {
         const isHovered = hovered === id;
@@ -22,57 +22,59 @@ export default function SocialIcons({ isSmall }: IconsProps) {
 
         return `
       ${baseClasses}
-      ${isHovered ? " " : isOther ? "opacity-[30%] scale-[100%]" : "opacity-100 scale-[102%]"}
+      ${isHovered ? "" : isOther ? "opacity-[30%] scale-[100%]" : "opacity-100 scale-[102%]"}
     `;
     };
 
-    // Define responsive clamp-based size
     const sizeClass = !isSmall
-        ? "w-[clamp(32px,5.5vw,48px)] h-[clamp(32px,5.5vw,48px)]" // large variant
-        : "w-[clamp(30px,5vw,32px)] h-[clamp(30px,5vw,32px)]"; // small variant
+        ? "w-[clamp(32px,5.5vw,48px)] h-[clamp(32px,5.5vw,48px)]"
+        : "w-[clamp(30px,5vw,32px)] h-[clamp(30px,5vw,32px)]";
 
     const gapClass = !isSmall
-        ? "px-[clamp(_6px,_2vw,_15px)]" // large variant
-        : "px-[clamp(_6px,_2vw,_15px)]"; // small variant
+        ? "px-[clamp(_6px,_2vw,_15px)]"
+        : "px-[clamp(_6px,_2vw,_15px)]";
+
+    // Animation variants
+    const container = {
+        hidden: {},
+        visible: {
+            transition: { staggerChildren: 0.2 },
+        },
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 15 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.4, ease: "easeOut" as const},
+        },
+    };
 
     return (
-        <span className={`flex items-center`}>
-          <a href="https://github.com/Decayyer107" className={`${gapClass}`}
-             onMouseEnter={() => setHovered("github")}
-             onMouseLeave={() => setHovered(null)}>
-            <FaGithub
-
-                className={`${getStyle("github")} ${sizeClass}`}
-            />
-          </a>
-
-          <a href="https://x.com/dan_kadlec" className={`${gapClass}`}
-             onMouseEnter={() => setHovered("twitter")}
-             onMouseLeave={() => setHovered(null)}
-          >
-            <FaXTwitter
-                className={`${getStyle("twitter")} ${sizeClass}`}
-            />
-          </a>
-
-          <a href="https://www.linkedin.com/in/daniel-kadlec-903759379/" className={`${gapClass}`}
-             onMouseEnter={() => setHovered("linkedin")}
-             onMouseLeave={() => setHovered(null)}
-          >
-            <FaLinkedin
-                className={`${getStyle("linkedin")} ${sizeClass}`}
-            />
-          </a>
-
-          <a href="mailto:kontakt@danielkadlec.cz" className={`${gapClass}`}
-             onMouseEnter={() => setHovered("email")}
-             onMouseLeave={() => setHovered(null)}
-          >
-            <FaEnvelope
-
-                className={`${getStyle("email")} ${sizeClass}`}
-            />
-          </a>
-        </span>
+        <motion.span
+            className="flex items-center"
+            variants={container}
+            initial="hidden"
+            animate="visible"
+        >
+            {[
+                { id: "github", icon: FaGithub, href: "https://github.com/Decayyer107" },
+                { id: "twitter", icon: FaXTwitter, href: "https://x.com/dan_kadlec" },
+                { id: "linkedin", icon: FaLinkedin, href: "https://www.linkedin.com/in/daniel-kadlec-903759379/" },
+                { id: "email", icon: FaEnvelope, href: "mailto:kontakt@danielkadlec.cz" },
+            ].map(({ id, icon: Icon, href }) => (
+                <motion.a
+                    key={id}
+                    href={href}
+                    variants={item}
+                    className={gapClass}
+                    onMouseEnter={() => setHovered(id)}
+                    onMouseLeave={() => setHovered(null)}
+                >
+                    <Icon className={`${getStyle(id)} ${sizeClass}`} />
+                </motion.a>
+            ))}
+        </motion.span>
     );
 }

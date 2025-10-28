@@ -162,6 +162,7 @@ export default function Contact() {
                         placeholder={dict.contact.contact_form_subject}
                         className={`w-full border-2 ${errors.subject ? "!border-red-error" : "border-transparent"}`}
                         onChange={(e) => handleInputChange("subject", e.target.value)}
+                        autoComplete={"off"}
                     />
 
                     <textarea

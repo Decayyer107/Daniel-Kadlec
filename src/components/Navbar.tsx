@@ -10,6 +10,8 @@ import Image from "next/image";
 import { TbMenuDeep } from "react-icons/tb";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import NavLinks from "@/components/NavLinks";
+import { motion } from "framer-motion";
+
 
 const LogoPrimary = "/logo/logomark-primary.svg";
 const LogoSecondary = "/logo/logomark-secondary.svg";
@@ -60,30 +62,64 @@ export default function Navbar() {
 
 
     return (
-        <header className={'section w-full fixed top-0 left-1/2 -translate-x-1/2 z-[99]'}>
-            <HamburgerMenu isOpen={isMenuOpen} onClose={handleMenuClose} />
+        <motion.header
+            className="section w-full fixed top-0 left-1/2 -translate-x-1/2 z-[99]"
+            initial={{
+                y: "-100%",
+                scale: 0.9,
+                opacity: 0,
+                filter: "blur(8px)"
+            }}
+            animate={{
+                y: 0,
+                scale: 1,
+                opacity: 1,
+                filter: "blur(0px)"
+            }}
+            transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                times: [0, 0.5, 1],
+                y: { duration: 0.8, ease: "easeOut" },
+                opacity: { duration: 0.8 },
+                filter: {duration: 0.7, ease: "easeInOut" }
+            }}
+        >
+
+        <HamburgerMenu isOpen={isMenuOpen} onClose={handleMenuClose} />
+
             <nav
                 className={`nav-section h-20 flex items-center justify-between transition-all duration-500 rounded-full
                     ${scrolled
-                    ? 'w-[95%] sm:w-[85%] px-[clamp(_18px,_6vw,_42px)] mt-4 border border-neutral-300/100 dark:border-neutral-700/100 bg-offwhite/70 dark:bg-offblack/70 backdrop-blur-sm shadow-md'
+                    ? 'w-[95%] sm:w-[85%] px-[clamp(_18px,_6vw,_42px)] mt-4 border border-neutral-300/100 dark:border-neutral-700/100 bg-offwhite/95 dark:bg-offblack/95 backdrop-blur-sm shadow-md'
                     : 'w-full px-0 border border-neutral-300/0 dark:border-neutral-700/0 bg-transparent backdrop-blur-0 shadow-none'
-                }`
-                }
+                }`}
             >
                 <Link href="/" onClick={(e) => goHome(undefined, e)}>
-                    <Image width={56} height={56} src={theme === "dark" ? LogoPrimary : LogoSecondary} alt="Logo" className="cursor-pointer" priority unoptimized/>
+                    <Image
+                        width={56}
+                        height={56}
+                        src={theme === "dark" ? LogoPrimary : LogoSecondary}
+                        alt="Logo"
+                        className="cursor-pointer"
+                        priority
+                        unoptimized
+                    />
                 </Link>
+
                 <TbMenuDeep
                     onClick={handleMenuOpen}
                     className="block md:hidden text w-8 h-8 cursor-pointer"
                 />
-                <NavLinks/>
+
+                <NavLinks />
+
                 <div className="gap-4 hidden md:flex">
                     <LanguageSwitcher />
                     <ThemeSwitcher theme={theme} toggleTheme={toggleTheme} />
                 </div>
             </nav>
-        </header>
+        </motion.header>
 
     );
 }
