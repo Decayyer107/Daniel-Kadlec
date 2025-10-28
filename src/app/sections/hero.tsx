@@ -17,36 +17,67 @@ export default function Hero() {
             <HeroElement />
 
             {/* Main heading & paragraph */}
-            <motion.div
-                className="relative z-10 flex flex-col justify-start"
-                initial={
-                    r
-                        ? { opacity: 0 }
-                        : { opacity: 0, y: 20, scale: 0.97, filter: "blur(8px)", letterSpacing: "0.03em" }
-                }
-                animate={
-                    r
-                        ? { opacity: 1, transition: { duration: 0.5, ease: "easeOut" } }
-                        : {
-                            opacity: 1,
-                            y: 0,
-                            scale: 1,
-                            filter: "blur(0px)",
-                            letterSpacing: "0em",
-                            transition: {
-                                duration: 0.9,
-                                ease: [0.22, 1, 0.36, 1],
-                                filter: { duration: 0.6 },
-                                letterSpacing: { duration: 0.6 },
-                            },
-                        }
-                }
-            >
-                <h1 className="text-h1 !text-[clamp(36px,_7vw,_64px)]">
+            <motion.div className="relative z-10 flex flex-col justify-start">
+                <motion.h1
+                    className="text-h1 !text-[clamp(36px,_7vw,_64px)]"
+                    initial={
+                        r
+                            ? { opacity: 0 }
+                            : { opacity: 0, y: 20, scale: 0.97, filter: "blur(4px)", letterSpacing: "0.02em" }
+                    }
+                    animate={
+                        r
+                            ? { opacity: 1, transition: { duration: 0.5, ease: "easeOut" } }
+                            : {
+                                opacity: 1,
+                                y: 0,
+                                scale: 1,
+                                filter: "blur(0px)",
+                                letterSpacing: "0em",
+                                transition: {
+                                    ease: [0.22, 1, 0.36, 1],
+                                    opacity: { delay: 0.6, duration: 0.4 },
+                                    y: { delay: 0.6, duration: 0.6 },
+                                    filter: { delay: 0.6, duration: 0.8 },
+                                    letterSpacing: { delay: 0.6, duration: 0.8 },
+                                },
+                            }
+                    }
+                >
                     {dict.hero.heading()}
-                </h1>
-                <h2 className="text-body-large">{dict.hero.paragraph()}</h2>
+                </motion.h1>
+
+
+                <motion.h2
+                    className="text-body-large"
+                    initial={
+                        r
+                            ? { opacity: 0 }
+                            : { opacity: 0, y: 20, scale: 0.97, filter: "blur(4px)", letterSpacing: "0.02em" }
+                    }
+                    animate={
+                        r
+                            ? { opacity: 1, transition: { duration: 0.5, ease: "easeOut",} }
+                            : {
+                                opacity: 1,
+                                y: 0,
+                                scale: 1,
+                                filter: "blur(0px)",
+                                letterSpacing: "0em",
+                                transition: {
+                                    ease: [0.22, 1, 0.36, 1],
+                                    opacity: { delay: 0.8, duration: 0.4 },
+                                    y: { delay: 0.8, duration: 0.6 },
+                                    filter: { delay: 0.8, duration: 0.8 },
+                                    letterSpacing: { delay: 0.8, duration: 0.8 },
+                                },
+                            }
+                    }
+                >
+                    {dict.hero.paragraph()}
+                </motion.h2>
             </motion.div>
+
 
             {/* Social icons & button */}
             <motion.div
@@ -65,7 +96,7 @@ export default function Hero() {
                             scale: 1,
                             filter: "blur(0px)",
                             transition: {
-                                delay: 0.2,
+                                delay: 0.8,
                                 duration: 0.9,
                                 ease: [0.22, 1, 0.36, 1],
                                 filter: { duration: 0.9 },

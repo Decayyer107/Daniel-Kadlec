@@ -78,11 +78,11 @@ export default function Navbar() {
             }}
             transition={{
                 duration: 0.8,
-                ease: "easeOut",
+                ease: "easeInOut",
                 times: [0, 0.5, 1],
-                y: { duration: 0.8, ease: "easeOut" },
+                y: { duration: 0.8, ease: "easeInOut", delay: 0.5,},
                 opacity: { duration: 0.8 },
-                filter: {duration: 0.7, ease: "easeInOut" }
+                filter: {duration: 0.7, ease: "easeInOut", delay: 0.7, },
             }}
         >
 

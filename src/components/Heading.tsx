@@ -21,7 +21,7 @@ export default function Heading({ Heading, Subheading, className }: HeadingProps
 
     const initial = r
         ? { opacity: 0 }
-        : { opacity: 0, y: 20, scale: 0.97, filter: "blur(8px)", letterSpacing: "0.03em" };
+        : { opacity: 0, y: 20, scale: 0.97, filter: "blur(8px)", letterSpacing: "0.05em" };
 
     const whileInView = r
         ? {
@@ -39,6 +39,7 @@ export default function Heading({ Heading, Subheading, className }: HeadingProps
                 ease: [0.22, 1, 0.36, 1] as const,
                 filter: { duration: 0.6 },
                 letterSpacing: { duration: 0.6 },
+                delay: 0.2,
             },
         };
 

@@ -38,7 +38,7 @@ export default function SocialIcons({ isSmall }: IconsProps) {
     const container = {
         hidden: {},
         visible: {
-            transition: { staggerChildren: 0.2 },
+            transition: { delayChildren: 0.5, staggerChildren: 0.2 }
         },
     };
 
