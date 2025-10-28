@@ -10,7 +10,6 @@ import { LuDownload } from "react-icons/lu";
 export default function About() {
     const { dict } = useLanguage();
 
-    // Animation settings
     const container = {
         hidden: {},
         visible: {
@@ -42,7 +41,7 @@ export default function About() {
             variants={container}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.8}}
         >
             <motion.div
                 variants={item}
