@@ -5,7 +5,7 @@ import Link from "next/link";
 
 interface NavLinksProps{
     className?: string;
-    onLinkClick?: () => void; // <── add this
+    onLinkClick?: () => void;
 }
 
 export default function NavLinks({className, onLinkClick}: NavLinksProps) {
