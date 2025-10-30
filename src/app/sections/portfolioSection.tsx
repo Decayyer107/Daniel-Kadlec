@@ -76,7 +76,7 @@ export default function PortfolioSection() {
 
             <motion.div variants={item} className="mt-24">
                 <Link href="/portfolio">
-                    <Button className="w-1/2">{dict.portfolioSection.button}</Button>
+                    <Button className="w-full sm:w-1/2">{dict.portfolioSection.button}</Button>
                 </Link>
             </motion.div>
         </motion.section>
