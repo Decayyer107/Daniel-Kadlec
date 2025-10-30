@@ -31,10 +31,12 @@ export type ProjectType = {
     technical_description: string;
 
     /** Optional link titles and URLs */
+    anchorPlaceholder1?: string;
     anchorTitle1?: string;
-    anchor1?: string;
+    anchor1: string;
+    anchorPlaceholder2?: string;
     anchorTitle2?: string;
-    anchor2?: string;
+    anchor2: string;
 
     /** Whether the project is featured on the homepage */
     featured?: boolean;

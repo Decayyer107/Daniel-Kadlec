@@ -146,18 +146,18 @@ export default function Project({ project }: { project: ProjectType }) {
                                 <h3 className="text-h2">{project.anchorTitle1}</h3>
                                 <Link
                                     className="text-body-large !mt-1 !text-green-secondary dark:!text-gray-400 hover:underline"
-                                    href={"#"}
+                                    href={project.anchor1}
                                 >
-                                    {project.anchor1}
+                                    {project.anchorPlaceholder1}
                                 </Link>
                             </motion.span>
                             <motion.span variants={item} className="flex flex-col">
                                 <h3 className="text-h2">{project.anchorTitle2}</h3>
                                 <Link
                                     className="text-body-large !mt-1 !text-green-secondary dark:!text-gray-400 hover:underline"
-                                    href={"#"}
+                                    href={project.anchor2}
                                 >
-                                    {project.anchor2}
+                                    {project.anchorPlaceholder2}
                                 </Link>
                             </motion.span>
                         </div>

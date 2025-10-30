@@ -17,10 +17,12 @@ export const projectsCz: ProjectType[] = [
 
         "technical_description": "Původně mi bylo zadáno vytvořit celý web s využitím Bootstrap šablony, aby bylo možné stránku v budoucnu snadno rozšiřovat. Po několika hodinách plánování a zkoumání, jak Bootstrap v rámci šablony funguje, jsem však dospěl k závěru, že tento přístup pro mě není vhodný. Měl jsem jasnou představu o tom, jak má výsledná stránka vypadat a fungovat, a potřeboval jsem naprostou kontrolu nad každým detailem.\n\nNakonec jsem použil pouze menší množství základních komponent a několik drobných animací z Bootstrapu, ale většinu kódu jsem vytvořil ručně od základů. Díky tomu jsem mohl web přizpůsobit přesně své vizi a zaměřit se na čistý, přehledný a technicky kvalitní výsledek.\n\nCelý web je plně responzivní a optimalizovaný pro různá zařízení i rozlišení obrazovek. Tento projekt mě přinutil vystoupit ze své komfortní zóny, opustit moderní frameworky a vrátit se zpět k čistému HTML a CSS.",
 
+        "anchorPlaceholder1":"zahradasmutku.cz",
         "anchorTitle1":"Produkční stránka",
         "anchor1":"zahradasmutku.cz",
+        "anchorPlaceholder2":"figma.com/design/zahrada-smutku",
         "anchorTitle2":"Figma projekt",
-        "anchor2":"figma/zahradasmutku.com",
+        "anchor2":"https://www.figma.com/design/GhnoCIPiUBwQ7e5r999HPE/Zahrada-smutkut---public?m=auto&t=gTyzgWSGHMGDxbyi-1",
         "featured": true,
         "category": ["design"]
     }
