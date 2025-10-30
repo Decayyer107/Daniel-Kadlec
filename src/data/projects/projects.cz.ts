@@ -19,7 +19,7 @@ export const projectsCz: ProjectType[] = [
 
         "anchorPlaceholder1":"zahradasmutku.cz",
         "anchorTitle1":"Produkční stránka",
-        "anchor1":"zahradasmutku.cz",
+        "anchor1":"https://zahradasmutku.cz",
         "anchorPlaceholder2":"figma.com/design/zahrada-smutku",
         "anchorTitle2":"Figma projekt",
         "anchor2":"https://www.figma.com/design/GhnoCIPiUBwQ7e5r999HPE/Zahrada-smutkut---public?m=auto&t=gTyzgWSGHMGDxbyi-1",

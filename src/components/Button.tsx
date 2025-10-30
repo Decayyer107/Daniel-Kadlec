@@ -22,7 +22,7 @@ export default function Button({ children, className, ...props }: ButtonProps) {
                     hover: { scale: 10, opacity: 1 },
                 }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
-                className="absolute inset-0 -left-1/2 bg-offblack dark:bg-offwhite origin-bottom-left rotate-45 h-[200%] w-screen"
+                className="absolute inset-0 -left-full bg-offblack dark:bg-offwhite origin-bottom-left rotate-45 h-[200%] w-screen"
             />
             <span className="relative z-10 flex gap-2">{children}</span>
         </motion.button>

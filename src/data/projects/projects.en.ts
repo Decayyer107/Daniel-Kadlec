@@ -16,7 +16,7 @@ export const projectsEn: ProjectType[] = [
         "image_4": "/projects/zahrada-smutku/4.webp",
         "technical_description": "I was originally assigned to create the entire website using a Bootstrap template to make future expansion easier. However, after several hours of planning and exploring how Bootstrap worked within the template, I realized that this approach wasn’t suitable for me. I had a clear vision of how I wanted the site to look and function, and I needed full control over every detail. In the end, I used only a small number of basic components and a few subtle animations from Bootstrap, but most of the code was written manually from scratch. This allowed me to shape the website exactly according to my vision and focus on a clean, well-structured, and technically solid result. The website is fully responsive and optimized for various devices and screen resolutions. This project pushed me out of my comfort zone, made me step away from modern frameworks, and return to pure HTML and CSS.",
         "anchorTitle1":"Production website",
-        "anchor1":"zahradasmutku.cz",
+        "anchor1":"https://zahradasmutku.cz",
         "anchorTitle2":"Figma project",
         "anchor2":"figma/zahradasmutku.com",
         "featured": true,
