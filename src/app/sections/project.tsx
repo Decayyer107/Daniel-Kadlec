@@ -31,9 +31,8 @@ export default function Project({ project }: { project: ProjectType }) {
     project = getProject(params.project as string, lang)!;
     if (!project) notFound();
 
-    // ----------------------------
-    // Animation Variants
-    // ----------------------------
+
+
     const container = {
         hidden: {},
         visible: {
@@ -176,7 +175,7 @@ export default function Project({ project }: { project: ProjectType }) {
                     className="relative aspect-[16/9] rounded-2xl shadow-md overflow-hidden"
                 >
                     <Image
-                        src={project.image}
+                        src={project.image_main}
                         alt="Background image"
                         fill
                         className="object-cover object-center"
@@ -188,20 +187,54 @@ export default function Project({ project }: { project: ProjectType }) {
                 variants={item}
                 className="project-section w-full grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center mt-8"
             >
-                {[...Array(4)].map((_, i) => (
                     <motion.div
                         variants={item}
-                        key={i}
+                        key={1}
                         className="project-image-small"
                     >
                         <Image
-                            src={project.image}
-                            alt={`Project image ${i + 1}`}
+                            src={project.image_1}
+                            alt={`Project image 1`}
                             fill
                             className="object-cover object-center"
                         />
                     </motion.div>
-                ))}
+                <motion.div
+                    variants={item}
+                    key={2}
+                    className="project-image-small"
+                >
+                    <Image
+                        src={project.image_2}
+                        alt={`Project image 2`}
+                        fill
+                        className="object-cover object-center"
+                    />
+                </motion.div>
+                <motion.div
+                    variants={item}
+                    key={3}
+                    className="project-image-small"
+                >
+                    <Image
+                        src={project.image_3}
+                        alt={`Project image 3`}
+                        fill
+                        className="object-cover object-center"
+                    />
+                </motion.div>
+                <motion.div
+                    variants={item}
+                    key={4}
+                    className="project-image-small"
+                >
+                    <Image
+                        src={project.image_4}
+                        alt={`Project image 4`}
+                        fill
+                        className="object-cover object-center"
+                    />
+                </motion.div>
             </motion.div>
         </motion.section>
     );

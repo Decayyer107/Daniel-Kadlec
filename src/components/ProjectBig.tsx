@@ -21,7 +21,7 @@ export default function ProjectBig({ title, subtitle, techs, image, link, from =
 
     return (
         <div className="flex flex-col gap-[clamp(14px,_2vw,_32px)]">
-            <div className="relative aspect-[16/9] rounded-2xl shadow-md overflow-hidden">
+            <div className="relative aspect-[15/9] rounded-2xl shadow-md overflow-hidden">
                 <Image
                     src={image}
                     alt="Background image"

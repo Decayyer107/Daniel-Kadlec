@@ -126,7 +126,7 @@ export default function PortfolioPage() {
                             <ProjectBig
                                 title={p.title}
                                 subtitle={p.subtitle}
-                                image={p.image}
+                                image={p.image_preview}
                                 link={p.link}
                                 techs={
                                     p.technologies as import("@/components/Technologies").TechName[]
