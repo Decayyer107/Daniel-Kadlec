@@ -27,7 +27,7 @@ const en = {
             <>
                 I was fascinated by the <span className="text-highlighted">world of graphics</span> already in elementary school. I started learning <span className="text-highlighted">Photoshop</span>, got a graphics tablet, and experimented with drawing and photo editing, which guided me toward choosing <span className="text-highlighted">graphics as my future career</span>. <br/> <br/>
 
-                In high school focused on <span className="text-highlighted">IT, web design, and programming</span>, I gradually shifted my attention — <span className="text-highlighted">branding</span> took a back seat, and my main focus became <span className="text-highlighted">UX/UI design and frontend development</span>. <br/> <br/>
+                In high school focused on <span className="text-highlighted">IT, web design, and programming</span>, I gradually shifted my attention. <span className="text-highlighted">Branding</span> took a back seat, and my main focus became <span className="text-highlighted">UX/UI design and frontend development</span>. <br/> <br/>
 
                 School lessons were not enough, so I dedicate myself to <span className="text-highlighted">self-studying modern technologies and design principles</span>. Currently, I work with <span className="text-highlighted">React, Framer Motion, Next.js</span>, and basic <span className="text-highlighted">backend</span>. My passion is creating <span className="text-highlighted">web applications</span> that are both visually appealing and user-friendly. <br/> <br/>
 
@@ -65,7 +65,7 @@ const en = {
                 <span className={'text-green'}>UX/UI </span>design
             </>
         ),
-        card_2_paragraph:'I design interfaces that are not just visually appealing, but also memorable and enjoyable to use. I believe that the secret to a good website isn’t just colors, fonts, or layout — it’s the way the site communicates with the user, the animations, and the overall feel.\n' +
+        card_2_paragraph:'I design interfaces that are not just visually appealing, but also memorable and enjoyable to use. I believe that the secret to a good website isn’t just colors, fonts, or layout. It’s the way the site communicates with the user, the animations, and the overall feel.\n' +
             'I aim to make every click and interaction intuitive, so users feel naturally guided through the experience.',
         card_3_heading: (): ReactNode => (
             <>

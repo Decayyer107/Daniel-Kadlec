@@ -34,7 +34,6 @@ export default function SocialIcons({ isSmall }: IconsProps) {
         ? "px-[clamp(_6px,_2vw,_15px)]"
         : "px-[clamp(_6px,_2vw,_15px)]";
 
-    // Animation variants
     const container = {
         hidden: {},
         visible: {

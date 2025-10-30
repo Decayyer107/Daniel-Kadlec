@@ -94,7 +94,6 @@ export default function Project({ project }: { project: ProjectType }) {
                 <IoPlayBackCircle className="text w-full h-full" />
             </motion.div>
 
-            {/* Title and description */}
             <motion.div variants={item} className="flex flex-col mt-10">
                 <motion.h1 variants={item} className="text-h1">
                     {project.title}
@@ -146,6 +145,7 @@ export default function Project({ project }: { project: ProjectType }) {
                                 <h3 className="text-h2">{project.anchorTitle1}</h3>
                                 <Link
                                     className="text-body-large !mt-1 !text-green-secondary dark:!text-gray-400 hover:underline"
+                                    target={"_blank"}
                                     href={project.anchor1}
                                 >
                                     {project.anchorPlaceholder1}
@@ -155,6 +155,7 @@ export default function Project({ project }: { project: ProjectType }) {
                                 <h3 className="text-h2">{project.anchorTitle2}</h3>
                                 <Link
                                     className="text-body-large !mt-1 !text-green-secondary dark:!text-gray-400 hover:underline"
+                                    target={"_blank"}
                                     href={project.anchor2}
                                 >
                                     {project.anchorPlaceholder2}

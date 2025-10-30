@@ -246,7 +246,7 @@ export default function Contact() {
                             errors.message
                                 ? "border-red-error"
                                 : "border-gray-100 dark:border-gray-700"
-                        } text-gray-900 dark:text-gray-100 placeholder-gray-400 p-4 rounded-[8px] resize-none transition-all duration-500`}
+                        } text placeholder-gray-400 p-4 rounded-[8px] resize-none transition-all duration-500`}
                         name="message"
                         placeholder={dict.contact.contact_form_message}
                         onChange={(e) => handleInputChange("message", e.target.value)}
