@@ -83,14 +83,14 @@ export default function PortfolioPage() {
                                 className="relative px-5 py-2 sm:px-8 sm:py-2 transition-all duration-200 text-center"
                             >
                                 <span
-                                    className={`absolute inset-0 rounded-full bg-[#d3d3de] dark:bg-gray-700 scale-95 opacity-0 transition-all duration-300 ${
+                                    className={`absolute inset-0 rounded-full bg-[#d3d3de] dark:bg-gray-700 scale-95 opacity-0 transition-all duration-300 cursor-pointer ${
                                         activeFilter === filter.key
                                             ? "opacity-100 scale-100"
                                             : ""
                                     }`}
                                 ></span>
 
-                                <span className="relative z-10 cursor-pointer text">
+                                <span className="relative z-10 text">
                                     {filter.label}
                                 </span>
                             </button>

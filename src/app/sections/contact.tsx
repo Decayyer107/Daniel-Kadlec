@@ -154,6 +154,7 @@ export default function Contact() {
                         <motion.a
                             variants={item}
                             href="https://github.com/Decayyer107"
+                            target={"_blank"}
                             className="cursor-pointer w-fit hover:underline"
                         >
                             <span className="contact-link flex items-center gap-4">
@@ -164,6 +165,7 @@ export default function Contact() {
 
                         <motion.a
                             variants={item}
+                            target={"_blank"}
                             href="https://x.com/dan_kadlec"
                             className="cursor-pointer w-fit hover:underline"
                         >
@@ -177,6 +179,7 @@ export default function Contact() {
 
                         <motion.a
                             variants={item}
+                            target={"_blank"}
                             href="https://www.linkedin.com/in/daniel-kadlec-903759379/"
                             className="cursor-pointer w-fit hover:underline"
                         >
@@ -188,6 +191,7 @@ export default function Contact() {
 
                         <motion.a
                             variants={item}
+                            target={"_blank"}
                             href="mailto:kontakt@danielkadlec.cz"
                             className="cursor-pointer w-fit hover:underline"
                         >
@@ -247,24 +251,37 @@ export default function Contact() {
                         placeholder={dict.contact.contact_form_message}
                         onChange={(e) => handleInputChange("message", e.target.value)}
                     />
-
-                    <button
+                    <motion.button
                         type="submit"
                         disabled={loading}
-                        className="inline-flex justify-center items-center gap-2 h-14 px-14 border-2 rounded-[14px] font-secondary font-bold text-xl text-offblack dark:text-offwhite border-offblack dark:border-offwhite cursor-pointer disabled:opacity-50"
+                        initial="initial"
+                        whileHover="hover"
+                        className="group relative overflow-hidden inline-flex justify-center items-center gap-2 h-14 px-14 border-2 rounded-[14px] font-secondary font-bold text-xl text-offblack dark:text-offwhite hover:text-offwhite hover:dark:text-offblack border-offblack dark:border-offwhite transition-all cursor-pointer disabled:opacity-50"
                     >
-                        {loading ? (
-                            <div className="flex flex-col items-center gap-4">
-                                <div
-                                    className="spinner !w-6 !h-6 !border-4"
-                                    role="status"
-                                    aria-label="Loading"
-                                />
-                            </div>
-                        ) : (
-                            dict.contact.contact_form_button
-                        )}
-                    </button>
+                        <motion.span
+                            variants={{
+                                initial: { scale: 0, opacity: 0 },
+                                hover: { scale: 10, opacity: 1 },
+                            }}
+                            transition={{ duration: 0.7, ease: "easeOut" }}
+                            className="absolute inset-0 -left-full bg-offblack dark:bg-offwhite origin-bottom-left rotate-45 h-[200%] w-screen"
+                        />
+
+                        <span className="relative z-10 flex items-center gap-2">
+        {loading ? (
+            <div className="flex flex-col items-center gap-4">
+                <div
+                    className="spinner group-hover:!border-offwhite dark:group-hover:!border-offblack !w-6 !h-6 !border-4"
+                    role="status"
+                    aria-label="Loading"
+                />
+            </div>
+        ) : (
+            dict.contact.contact_form_button
+        )}
+    </span>
+                    </motion.button>
+
                 </motion.form>
 
                 <div className="fixed bottom-0 left-0 sm:left-auto sm:bottom-6 sm:right-6 flex flex-col gap-0 sm:gap-4 z-[99] w-full sm:w-auto">

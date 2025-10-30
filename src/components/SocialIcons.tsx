@@ -67,6 +67,7 @@ export default function SocialIcons({ isSmall }: IconsProps) {
                 <motion.a
                     key={id}
                     href={href}
+                    target={"_blank"}
                     variants={item}
                     className={gapClass}
                     onMouseEnter={() => setHovered(id)}

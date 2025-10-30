@@ -80,7 +80,7 @@ const cs = {
     contact: {
         heading: (): ReactNode => (
             <>
-                Kontaktujte <span className={"text-green"}>mně</span>.
+                Kontaktujte <span className={"text-green"}>mě</span>.
             </>
         ),
         paragraph: (): ReactNode => (

@@ -41,7 +41,6 @@ export type TechName =
     | "framer"
 
     // Backend
-    | "nodejs"
 
     // Design
     | "figma"
@@ -53,7 +52,7 @@ export type TechName =
 
 export const getTechMap = (size = 20) =>
     ({
-        // 🖥️ Frontend
+        //  Frontend
         html: { icon: <Html5Original size={size} />, label: "HTML5" },
         css: { icon: <Css3Original size={size} />, label: "CSS3" },
         javascript: { icon: <JavascriptOriginal size={size} />, label: "JavaScript" },
@@ -61,20 +60,19 @@ export const getTechMap = (size = 20) =>
         react: { icon: <ReactOriginal size={size} />, label: "React" },
         tailwind: { icon: <TailwindcssOriginal size={size} />, label: "Tailwind CSS" },
 
-        // ⚙️ Frameworks / Build Tools
+        // Frameworks / Build Tools
         nextjs: { icon: <NextjsOriginal size={size} />, label: "Next.js" },
         vite: { icon: <VitejsOriginal size={size} />, label: "Vite" },
         framer: { icon: <FramermotionOriginal size={size} />, label: "Framer Motion" },
 
-        // 🔌 Backend
-        nodejs: { icon: <NodejsOriginal size={size} />, label: "Node.js" },
+        // Backend
 
-        // 🎨 Design
+        // Design
         figma: { icon: <FigmaOriginal size={size} />, label: "Figma" },
         photoshop: { icon: <PhotoshopOriginal size={size} />, label: "Photoshop" },
         illustrator: { icon: <IllustratorOriginal size={size} />, label: "Illustrator" },
 
-        // 🛠️ Version Control
+        // Version Control
         git: { icon: <GitOriginal size={size} />, label: "Git" },
     } as const);
 
