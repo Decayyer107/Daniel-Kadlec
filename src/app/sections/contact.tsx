@@ -149,7 +149,7 @@ export default function Contact() {
 
                     <motion.div
                         variants={container}
-                        className="text text-[clamp(24px,3vw,36px)] font-bold flex justify-between px-12 xs:px-0 xs:grid xs:grid-cols-2 lg:flex lg:flex-col gap-6 mt-8"
+                        className="text text-[clamp(24px,3vw,36px)] font-bold flex justify-between px-10 xs:px-0 xs:grid xs:grid-cols-2 lg:flex lg:flex-col gap-6 mt-8"
                     >
                         <motion.a
                             variants={item}

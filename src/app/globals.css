@@ -99,7 +99,7 @@
     @apply flex gap-[clamp(12px,2vw,24px)] items-center;
 }
 .contact-icon{
-    @apply text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px];
+    @apply text-[42px] md:text-[48px] lg:text-[56px];
 }
 html, body {
     @apply h-full;
