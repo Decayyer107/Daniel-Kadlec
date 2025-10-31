@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
-export default function useLenisScroll() {
+export default function useScroll() {
     useEffect(() => {
         const lenis = new Lenis({
             wrapper: document.documentElement,
