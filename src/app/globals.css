@@ -46,7 +46,7 @@
 }
 
 .section {
-    @apply mx-auto max-w-[1350px] px-[clamp(20px,_6vw,_100px)];
+    @apply mx-auto max-w-[1350px] px-[clamp(14px,_4vw,_100px)] sm:px-[clamp(20px,_6vw,_100px)];
 }
 .nav-section {
     @apply mx-auto max-w-[1350px];
