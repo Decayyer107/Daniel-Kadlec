@@ -213,7 +213,7 @@ export default function Contact() {
                     <div className="flex-col xl:flex-row flex justify-between gap-3">
                         <Input
                             className={`w-full border-2 ${
-                                errors.name ? "!border-red-error" : "border-transparent"
+                                errors.name ? "!border-red-error" : "border-gray-100 dark:border-gray-700"
                             }`}
                             name="name"
                             placeholder={dict.contact.contact_form_name}
@@ -222,7 +222,7 @@ export default function Contact() {
                         />
                         <Input
                             className={`w-full border-2 ${
-                                errors.email ? "!border-red-error" : "border-transparent"
+                                errors.email ? "!border-red-error" : "border-gray-100 dark:border-gray-700"
                             }`}
                             name="email"
                             placeholder={dict.contact.contact_form_email}
@@ -235,7 +235,7 @@ export default function Contact() {
                         name="subject"
                         placeholder={dict.contact.contact_form_subject}
                         className={`w-full border-2 ${
-                            errors.subject ? "!border-red-error" : "border-transparent"
+                            errors.subject ? "!border-red-error" : "border-gray-100 dark:border-gray-700"
                         }`}
                         onChange={(e) => handleInputChange("subject", e.target.value)}
                         autoComplete="off"
