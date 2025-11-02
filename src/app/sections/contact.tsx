@@ -297,7 +297,7 @@ export default function Contact() {
                                     duration: 0.3,
                                     layout: { duration: 0.25 },
                                 }}
-                                className={`relative px-12 w-full sm:w-fit py-8 sm:py-6 rounded-none sm:rounded-xl shadow-lg border-0 border-t-2 sm:border-2 overflow-hidden text flex flex-col bg-gray-200 dark:bg-gray-900 ${
+                                className={`relative px-8 py-6 w-full sm:w-fit rounded-none sm:rounded-xl shadow-lg border-0 border-t-2 sm:border-2 overflow-hidden text flex flex-col bg-gray-200 dark:bg-gray-900 ${
                                     toast.success
                                         ? "border-gray-700 sm:border-green-primary"
                                         : "border-gray-700 sm:border-red-error"

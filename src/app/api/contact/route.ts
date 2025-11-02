@@ -10,7 +10,6 @@ export async function POST(req: Request) {
         if (!name || !email || !message)
             return NextResponse.json({ error: "Missing fields" }, { status: 400 });
 
-        // === My inbox ===
         await resend.emails.send({
             from: "Portfolio <no-reply@danielkadlec.cz>",
             to: "kontakt@danielkadlec.cz",
@@ -24,25 +23,6 @@ export async function POST(req: Request) {
                 <p><strong>Zpráva:</strong></p>
                 <p style="white-space: pre-wrap;">${message}</p>
 
-      `,
-        });
-
-        // === Sender inbox ===
-        await resend.emails.send({
-            from: "Daniel Kadlec <no-reply@danielkadlec.cz>",
-            to: email,
-            replyTo: "kontakt@danielkadlec.cz",
-            subject: "Vaše zpráva byla přijata!",
-            html: `
-                <h2>Díky, že jste mně kontaktovali!</h2>
-                <p>Obdržel jsem vaši zprávu:</p>
-                <blockquote>${message}</blockquote>
-                <p>Brzy odpovím z adresy <a href="mailto:kontakt@danielkadlec.cz">kontakt@danielkadlec.cz</a>.</p>
-                <br/>
-                <p>- Daniel</p>
-                <br/>
-                <br/>
-                <p>*Toto je automatizovaná zpráva. Odpověď na tento e-mail nikam nedorazí :)</p>
       `,
         });
 

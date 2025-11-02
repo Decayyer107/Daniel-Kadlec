@@ -100,7 +100,7 @@ const en = {
 
         toast_invalid_email: "Invalid email adress format.",
         toast_missing_fields: "Please fill out all required fields.",
-        toast_success: "Message sent successfully!",
+        toast_success: "I have received your message, and I will get back to you as soon as possible.",
         toast_error: "Error sending message.",
         toast_unexpected: "Unexpected error occurred.",
     },

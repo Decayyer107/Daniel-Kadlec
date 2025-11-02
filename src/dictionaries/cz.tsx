@@ -101,7 +101,7 @@ const cs = {
 
         toast_invalid_email: "Neplatný formát e-mailové adresy.",
         toast_missing_fields: "Vyplňte prosím všechna povinná pole.",
-        toast_success: "Zpráva byla úspěšně odeslána!",
+        toast_success: "Vaši zprávu jsem obdržel a co nejdříve se vám ozvu.",
         toast_error: "Chyba při odesílání zprávy.",
         toast_unexpected: "Došlo k neočekávané chybě.",
     },
