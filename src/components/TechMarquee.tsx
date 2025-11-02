@@ -8,7 +8,7 @@ export default function TechMarquee() {
     const techMap = getTechMap();
     const techs = Object.keys(techMap) as TechName[];
 
-    const scrollingTechs = [...techs, ...techs];
+    const scrollingTechs = [...techs, ...techs, ...techs];
 
 
 
@@ -27,13 +27,13 @@ export default function TechMarquee() {
             }}
         >
             <motion.div
-                animate={{ x: ["0%", "-100%"] }}
+                animate={{ x: ["0%", "-300%"] }}
                 transition={{
-                    duration: 30,
+                    duration: 90,
                     ease: "linear",
                     repeat: Infinity,
                 }}
-                className="flex gap-[clamp(_4px,_2vw,_46px)] justify-between"
+                className="flex gap-[clamp(_4px,_2vw,_24px)] justify-between"
             >
                 {scrollingTechs.map((tech, idx) => {
                     const key = techs[idx % techs.length];
