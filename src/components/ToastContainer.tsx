@@ -2,6 +2,7 @@
 
 import { AnimatePresence } from "framer-motion";
 import Toast from "./Toast";
+import {useLanguage} from "@/utils/LanguageContext";
 
 interface ToastItem {
     id: number;
@@ -11,10 +12,11 @@ interface ToastItem {
 
 interface ToastContainerProps {
     toasts: ToastItem[];
-    dict: any;
 }
 
-export default function ToastContainer({ toasts, dict }: ToastContainerProps) {
+export default function ToastContainer({ toasts}: ToastContainerProps) {
+    const { dict } = useLanguage();
+
     return (
         <div className="fixed bottom-0 left-0 sm:left-auto sm:bottom-6 sm:right-6 flex flex-col gap-0 sm:gap-4 z-[99] w-full sm:w-auto">
             <AnimatePresence>
@@ -24,7 +26,6 @@ export default function ToastContainer({ toasts, dict }: ToastContainerProps) {
                         id={toast.id}
                         message={toast.message}
                         success={toast.success}
-                        dict={dict}
                     />
                 ))}
             </AnimatePresence>

@@ -56,19 +56,20 @@ export default function Contact() {
                             {dict.contact.paragraph()}
                         </motion.p>
 
-                        <SocialLinks dict={dict} />
+                        <SocialLinks/>
                     </motion.div>
 
-                    <ContactForm dict={dict} showToast={showToast} />
+                    <ContactForm showToast={showToast} />
                 </div>
             </motion.section>
 
-            <ToastContainer toasts={toasts} dict={dict} />
+            <ToastContainer toasts={toasts} />
         </>
     );
 }
 
-function SocialLinks({ dict }: { dict: any }) {
+function SocialLinks() {
+    const { dict } = useLanguage();
     const links = [
         { href: "https://github.com/Decayyer107", label: "Github", icon: <FaGithub /> },
         { href: "https://x.com/dan_kadlec", label: dict.contact.contact_twitter, icon: <FaXTwitter /> },

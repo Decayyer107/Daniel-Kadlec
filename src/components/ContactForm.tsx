@@ -3,13 +3,16 @@
 import { motion } from "framer-motion";
 import Input from "@/components/Input";
 import React, { useState } from "react";
+import {useLanguage} from "@/utils/LanguageContext";
 
 interface ContactFormProps {
-    dict: any;
     showToast: (message: string, success: boolean | null) => void;
 }
 
-export default function ContactForm({ dict, showToast }: ContactFormProps) {
+export default function ContactForm({showToast }: ContactFormProps) {
+
+    const { dict } = useLanguage();
+
     const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState({
         name: false,
@@ -43,7 +46,7 @@ export default function ContactForm({ dict, showToast }: ContactFormProps) {
 
         setErrors(newErrors);
         if (Object.values(newErrors).some(Boolean)) {
-            const msg =
+            const msg:string =
                 data.email && !validateEmail(data.email)
                     ? dict.contact.toast_invalid_email
                     : dict.contact.toast_missing_fields;

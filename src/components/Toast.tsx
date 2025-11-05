@@ -1,15 +1,17 @@
 'use client'
 
 import { motion } from "framer-motion";
+import {useLanguage} from "@/utils/LanguageContext";
 
 interface ToastProps {
     id: number;
     message: string;
     success: boolean | null;
-    dict: any;
 }
 
-export default function Toast({ id, message, success, dict }: ToastProps) {
+export default function Toast({ id, message, success}: ToastProps) {
+    const { dict } = useLanguage();
+
     return (
         <motion.div
             key={id}
