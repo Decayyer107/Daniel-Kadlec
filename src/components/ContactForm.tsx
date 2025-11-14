@@ -128,13 +128,25 @@ export default function ContactForm({showToast }: ContactFormProps) {
             <motion.button
                 type="submit"
                 disabled={loading}
-                className="group relative overflow-hidden inline-flex justify-center items-center gap-2 h-14 px-14 border-2 rounded-[14px] font-secondary font-bold text-xl border-offblack dark:border-offwhite cursor-pointer disabled:opacity-50"
+                initial="initial"
+                whileHover="hover"
+                className="group relative overflow-hidden inline-flex justify-center items-center gap-2 h-16 px-14 border-2 rounded-[14px] font-secondary font-bold text-xl border-offblack dark:border-offwhite cursor-pointer disabled:opacity-50 hover:text-offwhite hover:dark:text-offblack transition-all duration-300"
             >
-                {loading ? (
-                    <div className="spinner !w-6 !h-6 !border-4" />
-                ) : (
-                    dict.contact.contact_form_button
-                )}
+                <motion.span
+                    variants={{
+                        initial: { scale: 0, opacity: 0 },
+                        hover: { scale: 10, opacity: 1 },
+                    }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                    className="absolute inset-0 -left-full bg-offblack dark:bg-offwhite origin-bottom-left rotate-45 h-[200%] w-screen"
+                />
+                <span className={'inline-flex justify-center items-center z-10'}>
+                    {loading ? (
+                        <div className="spinner !w-6 !h-6 !border-4" />
+                    ) : (
+                        dict.contact.contact_form_button
+                    )}
+                </span>
             </motion.button>
         </motion.form>
     );
