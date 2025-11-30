@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Input from "@/components/Input";
 import React, { useState } from "react";
 import {useLanguage} from "@/utils/LanguageContext";
+import Button from "@/components/Button";
 
 interface ContactFormProps {
     showToast: (message: string, success: boolean | null) => void;
@@ -125,29 +126,16 @@ export default function ContactForm({showToast }: ContactFormProps) {
                 onChange={() => handleInputChange("message")}
             />
 
-            <motion.button
+            <Button
                 type="submit"
-                disabled={loading}
-                initial="initial"
-                whileHover="hover"
-                className="group relative overflow-hidden inline-flex justify-center items-center gap-2 h-16 px-14 border-2 rounded-[14px] font-secondary font-bold text-xl border-offblack dark:border-offwhite cursor-pointer disabled:opacity-50 hover:text-offwhite hover:dark:text-offblack transition-all duration-300"
-            >
-                <motion.span
-                    variants={{
-                        initial: { scale: 0, opacity: 0 },
-                        hover: { scale: 10, opacity: 1 },
-                    }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
-                    className="absolute inset-0 -left-full bg-offblack dark:bg-offwhite origin-bottom-left rotate-45 h-[200%] w-screen"
-                />
+                disabled={loading}>
                 <span className={'inline-flex justify-center items-center z-10'}>
                     {loading ? (
                         <div className="spinner !w-6 !h-6 !border-4" />
                     ) : (
                         dict.contact.contact_form_button
                     )}
-                </span>
-            </motion.button>
+                </span></Button>
         </motion.form>
     );
 }
