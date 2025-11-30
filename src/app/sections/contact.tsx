@@ -14,6 +14,15 @@ interface ToastItem {
     message: string;
     success: boolean | null;
 }
+const container = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.2, delayChildren: 0.1 } },
+};
+
+const item = {
+    hidden: { opacity: 0, y: 20, scale: 0.97, filter: "blur(2px)" },
+    visible: { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", transition: { duration: 0.6 } },
+};
 
 export default function Contact() {
     const { dict } = useLanguage();
@@ -24,16 +33,6 @@ export default function Contact() {
         setToasts(prev => [...prev, { id, message, success }]);
         setTimeout(() => setToasts(prev => prev.filter(t => t.id !== id)), 4000);
     }
-
-    const container = {
-        hidden: {},
-        visible: { transition: { staggerChildren: 0.2, delayChildren: 0.1 } },
-    };
-
-    const item = {
-        hidden: { opacity: 0, y: 20, scale: 0.97 },
-        visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6 } },
-    };
 
     return (
         <>
@@ -55,7 +54,6 @@ export default function Contact() {
                         <motion.p variants={item} className="text text-body-large font-bold">
                             {dict.contact.paragraph()}
                         </motion.p>
-
                         <SocialLinks/>
                     </motion.div>
 
@@ -71,25 +69,32 @@ export default function Contact() {
 function SocialLinks() {
     const { dict } = useLanguage();
     const links = [
-        { href: "https://github.com/Decayyer107", label: "Github", icon: <FaGithub /> },
-        { href: "https://x.com/dan_kadlec", label: dict.contact.contact_twitter, icon: <FaXTwitter /> },
-        { href: "https://www.linkedin.com/in/daniel-kadlec-903759379/", label: "LinkedIn", icon: <FaLinkedin /> },
-        { href: "mailto:kontakt@danielkadlec.cz", label: "E-mail", icon: <FaEnvelope /> },
+        { href: "https://github.com/Decayyer107", label: "Github", icon: <FaGithub className="contact-icon" /> },
+        { href: "https://x.com/dan_kadlec", label: dict.contact.contact_twitter, icon: <FaXTwitter className="contact-icon" /> },
+        { href: "https://www.linkedin.com/in/daniel-kadlec-903759379/", label: "LinkedIn", icon: <FaLinkedin className="contact-icon" /> },
+        { href: "mailto:kontakt@danielkadlec.cz", label: "E-mail", icon: <FaEnvelope className="contact-icon mt-1" /> },
     ];
 
     return (
-        <div className="text text-[clamp(24px,3vw,36px)] font-bold flex justify-between px-10 xs:px-0 xs:grid xs:grid-cols-2 lg:flex lg:flex-col gap-6 mt-8">
+        <motion.div
+            className="text text-[clamp(20px,2vw,34px)] font-bold flex justify-center px-10 xs:px-0 xs:grid xs:grid-cols-2 lg:flex lg:flex-col gap-12 xs:gap-6 mt-8"
+            initial="hidden"
+            whileInView="visible"
+            variants={container}
+            viewport={{ once: true, amount: 0.5 }}
+        >
             {links.map(({ href, label, icon }) => (
-                <a
+                <motion.a
                     key={href}
                     href={href}
                     target="_blank"
-                    className="cursor-pointer w-fit hover:underline flex items-center gap-4 text-[40px]"
+                    variants={item}
+                    className="cursor-pointer w-fit hover:underline flex items-center gap-5 text-[40px]"
                 >
                     {icon}
-                    <span className="hidden xs:inline">{label}</span>
-                </a>
+                    <span className="hidden xs:inline text-[clamp(24px,4vw,38px)]">{label}</span>
+                </motion.a>
             ))}
-        </div>
+        </motion.div>
     );
 }

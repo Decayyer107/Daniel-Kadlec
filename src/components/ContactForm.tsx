@@ -81,6 +81,20 @@ export default function ContactForm({showToast }: ContactFormProps) {
     function handleInputChange(field: keyof typeof errors) {
         setErrors((prev) => ({ ...prev, [field]: false }));
     }
+    const container = {
+        hidden: { opacity: 0, y: 40, scale: 0.97, filter: "blur(8px)" },
+        visible: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            filter: "blur(0px)",
+            transition: {
+                duration: 0.8,
+                ease: "easeOut" as const
+            }
+        },
+    };
+
 
     return (
         <motion.form
@@ -88,8 +102,13 @@ export default function ContactForm({showToast }: ContactFormProps) {
             id="contactform"
             onSubmit={submitForm}
             className="flex flex-col gap-4 w-full lg:w-1/2 text flex-1"
+            initial="hidden"
+            whileInView="visible"
+            variants={container}
+            viewport={{ once: true, amount: 0.5 }}
         >
-            <div className="flex-col xl:flex-row flex justify-between gap-3">
+
+            <motion.div className="flex-col xl:flex-row flex justify-between gap-3">
                 <Input
                     name="name"
                     placeholder={dict.contact.contact_form_name}
@@ -106,7 +125,7 @@ export default function ContactForm({showToast }: ContactFormProps) {
                     }`}
                     onChange={() => handleInputChange("email")}
                 />
-            </div>
+            </motion.div>
 
             <Input
                 name="subject"
@@ -117,7 +136,7 @@ export default function ContactForm({showToast }: ContactFormProps) {
                 onChange={() => handleInputChange("subject")}
             />
 
-            <textarea
+            <motion.textarea
                 name="message"
                 placeholder={dict.contact.contact_form_message}
                 className={`flex-1 min-h-[10rem] bg-gray-200 dark:bg-gray-900 border-2 ${
