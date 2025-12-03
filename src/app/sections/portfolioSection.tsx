@@ -9,6 +9,7 @@ import { projectsEn } from "@/data/projects/projects.en";
 import { projectsCz } from "@/data/projects/projects.cz";
 import Button from "@/components/Button";
 import Link from "next/link";
+import {TechName} from "@/components/Technologies";
 
 export default function PortfolioSection() {
     const { lang, dict } = useLanguage();
@@ -90,7 +91,7 @@ export default function PortfolioSection() {
                                             subtitle={p.subtitle}
                                             image={p.image_preview}
                                             link={p.link}
-                                            techs={p.technologies as any}
+                                            techs={p.technologies  as TechName[]}
                                         />
                                     </div>
                             </motion.div>
