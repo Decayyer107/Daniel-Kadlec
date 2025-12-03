@@ -89,7 +89,7 @@ export default function Project({ project }: { project: ProjectType }) {
                         document.documentElement.style.scrollBehavior = "";
                     }, 100);
                 }}
-                className="p-[1px] border-offblack dark:border-offwhite border-2 rounded-full w-14 h-14 absolute top-6 left-6 cursor-pointer"
+                className="p-[1px] bg-offblack border-offblack dark:border-offwhite border-2 rounded-full w-14 h-14 top-6 left-6 cursor-pointer fixed z-50"
             >
                 <IoPlayBackCircle className="text w-full h-full" />
             </motion.div>
@@ -170,7 +170,7 @@ export default function Project({ project }: { project: ProjectType }) {
                 </motion.div>
             </motion.div>
 
-            <motion.div variants={item} className="project-section w-full mt-8 sm:mt-16">
+            <motion.div variants={item} className="w-full mt-6 sm:mt-16">
                 <motion.div
                     variants={item}
                     className="relative aspect-[16/9] rounded-2xl shadow-md overflow-hidden"
@@ -186,11 +186,10 @@ export default function Project({ project }: { project: ProjectType }) {
 
             <motion.div
                 variants={item}
-                className="project-section w-full grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center mt-8"
+                className=" w-full grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center mt-6"
             >
                     <motion.div
                         variants={item}
-                        key={1}
                         className="project-image-small"
                     >
                         <Image
@@ -202,7 +201,6 @@ export default function Project({ project }: { project: ProjectType }) {
                     </motion.div>
                 <motion.div
                     variants={item}
-                    key={2}
                     className="project-image-small"
                 >
                     <Image
@@ -214,7 +212,6 @@ export default function Project({ project }: { project: ProjectType }) {
                 </motion.div>
                 <motion.div
                     variants={item}
-                    key={3}
                     className="project-image-small"
                 >
                     <Image
@@ -226,7 +223,6 @@ export default function Project({ project }: { project: ProjectType }) {
                 </motion.div>
                 <motion.div
                     variants={item}
-                    key={4}
                     className="project-image-small"
                 >
                     <Image
