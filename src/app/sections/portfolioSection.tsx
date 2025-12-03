@@ -1,8 +1,9 @@
 'use client'
 
-import { motion } from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
+import { useState } from "react";
 import { useLanguage } from "@/utils/LanguageContext";
-import ProjectSmall from "@/components/ProjectSmall";
+import Project from "@/components/Project";
 import Heading from "@/components/Heading";
 import { projectsEn } from "@/data/projects/projects.en";
 import { projectsCz } from "@/data/projects/projects.cz";
@@ -12,6 +13,18 @@ import Link from "next/link";
 export default function PortfolioSection() {
     const { lang, dict } = useLanguage();
     const projects = lang === "cz" ? projectsCz : projectsEn;
+
+    const [hovered, setHovered] = useState<string | null>(null);
+
+    const getStyle = (id: string) => {
+        const isHovered = hovered === id;
+        const isOther = hovered !== null && !isHovered;
+
+        return `
+            transition-all duration-400 ease-out
+            ${isOther ? "opacity-50" : "opacity-100"}
+        `;
+    };
 
     const container = {
         hidden: {},
@@ -46,37 +59,46 @@ export default function PortfolioSection() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.6 }}
         >
-
-        <Heading
+            <Heading
                 Heading={dict.portfolioSection.heading()}
                 Subheading={dict.portfolioSection.subheading}
             />
-
-            {/* Projects container */}
-            <motion.div
-                variants={container}
-                className="flex flex-col gap-[clamp(52px,_4vw,_64px)]"
-            >
-                {projects
-                    .filter((p) => p.featured)
-                    .map((p) => (
-                        <motion.div key={p.id} variants={item}>
-                            <ProjectSmall
-                                title={p.title}
-                                subtitle={p.subtitle}
-                                image={p.image_preview}
-                                link={p.link}
-                                techs={
-                                    p.technologies as import("@/components/Technologies").TechName[]
-                                }
-                            />
-                        </motion.div>
-                    ))}
-            </motion.div>
-
-            <motion.div variants={item} className="mt-24">
-                <Link href="/portfolio">
-                    <Button className="w-full sm:w-1/2">{dict.portfolioSection.button}</Button>
+                <motion.div
+                    className="
+                    grid
+                    grid-cols-1
+                    md:grid-cols-2
+                    gap-[clamp(32px,_5vw,_64px)]
+                    mt-8
+                    lg:mt-4
+                    [&>*:nth-child(even)]:mt-[clamp(16px,_2vw,_32px)]
+                    max-md:[&>*:nth-child(even)]:mt-0
+                "
+                >
+                    {projects
+                        .filter((p) => p.featured)
+                        .map((p) => (
+                                <motion.div
+                                    key={p.id}
+                                    variants={item}
+                                    onMouseEnter={() => setHovered(p.id)}
+                                    onMouseLeave={() => setHovered(null)}
+                                >
+                                    <div className={getStyle(p.id)}>
+                                        <Project
+                                            title={p.title}
+                                            subtitle={p.subtitle}
+                                            image={p.image_preview}
+                                            link={p.link}
+                                            techs={p.technologies as any}
+                                        />
+                                    </div>
+                            </motion.div>
+                        ))}
+                </motion.div>
+            <motion.div variants={item} className="mt-24 w-full flex justify-center">
+                <Link href="/portfolio" className="w-full sm:w-1/2">
+                    <Button className="w-full">{dict.portfolioSection.button}</Button>
                 </Link>
             </motion.div>
         </motion.section>

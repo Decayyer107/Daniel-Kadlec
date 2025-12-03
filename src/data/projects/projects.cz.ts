@@ -25,6 +25,6 @@ export const projectsCz: ProjectType[] = [
         "anchor2":"https://www.figma.com/design/GhnoCIPiUBwQ7e5r999HPE/Zahrada-smutkut---public?m=auto&t=gTyzgWSGHMGDxbyi-1",
         "featured": true,
         "category": ["design"]
-    }
+    },
 ];
 

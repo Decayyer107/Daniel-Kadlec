@@ -5,7 +5,7 @@ import { projectsCz } from "@/data/projects/projects.cz";
 import { projectsEn } from "@/data/projects/projects.en";
 import { useState } from "react";
 import Heading from "@/components/Heading";
-import ProjectBig from "@/components/ProjectBig";
+import Project from "@/components/Project";
 import { AnimatePresence, motion } from "framer-motion";
 
 
@@ -14,6 +14,18 @@ export default function PortfolioPage() {
     const projects = lang === "cz" ? projectsCz : projectsEn;
 
     const [activeFilter, setActiveFilter] = useState("all");
+
+    const [hovered, setHovered] = useState<string | null>(null);
+
+    const getStyle = (id: string) => {
+        const isHovered = hovered === id;
+        const isOther = hovered !== null && !isHovered;
+
+        return `
+            transition-all duration-500 ease-out
+            ${isOther ? "opacity-25" : "opacity-100"}
+        `;
+    };
 
     const filters = [
         { key: "all", label: dict.portfolio.filters_all },
@@ -63,11 +75,12 @@ export default function PortfolioPage() {
             animate="visible"
         >
             <Heading
-                className="mt-[clamp(112px,_25vw,_224px)]"
+                className="mt-[clamp(112px,_15vw,_224px)]"
                 Heading={dict.portfolio.heading()}
                 Subheading={dict.portfolio.subheading}
             />
 
+            {/* Filters */}
             <motion.div
                 variants={item}
                 className="w-full flex justify-end mt-12 sm:mt-0"
@@ -109,7 +122,7 @@ export default function PortfolioPage() {
                     lg:mt-4
                     [&>*:nth-child(even)]:mt-[clamp(16px,_2vw,_32px)]
                     max-md:[&>*:nth-child(even)]:mt-0
-                  "
+                "
             >
                 <AnimatePresence mode="wait">
                     {filteredProjects.map((p) => (
@@ -122,22 +135,24 @@ export default function PortfolioPage() {
                                 duration: 0.5,
                                 ease: [0.22, 1, 0.36, 1],
                             }}
+                            onMouseEnter={() => setHovered(p.id)}
+                            onMouseLeave={() => setHovered(null)}
                         >
-                            <ProjectBig
-                                title={p.title}
-                                subtitle={p.subtitle}
-                                image={p.image_preview}
-                                link={p.link}
-                                techs={
-                                    p.technologies as import("@/components/Technologies").TechName[]
-                                }
-                            />
+                            <div className={getStyle(p.id)}>
+                                <Project
+                                    title={p.title}
+                                    subtitle={p.subtitle}
+                                    image={p.image_preview}
+                                    link={p.link}
+                                    techs={
+                                        p.technologies as import("@/components/Technologies").TechName[]
+                                    }
+                                />
+                            </div>
                         </motion.div>
                     ))}
                 </AnimatePresence>
-
             </div>
-
         </motion.section>
     );
 }

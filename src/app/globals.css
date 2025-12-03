@@ -58,6 +58,9 @@
 .text-h2{
     @apply text-offblack dark:text-offwhite font-primary text-[clamp(_36px,_calc(4vw+4px),_58px)] leading-[clamp(34px,_calc(2vw+20px),_58px)];
 }
+.text-h3{
+    @apply text-offblack dark:text-offwhite font-primary text-[clamp(_32px,_calc(4vw+4px),_48px)] leading-[clamp(34px,_calc(2vw+20px),_58px)];
+}
 .text-subheading{
     @apply text-[#8c8ca6] font-secondary font-semibold text-[clamp(20px,_2vw,_26px)] leading-[clamp(24px,_calc(2vw+12px),_58px)] mt-2 lg:-mt-2;
 }
