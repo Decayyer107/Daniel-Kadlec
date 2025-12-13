@@ -29,7 +29,7 @@ export const projectsEn: ProjectType[] = [
         "link": "el-toro",
         "title": "El Toro",
         "subtitle": "Independent website redesign",
-        "description": "I came across the El Toro restaurant website while searching for inspiration and potential projects. Since it is a place I personally consider to be of very high quality, I immediately noticed areas where the website could better reflect the level of the restaurant itself.\n" +
+        "description": "I came across the El Toro restaurant website while searching for inspiration and potential projects. Since it is a place I personally consider to be of very high quality, I noticed opportunities to explore how the website could visually reflect the character and atmosphere of the restaurant.\n" +
             "\n" +
             "I decided to create the redesign as an independent conceptual project for my portfolio. My goal was to further develop my skills in UX/UI design, visual hierarchy, brand atmosphere, and overall user experience. I approached the project as an opportunity not only to improve an existing solution, but also to experiment with new approaches and design decisions.\n" +
             "\n" +
@@ -42,9 +42,9 @@ export const projectsEn: ProjectType[] = [
         "image_3": "/projects/el-toro/4.png",
         "image_4": "/projects/el-toro/5.png",
 
-        "technical_description": "The goal was to combine the bold, meaty character of a steakhouse with the elegant experience that El Toro offers. For this reason, I intentionally moved away from the original cool color palette toward warmer beige tones, which feel more inviting and better support a premium atmosphere.\n" +
+        "technical_description": "The goal was to combine the bold, meaty character of a steakhouse with an elegant, premium dining experience. For this reason, I intentionally moved away from the original cool color palette toward warmer beige tones, which feel more inviting and better support a refined atmosphere.\n" +
             "\n" +
-            "The typography is based on a combination of a serif typeface for headings and a sans-serif typeface for longer texts. This pairing helps balance elegance with brand strength while maintaining good readability. I also added a subtle paper texture to the background to soften the overall look and give the website more character without becoming distracting. The entire redesign was created in Figma.",
+            "The typography is based on a combination of a serif typeface for headings and a sans-serif typeface for longer texts. This pairing helps balance elegance with visual strength while maintaining good readability. I also added a subtle paper texture to the background to soften the overall look and give the website more character without becoming distracting. The entire redesign was created in Figma.\n",
 
         "anchorPlaceholder1": "figma.com/design/el-toro",
         "anchorTitle1": "Figma project",

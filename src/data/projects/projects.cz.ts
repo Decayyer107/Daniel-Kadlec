@@ -31,9 +31,9 @@ export const projectsCz: ProjectType[] = [
         "link": "el-toro",
         "title": "El Toro",
         "subtitle": "Nezávislý redesign webu",
-        "description": "Na web restaurace El Toro jsem narazil při hledání inspirace a potenciálních zakázek. Jelikož se jedná o podnik, který osobně považuji za velmi kvalitní, okamžitě jsem si všiml prostoru, kde by web mohl lépe odpovídat úrovni samotné restaurace.\n" +
+        "description": "Na web restaurace El Toro jsem narazil při hledání inspirace a potenciálních zakázek. Jelikož se jedná o podnik, který osobně považuji za velmi kvalitní, okamžitě jsem si všiml prostoru, kde by web mohl lépe vizuálně reflektovat charakter a atmosféru samotné restaurace.\n" +
             "\n" +
-            "Redesign jsem se rozhodl vytvořit jako nezávislý konceptuální projekt pro své portfolio. Mým cílem bylo prohloubit dovednosti v oblasti UX/UI designu, práce s vizuální hierarchií, atmosférou značky a celkovým uživatelským zážitkem. Projekt jsem bral jako příležitost nejen zlepšit existující řešení, ale také si vyzkoušet nové přístupy a designová rozhodnutí.\n" +
+            "Redesign jsem vytvořil jako nezávislý, nekomerční návrh určený výhradně pro mé portfolio. Mým cílem bylo prohloubit dovednosti v oblasti UX/UI designu, práce s vizuální hierarchií, atmosférou značky a celkovým uživatelským zážitkem. Projekt jsem bral jako příležitost nejen zlepšit existující řešení, ale také si vyzkoušet nové přístupy a designová rozhodnutí.\n" +
             "\n" +
             "Celý návrh vznikl bez jakékoliv spolupráce s restaurací El Toro a slouží výhradně jako ukázka mého designového přístupu a způsobu uvažování nad webem prémiové restaurace.",
         "technologies": ["figma"],
