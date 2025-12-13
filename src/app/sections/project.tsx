@@ -140,26 +140,30 @@ export default function Project({ project }: { project: ProjectType }) {
                         variants={item}
                         className="flex flex-row lg:flex-col justify-between items-end lg:justify-end gap-6 text text-left lg:text-right"
                     >
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-6">
                             <motion.span variants={item} className="flex flex-col">
                                 <h3 className="text-h2">{project.anchorTitle1}</h3>
-                                <Link
-                                    className="text-body-large !mt-1 !text-green-secondary dark:!text-gray-400 hover:underline"
-                                    target={"_blank"}
-                                    href={project.anchor1}
-                                >
-                                    {project.anchorPlaceholder1}
-                                </Link>
+                                {project.anchor1 && (
+                                    <Link
+                                        className="text-body-large !mt-1 !text-green-secondary dark:!text-gray-400 hover:underline"
+                                        target="_blank"
+                                        href={project.anchor1}
+                                    >
+                                        {project.anchorPlaceholder1}
+                                    </Link>
+                                )}
                             </motion.span>
                             <motion.span variants={item} className="flex flex-col">
                                 <h3 className="text-h2">{project.anchorTitle2}</h3>
-                                <Link
-                                    className="text-body-large !mt-1 !text-green-secondary dark:!text-gray-400 hover:underline"
-                                    target={"_blank"}
-                                    href={project.anchor2}
-                                >
-                                    {project.anchorPlaceholder2}
-                                </Link>
+                                {project.anchor2 && (
+                                    <Link
+                                        className="text-body-large !mt-1 !text-green-secondary dark:!text-gray-400 hover:underline"
+                                        target="_blank"
+                                        href={project.anchor2}
+                                    >
+                                        {project.anchorPlaceholder2}
+                                    </Link>
+                                )}
                             </motion.span>
                         </div>
 
@@ -173,7 +177,7 @@ export default function Project({ project }: { project: ProjectType }) {
             <motion.div variants={item} className="w-full mt-6 sm:mt-16">
                 <motion.div
                     variants={item}
-                    className="relative aspect-[16/9] rounded-2xl shadow-md overflow-hidden"
+                    className="relative aspect-[5/3] rounded-2xl shadow-md overflow-hidden"
                 >
                     <Image
                         src={project.image_main}

@@ -26,5 +26,36 @@ export const projectsCz: ProjectType[] = [
         "featured": true,
         "category": ["design"]
     },
+    {
+        "id": "2",
+        "link": "el-toro",
+        "title": "El Toro",
+        "subtitle": "Nezávislý redesign webu",
+        "description": "Na web restaurace El Toro jsem narazil při hledání inspirace a potenciálních zakázek. Jelikož se jedná o podnik, který osobně považuji za velmi kvalitní, okamžitě jsem si všiml prostoru, kde by web mohl lépe odpovídat úrovni samotné restaurace.\n" +
+            "\n" +
+            "Redesign jsem se rozhodl vytvořit jako nezávislý konceptuální projekt pro své portfolio. Mým cílem bylo prohloubit dovednosti v oblasti UX/UI designu, práce s vizuální hierarchií, atmosférou značky a celkovým uživatelským zážitkem. Projekt jsem bral jako příležitost nejen zlepšit existující řešení, ale také si vyzkoušet nové přístupy a designová rozhodnutí.\n" +
+            "\n" +
+            "Celý návrh vznikl bez jakékoliv spolupráce s restaurací El Toro a slouží výhradně jako ukázka mého designového přístupu a způsobu uvažování nad webem prémiové restaurace.",
+        "technologies": ["figma"],
+        "image_preview": "/projects/el-toro/1.png",
+        "image_main": "/projects/el-toro/1.png",
+        "image_1": "/projects/el-toro/2.png",
+        "image_2": "/projects/el-toro/3.png",
+        "image_3": "/projects/el-toro/4.png",
+        "image_4": "/projects/el-toro/5.png",
+
+        "technical_description": "Cílem bylo propojit výrazný, masitý charakter steakhouse restaurace s elegantním zážitkem, který El Toro nabízí. Proto jsem se záměrně posunul od původního chladného barevného ladění směrem k teplejším béžovým tónům, které působí přívětivěji a lépe podporují prémiovou atmosféru.\n" +
+            "\n" +
+            "Typografie je postavená na kombinaci patkového písma pro nadpisy a bezpatkového písma pro delší texty. Tato kombinace pomáhá vyvážit eleganci a sílu značky, zároveň ale zůstává dobře čitelná. Do pozadí jsem navíc přidal jemnou papírovou texturu, která vizuál změkčuje a dodává webu víc charakteru, aniž by působila rušivě. Celý redesign jsem uskutečnil v programu Figma.",
+
+        "anchorPlaceholder1":"figma.com/design/el-toro",
+        "anchorTitle1":"Figma projekt",
+        "anchor1":"https://www.figma.com/design/UWdnUn0FXxskeUzsYloTCX/El-Toro---public?node-id=0-1&t=02RugkSJglkrRER0-1",
+        "anchorPlaceholder2":"eltoromost.cz",
+        "anchorTitle2":"Originální web",
+        "anchor2":"https://eltoromost.cz",
+        "featured": true,
+        "category": ["design"]
+    },
 ];
 

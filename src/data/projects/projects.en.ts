@@ -24,4 +24,36 @@ export const projectsEn: ProjectType[] = [
         "featured": true,
         "category": ["design"],
     },
+    {
+        "id": "2",
+        "link": "el-toro",
+        "title": "El Toro",
+        "subtitle": "Independent website redesign",
+        "description": "I came across the El Toro restaurant website while searching for inspiration and potential projects. Since it is a place I personally consider to be of very high quality, I immediately noticed areas where the website could better reflect the level of the restaurant itself.\n" +
+            "\n" +
+            "I decided to create the redesign as an independent conceptual project for my portfolio. My goal was to further develop my skills in UX/UI design, visual hierarchy, brand atmosphere, and overall user experience. I approached the project as an opportunity not only to improve an existing solution, but also to experiment with new approaches and design decisions.\n" +
+            "\n" +
+            "The entire design was created without any collaboration with the El Toro restaurant and serves solely as a showcase of my design approach and way of thinking about a premium restaurant website.",
+        "technologies": ["figma"],
+        "image_preview": "/projects/el-toro/1.png",
+        "image_main": "/projects/el-toro/1.png",
+        "image_1": "/projects/el-toro/2.png",
+        "image_2": "/projects/el-toro/3.png",
+        "image_3": "/projects/el-toro/4.png",
+        "image_4": "/projects/el-toro/5.png",
+
+        "technical_description": "The goal was to combine the bold, meaty character of a steakhouse with the elegant experience that El Toro offers. For this reason, I intentionally moved away from the original cool color palette toward warmer beige tones, which feel more inviting and better support a premium atmosphere.\n" +
+            "\n" +
+            "The typography is based on a combination of a serif typeface for headings and a sans-serif typeface for longer texts. This pairing helps balance elegance with brand strength while maintaining good readability. I also added a subtle paper texture to the background to soften the overall look and give the website more character without becoming distracting. The entire redesign was created in Figma.",
+
+        "anchorPlaceholder1": "figma.com/design/el-toro",
+        "anchorTitle1": "Figma project",
+        "anchor1": "https://www.figma.com/design/UWdnUn0FXxskeUzsYloTCX/El-Toro---public?node-id=0-1&t=02RugkSJglkrRER0-1",
+        "anchorPlaceholder2": "eltoromost.cz",
+        "anchorTitle2": "Original website",
+        "anchor2": "https://eltoromost.cz",
+        "featured": true,
+        "category": ["design"]
+    }
+
 ];
