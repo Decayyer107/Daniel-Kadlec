@@ -39,7 +39,7 @@ export default function Button({ children, className, ...props }: ButtonProps) {
                     transition={{ duration: 0.25, ease: "easeOut" }}
                     className="relative z-10 "
                 >
-                    <FiExternalLink className="text-3xl dark:text-offblack text-offwhite" />
+                    <FiExternalLink className="text-2xl dark:text-offblack text-offwhite" />
                 </motion.span>
             </motion.span>
         </motion.button>
