@@ -20,10 +20,10 @@ export type ProjectType = {
     /** Path or URL to the main thumbnail image */
     image_preview: string;
     image_main: string;
-    image_1: string;
-    image_2: string;
-    image_3: string;
-    image_4: string;
+    image_1?: string;
+    image_2?: string;
+    image_3?: string;
+    image_4?: string;
 
 
 

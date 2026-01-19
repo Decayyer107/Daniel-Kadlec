@@ -23,7 +23,7 @@ export const projectsCz: ProjectType[] = [
         "anchorPlaceholder2":"figma.com/design/zahrada-smutku",
         "anchorTitle2":"Figma projekt",
         "anchor2":"https://www.figma.com/design/GhnoCIPiUBwQ7e5r999HPE/Zahrada-smutkut---public?m=auto&t=gTyzgWSGHMGDxbyi-1",
-        "featured": true,
+        "featured": false,
         "category": ["design"]
     },
     {
@@ -54,6 +54,32 @@ export const projectsCz: ProjectType[] = [
         "anchorPlaceholder2":"eltoromost.cz",
         "anchorTitle2":"Originální web",
         "anchor2":"https://eltoromost.cz",
+        "featured": true,
+        "category": ["design"]
+    },
+    {
+        "id": "3",
+        "link": "echos",
+        "title": "Echos",
+        "subtitle": "UX/UI koncept",
+        "description": "ECHOS je fiktivní digitální studio. Vytvořil jsem ho jako koncept, na kterém jsem si chtěl vyzkoušet, jak přemýšlím nad UX a UI jako celkem, ne jen nad vizuálem. Hlavní myšlenka je jednoduchá. Dobrý digitální design podle mě začíná rozhodnutími. Co má být vidět první, co je důležité, co může počkat a jak spolu jednotlivé části mluví. Součástí konceptu je i Signál. Je to fiktivní e mailový zpravodaj, který jsem použil jako způsob, jak dát webu jasný směr a charakter. Není to marketingový prvek, ale spíš obsahová vrstva, kolem které se dá postavit struktura, navigace i tón textů. Celý projekt je ukázkou toho, jak přistupuju k UX a UI od rozvržení až po detaily v obsahu.",
+        "technologies": ["figma"],
+        "image_preview": "/projects/echos/main.png",
+        "image_main": "/projects/echos/main.png",
+
+
+        "technical_description": "Na začátku jsem si vybral open source název a logo a rozhodl se, že se jich budu držet. Všechno ostatní jsem stavěl kolem nich, místo toho, abych si identitu upravoval podle sebe.\n" +
+            "\n" +
+            "Chtěl jsem navrhnout jednoduchou navigaci a footer, které nebudou působit genericky. Proto jsem si vymyslel vlastní službu Signál a použil ji jako hlavní prvek, kolem kterého se celý layout točí. Díky tomu šlo pracovat s hierarchií jinak než jen pomocí barvy nebo velikosti textu.\n" +
+            "\n" +
+            "Návrh je záměrně klidný a jednoduchý. Soustředil jsem se hlavně na to, aby bylo jasné, co je důležité, kam se uživatel dívá a proč. Celý redesign jsem uskutečnil v programu Figma.",
+
+        "anchorPlaceholder1":"figma.com/design/echos",
+        "anchorTitle1":"Figma projekt",
+        "anchor1":"https://www.figma.com/design/XfeYhCpLsHZz1ztseC3NFv/Echos---Public?node-id=0-1&t=we1QIqi4gQttjtdv-1",
+        "anchorPlaceholder2":"",
+        "anchorTitle2":"",
+        "anchor2":"",
         "featured": true,
         "category": ["design"]
     },

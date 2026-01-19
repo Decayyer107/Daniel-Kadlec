@@ -192,50 +192,46 @@ export default function Project({ project }: { project: ProjectType }) {
                 variants={item}
                 className=" w-full grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center mt-6"
             >
-                    <motion.div
-                        variants={item}
-                        className="project-image-small"
-                    >
+                {project.image_1 && (
+                    <motion.div variants={item} className="project-image-small">
                         <Image
                             src={project.image_1}
-                            alt={`Project image 1`}
+                            alt="Project image 1"
                             fill
                             className="object-cover object-center"
                         />
                     </motion.div>
-                <motion.div
-                    variants={item}
-                    className="project-image-small"
-                >
-                    <Image
-                        src={project.image_2}
-                        alt={`Project image 2`}
-                        fill
-                        className="object-cover object-center"
-                    />
-                </motion.div>
-                <motion.div
-                    variants={item}
-                    className="project-image-small"
-                >
-                    <Image
-                        src={project.image_3}
-                        alt={`Project image 3`}
-                        fill
-                        className="object-cover object-center"
-                    />
-                </motion.div>
-                <motion.div
-                    variants={item}
-                    className="project-image-small"
-                >
-                    <Image
-                        src={project.image_4}
-                        alt={`Project image 4`}
-                        fill
-                        className="object-cover object-center"
-                    />
-                </motion.div>
+                )}
+                {project.image_2 && (
+                    <motion.div variants={item} className="project-image-small">
+                        <Image
+                            src={project.image_2}
+                            alt="Project image 2"
+                            fill
+                            className="object-cover object-center"
+                        />
+                    </motion.div>
+                )}
+                {project.image_3 && (
+                    <motion.div variants={item} className="project-image-small">
+                        <Image
+                            src={project.image_3}
+                            alt="Project image 3"
+                            fill
+                            className="object-cover object-center"
+                        />
+                    </motion.div>
+                )}
+                {project.image_4 && (
+                    <motion.div variants={item} className="project-image-small">
+                        <Image
+                            src={project.image_4}
+                            alt="Project image 4"
+                            fill
+                            className="object-cover object-center"
+                        />
+                    </motion.div>
+                )}
             </motion.div>
         </motion.section>
     );

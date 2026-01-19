@@ -21,7 +21,7 @@ export const projectsEn: ProjectType[] = [
         "anchorPlaceholder2":"figma.com/design/zahrada-smutku",
         "anchorTitle2":"Figma project",
         "anchor2":"https://www.figma.com/design/GhnoCIPiUBwQ7e5r999HPE/Zahrada-smutkut---public?m=auto&t=gTyzgWSGHMGDxbyi-1",
-        "featured": true,
+        "featured": false,
         "category": ["design"],
     },
     {
@@ -52,6 +52,27 @@ export const projectsEn: ProjectType[] = [
         "anchorPlaceholder2": "eltoromost.cz",
         "anchorTitle2": "Original website",
         "anchor2": "https://eltoromost.cz",
+        "featured": true,
+        "category": ["design"]
+    },
+    {
+        "id": "3",
+        "link": "echos",
+        "title": "Echos",
+        "subtitle": "UX/UI concept",
+        "description": "ECHOS is a fictional digital studio. I created it as a concept to explore how I think about UX and UI as a whole, not just the visual side. The main idea is simple. Good digital design starts with decisions. What should be seen first, what matters most, what can wait, and how individual parts communicate with each other.\n\nThe concept also includes Signál. A fictional email newsletter that I used as a way to give the website a clear direction and personality. It is not a marketing feature, but rather a content layer around which the structure, navigation, and tone of voice can be built.\n\nThe entire project is a demonstration of how I approach UX and UI, from layout decisions to content details.",
+        "technologies": ["figma"],
+        "image_preview": "/projects/echos/main.png",
+        "image_main": "/projects/echos/main.png",
+
+        "technical_description": "At the beginning, I chose an open source name and logo and decided to work with them as they were. Everything else was built around this existing identity instead of adapting it to my personal style.\n\nMy goal was to design a simple navigation bar and footer that would not feel generic. To achieve this, I created a fictional service called Signál and used it as a central element around which the entire layout is built. This allowed me to work with hierarchy in a way that goes beyond just color or text size.\n\nThe design is intentionally calm and minimal. I focused mainly on clarity, visual priorities, and guiding the user’s attention. The entire redesign was created in Figma.",
+
+        "anchorPlaceholder1": "figma.com/design/echos",
+        "anchorTitle1": "Figma project",
+        "anchor1": "https://www.figma.com/design/XfeYhCpLsHZz1ztseC3NFv/Echos---Public?node-id=0-1&t=we1QIqi4gQttjtdv-1",
+        "anchorPlaceholder2": "",
+        "anchorTitle2": "",
+        "anchor2": "",
         "featured": true,
         "category": ["design"]
     }
