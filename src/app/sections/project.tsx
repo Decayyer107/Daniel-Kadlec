@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image";
 import Technologies from "@/components/Technologies";
 import { useParams, useRouter } from "next/navigation";
 import { useLanguage } from "@/utils/LanguageContext";
@@ -12,7 +11,8 @@ import { TechName } from "@/components/Technologies";
 import HopperElement from "@/components/HopperElement";
 import { notFound } from "next/navigation";
 import { ProjectType } from "../types/project";
-import { motion } from "framer-motion"; // fixed import
+import { motion } from "framer-motion";
+import ProjectGallery from "../../components/Gallery/ProjectGallery";
 
 export default function Project({ project }: { project: ProjectType }) {
     const params = useParams();
@@ -30,8 +30,6 @@ export default function Project({ project }: { project: ProjectType }) {
 
     project = getProject(params.project as string, lang)!;
     if (!project) notFound();
-
-
 
     const container = {
         hidden: {},
@@ -56,6 +54,23 @@ export default function Project({ project }: { project: ProjectType }) {
             },
         },
     };
+
+    const images = [
+        project.image_main,
+        project.image_1,
+        project.image_2,
+        project.image_3,
+        project.image_4,
+    ].filter(Boolean) as string[];
+
+    const alt = [
+        project.image_main_alt ?? "",
+        project.image_1_alt ?? "",
+        project.image_2_alt ?? "",
+        project.image_3_alt ?? "",
+        project.image_4_alt ?? "",
+    ];
+
 
     return (
         <motion.section
@@ -175,63 +190,13 @@ export default function Project({ project }: { project: ProjectType }) {
             </motion.div>
 
             <motion.div variants={item} className="w-full mt-6 sm:mt-16">
-                <motion.div
-                    variants={item}
-                    className="relative aspect-[5/3] rounded-2xl shadow-md overflow-hidden"
-                >
-                    <Image
-                        src={project.image_main}
-                        alt="Background image"
-                        fill
-                        className="object-cover object-center"
-                    />
-                </motion.div>
             </motion.div>
 
             <motion.div
                 variants={item}
-                className=" w-full grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center mt-6"
+                className=" "
             >
-                {project.image_1 && (
-                    <motion.div variants={item} className="project-image-small">
-                        <Image
-                            src={project.image_1}
-                            alt="Project image 1"
-                            fill
-                            className="object-cover object-center"
-                        />
-                    </motion.div>
-                )}
-                {project.image_2 && (
-                    <motion.div variants={item} className="project-image-small">
-                        <Image
-                            src={project.image_2}
-                            alt="Project image 2"
-                            fill
-                            className="object-cover object-center"
-                        />
-                    </motion.div>
-                )}
-                {project.image_3 && (
-                    <motion.div variants={item} className="project-image-small">
-                        <Image
-                            src={project.image_3}
-                            alt="Project image 3"
-                            fill
-                            className="object-cover object-center"
-                        />
-                    </motion.div>
-                )}
-                {project.image_4 && (
-                    <motion.div variants={item} className="project-image-small">
-                        <Image
-                            src={project.image_4}
-                            alt="Project image 4"
-                            fill
-                            className="object-cover object-center"
-                        />
-                    </motion.div>
-                )}
+                <ProjectGallery images={images} alt={alt}/>
             </motion.div>
         </motion.section>
     );
