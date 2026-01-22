@@ -4,9 +4,11 @@ import { useState } from "react";
 type ProjectGalleryProps = {
     images: string[];
     alt: string[];
+    handleLightboxOpen: (index: number) => void;
 };
 
-export default function ProjectGallery({ images, alt }: ProjectGalleryProps) {
+
+export default function ProjectGallery({ images, alt, handleLightboxOpen }: ProjectGalleryProps) {
 
     const [hovered, setHovered] = useState<number | null>(null);
     const baseClasses =
@@ -31,6 +33,7 @@ export default function ProjectGallery({ images, alt }: ProjectGalleryProps) {
                     onMouseEnter={() => setHovered(0)}
                     onMouseLeave={() => setHovered(null)}
                     className={getStyle(0)}
+                    onClick={() => handleLightboxOpen(0)}
                 />
             )}
 
@@ -44,6 +47,7 @@ export default function ProjectGallery({ images, alt }: ProjectGalleryProps) {
                             onMouseEnter={() => {setHovered(i + 1);}}
                             onMouseLeave={() => setHovered(null)}
                             className={getStyle(i + 1)}
+                            onClick={() => handleLightboxOpen(i + 1)}
                         />
                     ) : null
                 )}
