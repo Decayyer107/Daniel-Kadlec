@@ -71,7 +71,6 @@ export default function Project({ project }: { project: ProjectType }) {
         project.image_4_alt ?? "",
     ];
 
-
     return (
         <motion.section
             id="project"
