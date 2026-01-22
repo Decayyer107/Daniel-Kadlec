@@ -116,6 +116,7 @@ export default function Project({ project }: { project: ProjectType }) {
             <Lightbox
                 isOpen={isLightboxOpen}
                 images={images}
+                image_description={alt}
                 index={openedImage}
                 onClose={handleLightboxClose}
                 onNext={next}

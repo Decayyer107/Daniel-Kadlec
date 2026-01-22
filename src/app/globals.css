@@ -129,6 +129,9 @@ main,
     animation: spin 0.8s linear infinite;
 }
 
+.lightboxButton{
+    @apply absolute top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full w-14 h-14 text-center cursor-pointer;
+}
 @keyframes spin {
     to {
         transform: rotate(360deg);
