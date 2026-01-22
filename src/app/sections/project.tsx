@@ -193,9 +193,7 @@ export default function Project({ project }: { project: ProjectType }) {
             </motion.div>
 
             <motion.div
-                variants={item}
-                className=" "
-            >
+                variants={item}>
                 <ProjectGallery images={images} alt={alt}/>
             </motion.div>
         </motion.section>

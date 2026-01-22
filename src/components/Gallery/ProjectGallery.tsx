@@ -16,7 +16,7 @@ export default function ProjectGallery({ images, alt }: ProjectGalleryProps) {
                 />
             )}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {images[1] && (
                     <GalleryImage
                         url={images[1]}
