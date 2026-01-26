@@ -5,23 +5,41 @@ type ProjectGalleryProps = {
     images: string[];
     alt: string[];
     handleLightboxOpen: (index: number) => void;
+    isMobile: boolean;
 };
 
-
-export default function ProjectGallery({ images, alt, handleLightboxOpen }: ProjectGalleryProps) {
-
+export default function ProjectGallery({
+                                           images,
+                                           alt,
+                                           handleLightboxOpen,
+                                           isMobile,
+                                       }: ProjectGalleryProps) {
     const [hovered, setHovered] = useState<number | null>(null);
-    const baseClasses =
-        "cursor-pointer transition-all duration-500 ease-out";
+
+    const baseClasses = isMobile
+        ? ""
+        : "cursor-pointer transition-all duration-500 ease-out";
+
+    const handleMouseEnter = (id: number) => {
+        if (!isMobile) setHovered(id);
+    };
+
+    const handleMouseLeave = () => {
+        if (!isMobile) setHovered(null);
+    };
 
     const getStyle = (id: number) => {
+        if (isMobile) {
+            return "opacity-100 scale-100";
+        }
+
         const isHovered = hovered === id;
         const isOther = hovered !== null && !isHovered;
 
         return `
-        ${baseClasses}
-        ${isHovered ? "scale-[100%]" : isOther ? "opacity-50" : "opacity-100"}
-    `;
+            ${baseClasses}
+            ${isHovered ? "scale-100" : isOther ? "opacity-50" : "opacity-100"}
+        `;
     };
 
     return (
@@ -30,8 +48,8 @@ export default function ProjectGallery({ images, alt, handleLightboxOpen }: Proj
                 <GalleryImage
                     url={images[0]}
                     alt={alt[0]}
-                    onMouseEnter={() => setHovered(0)}
-                    onMouseLeave={() => setHovered(null)}
+                    onMouseEnter={() => handleMouseEnter(0)}
+                    onMouseLeave={handleMouseLeave}
                     className={getStyle(0)}
                     onClick={() => handleLightboxOpen(0)}
                 />
@@ -44,8 +62,8 @@ export default function ProjectGallery({ images, alt, handleLightboxOpen }: Proj
                             key={i + 1}
                             url={img}
                             alt={alt[i + 1]}
-                            onMouseEnter={() => {setHovered(i + 1);}}
-                            onMouseLeave={() => setHovered(null)}
+                            onMouseEnter={() => handleMouseEnter(i + 1)}
+                            onMouseLeave={handleMouseLeave}
                             className={getStyle(i + 1)}
                             onClick={() => handleLightboxOpen(i + 1)}
                         />

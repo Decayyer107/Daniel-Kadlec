@@ -14,6 +14,7 @@ import { ProjectType } from "../types/project";
 import { motion } from "framer-motion";
 import ProjectGallery from "../../components/Gallery/ProjectGallery";
 import Lightbox from "@/components/Gallery/Lightbox";
+import GalleryImage from "@/components/Gallery/GalleryImage";
 export default function Project({ project }: { project: ProjectType }) {
     const params = useParams();
     const router = useRouter();
@@ -74,13 +75,29 @@ export default function Project({ project }: { project: ProjectType }) {
     ];
 
     const handleLightboxOpen = (index: number) => {
+        if (isMobile) return;
         setOpenedImage(index);
         setIsLightboxOpen(true);
     };
 
+
     const handleLightboxClose = () => {
         setIsLightboxOpen(false);
     };
+
+    const useIsMobile = (maxWidth = 450) => {
+        const [isMobile, setIsMobile] = useState(false);
+
+        useEffect(() => {
+            const check = () => setIsMobile(window.innerWidth < maxWidth);
+            check();
+            window.addEventListener("resize", check);
+            return () => window.removeEventListener("resize", check);
+        }, [maxWidth]);
+
+        return isMobile;
+    };
+    const isMobile = useIsMobile(450);
 
     useEffect(() => {
         if (!isLightboxOpen) return;
@@ -249,6 +266,7 @@ export default function Project({ project }: { project: ProjectType }) {
                         images={images}
                         alt={alt}
                         handleLightboxOpen={handleLightboxOpen}
+                        isMobile={isMobile}
                     />
 
                 </motion.div>
