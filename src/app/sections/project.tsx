@@ -155,9 +155,9 @@ export default function Project({ project }: { project: ProjectType }) {
                             document.documentElement.style.scrollBehavior = "";
                         }, 100);
                     }}
-                    className="p-[1px] bg-offblack border-offblack dark:border-offwhite border-2 rounded-full w-14 h-14 top-6 left-6 cursor-pointer fixed z-50"
+                    className="p-[1px] bg-offwhite dark:bg-offblack border-offblack dark:border-offwhite border-2 rounded-full w-14 h-14 top-6 left-6 cursor-pointer fixed z-50"
                 >
-                    <IoPlayBackCircle className="text w-full h-full" />
+                    <IoPlayBackCircle className=" text-offblack dark:text-offwhite w-full h-full" />
                 </motion.div>
 
                 <motion.div variants={item} className="flex flex-col mt-10">

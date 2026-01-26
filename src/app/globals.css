@@ -82,6 +82,9 @@
 .text-highlighted{
     @apply text-offblack dark:text-offwhite font-bold;
 }
+.lightboxText{
+    @apply text-2xl font-[600] my-4 dark:text-offwhite text-offblack  text-[clamp(16px,_calc(3vw),_28px)];
+}
 
 
 .hero-element{
@@ -130,7 +133,7 @@ main,
 }
 
 .lightboxButton{
-    @apply absolute top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full w-14 h-14 text-center cursor-pointer;
+    @apply absolute top-[85%] md:top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full w-14 h-14 text-center cursor-pointer;
 }
 @keyframes spin {
     to {
