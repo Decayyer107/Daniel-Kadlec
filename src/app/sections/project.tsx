@@ -11,10 +11,9 @@ import { TechName } from "@/components/Technologies";
 import HopperElement from "@/components/HopperElement";
 import { notFound } from "next/navigation";
 import { ProjectType } from "../types/project";
-import { motion } from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 import ProjectGallery from "../../components/Gallery/ProjectGallery";
 import Lightbox from "@/components/Gallery/Lightbox";
-import GalleryImage from "@/components/Gallery/GalleryImage";
 export default function Project({ project }: { project: ProjectType }) {
     const params = useParams();
     const router = useRouter();
@@ -130,16 +129,20 @@ export default function Project({ project }: { project: ProjectType }) {
 
     return (
         <div className={"relative"}>
-            <Lightbox
-                isOpen={isLightboxOpen}
-                images={images}
-                image_description={alt}
-                index={openedImage}
-                onClose={handleLightboxClose}
-                onNext={next}
-                onPrev={prev}
-            />
 
+            <AnimatePresence mode="wait">
+                {isLightboxOpen && (
+
+                        <Lightbox
+                            images={images}
+                            image_description={alt}
+                            index={openedImage}
+                            onClose={handleLightboxClose}
+                            onNext={next}
+                            onPrev={prev}
+                        />
+                )}
+            </AnimatePresence>
 
             <motion.section
                 id="project"
