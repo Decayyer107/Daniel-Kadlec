@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 
@@ -59,7 +59,7 @@ export default function SocialIcons({ isSmall }: IconsProps) {
         >
             {[
                 { id: "github", icon: FaGithub, href: "https://github.com/Decayyer107" },
-                { id: "twitter", icon: FaXTwitter, href: "https://x.com/dan_kadlec" },
+                { id: "twitter", icon: FaInstagram, href: "https://www.instagram.com/kadlec.design/" },
                 { id: "linkedin", icon: FaLinkedin, href: "https://www.linkedin.com/in/daniel-kadlec-903759379/" },
                 { id: "email", icon: FaEnvelope, href: "mailto:kontakt@danielkadlec.cz" },
             ].map(({ id, icon: Icon, href }) => (

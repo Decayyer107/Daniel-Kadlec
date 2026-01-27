@@ -82,6 +82,9 @@
 .text-highlighted{
     @apply text-offblack dark:text-offwhite font-bold;
 }
+.lightboxText{
+    @apply text-2xl font-[600] mb-4 dark:text-offwhite text-offblack  text-[clamp(16px,_calc(3vw),_28px)];
+}
 
 
 .hero-element{
@@ -129,6 +132,12 @@ main,
     animation: spin 0.8s linear infinite;
 }
 
+.lightboxButton{
+    @apply absolute top-[75%] md:top-1/2 bg-black/50 text-white rounded-full w-14 h-14 text-center cursor-pointer;
+}
+.lightboxButtonHover{
+    @apply hover:border-offwhite/100 border-offwhite/0 border-2 transition duration-300;
+}
 @keyframes spin {
     to {
         transform: rotate(360deg);

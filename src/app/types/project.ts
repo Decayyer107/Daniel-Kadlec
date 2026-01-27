@@ -14,23 +14,32 @@ export type ProjectType = {
     /** Main project description */
     description: string;
 
-    /** Technologies used, by slug (matches your TechName type) */
+    /** Technologies used */
     technologies: string[];
 
-    /** Path or URL to the main thumbnail image */
+    /** Images with alt text */
     image_preview: string;
+    image_preview_alt: string;
+
     image_main: string;
+    image_main_alt: string;
+
     image_1?: string;
+    image_1_alt?: string;
+
     image_2?: string;
+    image_2_alt?: string;
+
     image_3?: string;
+    image_3_alt?: string;
+
     image_4?: string;
+    image_4_alt?: string;
 
-
-
-    /** Technical description (used in the technical section) */
+    /** Technical description */
     technical_description: string;
 
-    /** Optional link titles and URLs */
+    /** Optional links */
     anchorPlaceholder1?: string;
     anchorTitle1?: string;
     anchor1?: string;
@@ -38,9 +47,9 @@ export type ProjectType = {
     anchorTitle2?: string;
     anchor2?: string;
 
-    /** Whether the project is featured on the homepage */
+    /** Homepage feature */
     featured?: boolean;
 
-    /** Project categories (e.g., ["design", "development"]) */
+    /** Project categories */
     category: string[];
 };
