@@ -2,6 +2,7 @@ import Image from "next/image";
 import { IoChevronBackOutline } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
 import {motion, AnimatePresence} from "framer-motion";
+import {images} from "next/dist/build/webpack/config/blocks/images";
 
 
 type LightboxProps = {
@@ -13,7 +14,9 @@ type LightboxProps = {
     onPrev: () => void;
 };
 
+
 export default function Lightbox({images, image_description, index, onClose, onNext, onPrev}: LightboxProps) {
+
     return (
         <>
             <motion.div
@@ -46,10 +49,9 @@ export default function Lightbox({images, image_description, index, onClose, onN
                                         exit={{ opacity: 0 }}
                                         transition={{ duration: 0.3, ease: "easeInOut" }}>
                                 <h1>{image_description[index]}</h1>
-                                <h1>{index + 1} / 5</h1>
+                                <h1>{index + 1} / {images.length}</h1>
                             </motion.div>
                         </AnimatePresence>
-
                         <div className="relative">
                             <AnimatePresence mode="popLayout">
                                 <motion.div
