@@ -60,16 +60,18 @@ export default function Lightbox({images, image_description, index, onClose, onN
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
                                     transition={{ duration: 0.3, ease: "easeInOut" }}
+                                    className="w-fit"
                                 >
                                     <Image
                                         src={images[index]}
                                         alt={image_description[index]}
-                                        width={2000}
-                                        height={2000}
-                                        className="max-w-[95vw] xl:max-w-[78vw] max-h-[90vh] object-contain rounded-xl"
+                                        width={4000}
+                                        height={4000}
+                                        className="w-auto h-auto max-w-[95vw] xl:max-w-[78vw] max-h-[90vh] object-contain rounded-xl"
                                     />
                                 </motion.div>
                             </AnimatePresence>
+
                         </div>
 
 
