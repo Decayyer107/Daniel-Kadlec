@@ -10,22 +10,22 @@ export const projectsCz: ProjectType[] = [
         technologies: ["figma", "css", "html"],
 
         image_preview: "/projects/zahrada-smutku/Preview.webp",
-        image_preview_alt: "Náhled webu Zahrada smutku",
+        image_preview_alt: "Úvodní stránka",
 
         image_main: "/projects/zahrada-smutku/Main.webp",
-        image_main_alt: "Hlavní rozložení webu Zahrada smutku",
+        image_main_alt: "Úvodní stránka",
 
         image_1: "/projects/zahrada-smutku/1.webp",
-        image_1_alt: "Sekce úvodní stránky webu Zahrada smutku",
+        image_1_alt: "Sekce, co dělat při úmrtí blízkého",
 
         image_2: "/projects/zahrada-smutku/2.webp",
-        image_2_alt: "Informační sekce pohřebních služeb",
+        image_2_alt: "CTA a pokyny",
 
         image_3: "/projects/zahrada-smutku/3.webp",
-        image_3_alt: "Typografie a práce s obsahem na webu Zahrada smutku",
+        image_3_alt: "Legislativní stránka",
 
         image_4: "/projects/zahrada-smutku/4.webp",
-        image_4_alt: "Ukázka responzivního zobrazení webu Zahrada smutku",
+        image_4_alt: "Kontakt sekce",
 
         technical_description: "Původně mi bylo zadáno vytvořit celý web s využitím Bootstrap šablony, aby bylo možné stránku v budoucnu snadno rozšiřovat. Po několika hodinách plánování a zkoumání, jak Bootstrap v rámci šablony funguje, jsem však dospěl k závěru, že tento přístup pro mě není vhodný. Měl jsem jasnou představu o tom, jak má výsledná stránka vypadat a fungovat, a potřeboval jsem naprostou kontrolu nad každým detailem.\n\nNakonec jsem použil pouze menší množství základních komponent a několik drobných animací z Bootstrapu, ale většinu kódu jsem vytvořil ručně od základů. Díky tomu jsem mohl web přizpůsobit přesně své vizi a zaměřit se na čistý, přehledný a technicky kvalitní výsledek.\n\nCelý web je plně responzivní a optimalizovaný pro různá zařízení i rozlišení obrazovek. Tento projekt mě přinutil vystoupit ze své komfortní zóny, opustit moderní frameworky a vrátit se zpět k čistému HTML a CSS.",
 
@@ -51,22 +51,22 @@ export const projectsCz: ProjectType[] = [
         technologies: ["figma"],
 
         image_preview: "/projects/el-toro/1.png",
-        image_preview_alt: "Náhled redesignu webu El Toro",
+        image_preview_alt: "Úvodní sekce",
 
         image_main: "/projects/el-toro/1.png",
-        image_main_alt: "Úvodní stránka redesignu restaurace El Toro",
+        image_main_alt: "Úvodní sekce",
 
         image_1: "/projects/el-toro/2.png",
-        image_1_alt: "Návrh sekce menu restaurace El Toro",
+        image_1_alt: "Sekce o nás",
 
         image_2: "/projects/el-toro/3.png",
-        image_2_alt: "Sekce atmosféry a interiéru restaurace El Toro",
+        image_2_alt: "Menu CTA",
 
         image_3: "/projects/el-toro/4.png",
-        image_3_alt: "Typografie a vizuální hierarchie webu El Toro",
+        image_3_alt: "Kontakt sekce",
 
         image_4: "/projects/el-toro/5.png",
-        image_4_alt: "Ukázka responzivního zobrazení webu El Toro",
+        image_4_alt: "Menu stránka",
 
         technical_description: "Cílem bylo propojit výrazný, masitý charakter steakhouse restaurace s elegantním zážitkem, který El Toro nabízí. Proto jsem se záměrně posunul od původního chladného barevného ladění směrem k teplejším béžovým tónům, které působí přívětivěji a lépe podporují prémiovou atmosféru.\n\nTypografie je postavená na kombinaci patkového písma pro nadpisy a bezpatkového písma pro delší texty. Tato kombinace pomáhá vyvážit eleganci a sílu značky, zároveň ale zůstává dobře čitelná. Do pozadí jsem navíc přidal jemnou papírovou texturu, která vizuál změkčuje a dodává webu víc charakteru, aniž by působila rušivě. Celý redesign jsem uskutečnil v programu Figma.",
 
@@ -92,7 +92,7 @@ export const projectsCz: ProjectType[] = [
         image_preview_alt: "Náhled UX/UI konceptu ECHOS",
 
         image_main: "/projects/echos/main.png",
-        image_main_alt: "Úvodní rozložení UX/UI konceptu ECHOS",
+        image_main_alt: "Hlavní design",
 
         technical_description: "Na začátku jsem si vybral open source název a logo a rozhodl se, že se jich budu držet. Všechno ostatní jsem stavěl kolem nich, místo toho, abych si identitu upravoval podle sebe.\n\nChtěl jsem navrhnout jednoduchou navigaci a footer, které nebudou působit genericky. Proto jsem si vymyslel vlastní službu Signál a použil ji jako hlavní prvek, kolem kterého se celý layout točí. Díky tomu šlo pracovat s hierarchií jinak než jen pomocí barvy nebo velikosti textu.\n\nNávrh je záměrně klidný a jednoduchý. Soustředil jsem se hlavně na to, aby bylo jasné, co je důležité, kam se uživatel dívá a proč. Celý redesign jsem uskutečnil v programu Figma.",
 

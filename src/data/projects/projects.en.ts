@@ -10,22 +10,22 @@ export const projectsEn: ProjectType[] = [
         technologies: ["figma", "css", "html"],
 
         image_preview: "/projects/zahrada-smutku/Preview.webp",
-        image_preview_alt: "Zahrada smutku website preview thumbnail",
+        image_preview_alt: "Homepage",
 
         image_main: "/projects/zahrada-smutku/Main.webp",
-        image_main_alt: "Zahrada smutku main website layout",
+        image_main_alt: "Homepage",
 
         image_1: "/projects/zahrada-smutku/1.webp",
-        image_1_alt: "Zahrada smutku homepage section design",
+        image_1_alt: "What to do after a loss",
 
         image_2: "/projects/zahrada-smutku/2.webp",
-        image_2_alt: "Zahrada smutku service information section",
+        image_2_alt: "Call-to-action and guidance",
 
         image_3: "/projects/zahrada-smutku/3.webp",
-        image_3_alt: "Zahrada smutku typography and content layout",
+        image_3_alt: "Legal information page",
 
         image_4: "/projects/zahrada-smutku/4.webp",
-        image_4_alt: "Zahrada smutku responsive layout example",
+        image_4_alt: "Contact section",
 
         technical_description: "I was originally assigned to create the entire website using a Bootstrap template to make future expansion easier. However, after several hours of planning and exploring how Bootstrap worked within the template, I realized that this approach wasn’t suitable for me. I had a clear vision of how I wanted the site to look and function, and I needed full control over every detail. In the end, I used only a small number of basic components and a few subtle animations from Bootstrap, but most of the code was written manually from scratch. This allowed me to shape the website exactly according to my vision and focus on a clean, well-structured, and technically solid result. The website is fully responsive and optimized for various devices and screen resolutions. This project pushed me out of my comfort zone, made me step away from modern frameworks, and return to pure HTML and CSS.",
 
@@ -51,22 +51,23 @@ export const projectsEn: ProjectType[] = [
         technologies: ["figma"],
 
         image_preview: "/projects/el-toro/1.png",
-        image_preview_alt: "El Toro website redesign preview",
+        image_preview_alt: "Hero section",
 
         image_main: "/projects/el-toro/1.png",
-        image_main_alt: "El Toro homepage redesign layout",
+        image_main_alt: "Hero section",
 
         image_1: "/projects/el-toro/2.png",
-        image_1_alt: "El Toro menu section design",
+        image_1_alt: "About section",
 
         image_2: "/projects/el-toro/3.png",
-        image_2_alt: "El Toro interior atmosphere section",
+        image_2_alt: "Menu call to action",
 
         image_3: "/projects/el-toro/4.png",
-        image_3_alt: "El Toro typography and visual hierarchy",
+        image_3_alt: "Contact section",
 
         image_4: "/projects/el-toro/5.png",
-        image_4_alt: "El Toro responsive website screens",
+        image_4_alt: "Menu page",
+
 
         technical_description:
             "The goal was to combine the bold, meaty character of a steakhouse with an elegant, premium dining experience. For this reason, I intentionally moved away from the original cool color palette toward warmer beige tones, which feel more inviting and better support a refined atmosphere.\n\n" +
@@ -94,10 +95,11 @@ export const projectsEn: ProjectType[] = [
         technologies: ["figma"],
 
         image_preview: "/projects/echos/main.png",
-        image_preview_alt: "ECHOS digital studio concept preview",
+        image_preview_alt: "ECHOS UX/UI preview",
 
         image_main: "/projects/echos/main.png",
-        image_main_alt: "ECHOS homepage UX/UI concept layout",
+        image_main_alt: "Main design",
+
 
         technical_description:
             "At the beginning, I chose an open source name and logo and decided to work with them as they were. Everything else was built around this existing identity instead of adapting it to my personal style.\n\n" +
